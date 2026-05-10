@@ -1,0 +1,34 @@
+# Environment
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.Python
+
+# Data — PDFs y bases de datos generadas (pesados, se regeneran con el pipeline)
+data/dfi_pdfs/
+data/dfi_pdfsl/
+database/funds.db
+database/chroma/
+
+# Evaluation cache (contiene respuestas generadas, no código fuente)
+evaluation/responses_cache.json
+
+# macOS
+.DS_Store
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+
+# Claude Code internal
+.claude/

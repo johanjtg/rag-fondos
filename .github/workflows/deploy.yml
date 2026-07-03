@@ -1,0 +1,48 @@
+name: Build & Deploy to Azure Container Apps
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout del código
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Login en Azure
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      # 3. Login en Azure Container Registry
+      - name: Login en ACR
+        uses: azure/docker-login@v2
+        with:
+          login-server: ${{ secrets.ACR_LOGIN_SERVER }}
+          username: ${{ secrets.ACR_USERNAME }}
+          password: ${{ secrets.ACR_PASSWORD }}
+
+      # 4. Build y push de la imagen Docker
+      - name: Build y Push imagen
+        run: |
+          docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/fondos-ai:${{ github.sha }} .
+          docker push ${{ secrets.ACR_LOGIN_SERVER }}/fondos-ai:${{ github.sha }}
+
+      # 5. Desplegar en Azure Container Apps
+      - name: Deploy a Azure Container Apps
+        uses: azure/container-apps-deploy-action@v2
+        with:
+          acrName: ${{ secrets.ACR_NAME }}
+          containerAppName: fondos-ai
+          containerAppEnvironment: fondos-ai-env
+          resourceGroup: fondos-ai-rg
+          imageToDeploy: ${{ secrets.ACR_LOGIN_SERVER }}/fondos-ai:${{ github.sha }}
+          environmentVariables: GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}
+          targetPort: 8501
+          ingress: external

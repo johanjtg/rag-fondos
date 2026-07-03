@@ -1,0 +1,30 @@
+# Control de versiones
+.git
+.gitignore
+
+# Entorno virtual Python
+.venv
+venv
+env
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Variables de entorno locales (la clave va como variable en Azure, no en el contenedor)
+.env
+
+# PDFs crudos (pesados, no necesarios en el contenedor de chat)
+data/dfi_pdfs/
+
+# Archivos de desarrollo
+.pytest_cache
+*.egg-info
+dist
+build
+
+# IDEs
+.vscode
+.idea
+*.swp

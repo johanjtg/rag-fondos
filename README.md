@@ -148,6 +148,14 @@ score_final =
 
 ---
 
+## Base de datos
+
+Los archivos `database/funds.db` (SQLite) y `database/chroma/` (ChromaDB) se incluyen directamente en el repositorio para que la imagen Docker pueda arrancar sin necesidad de ejecutar el pipeline de extracción. Esto significa que para actualizar el catálogo de fondos hay que regenerar la base de datos localmente y volver a hacer push.
+
+> **Escalado futuro:** en un entorno de producción, la base de datos debería almacenarse en **Azure Blob Storage** y montarse en el contenedor en tiempo de arranque. Esto permitiría actualizar el catálogo sin reconstruir la imagen Docker y soportaría múltiples instancias del servicio compartiendo los mismos datos.
+
+---
+
 ## Reiniciar la base de datos
 
 ```bash

@@ -13,11 +13,13 @@ dist/
 build/
 .Python
 
-# Data — PDFs y bases de datos generadas (pesados, se regeneran con el pipeline)
+# Data — PDFs crudos (pesados, se regeneran con el pipeline)
 data/dfi_pdfs/
 data/dfi_pdfsl/
-database/funds.db
-database/chroma/
+
+# La base de datos (funds.db y chroma/) se incluye en el repo intencionalmente
+# para que la imagen Docker pueda arrancar sin ejecutar el pipeline de extracción.
+# Ver README sección "Base de datos" para más detalles.
 
 # Evaluation cache (contiene respuestas generadas, no código fuente)
 evaluation/responses_cache.json

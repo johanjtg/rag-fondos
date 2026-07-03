@@ -16,18 +16,18 @@ jobs:
       - name: Login en ACR
         uses: azure/docker-login@v2
         with:
-          login-server: ${{ secrets.ACR_LOGIN_SERVER }}
-          username: ${{ secrets.ACR_USERNAME }}
+          login-server: fondosairegistry.azurecr.io
+          username: fondosairegistry
           password: ${{ secrets.ACR_PASSWORD }}
 
       - name: Build y Push imagen
         run: |
-          docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/fondos-ai:${{ github.sha }} .
-          docker push ${{ secrets.ACR_LOGIN_SERVER }}/fondos-ai:${{ github.sha }}
+          docker build -t fondosairegistry.azurecr.io/fondos-ai:${{ github.sha }} .
+          docker push fondosairegistry.azurecr.io/fondos-ai:${{ github.sha }}
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
           app-name: fondos-ai-app
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          images: ${{ secrets.ACR_LOGIN_SERVER }}/fondos-ai:${{ github.sha }}
+          images: fondosairegistry.azurecr.io/fondos-ai:${{ github.sha }}

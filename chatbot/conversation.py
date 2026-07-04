@@ -256,7 +256,8 @@ class FondosAdvisor:
         estado y devuelve la respuesta del asistente.
         """
         q = INVESTOR_PROFILE_QUESTIONS[self.pregunta_idx]
-        self.perfil.update(q["id"], respuesta_usuario)
+        from chatbot.llm_profiler import actualizar_perfil_llm
+        actualizar_perfil_llm(self.llm_perfilado, self.perfil, q["id"], q["pregunta"], respuesta_usuario)
 
         self.pregunta_idx += 1
         hay_mas_preguntas = self.pregunta_idx < len(INVESTOR_PROFILE_QUESTIONS)

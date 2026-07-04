@@ -23,7 +23,7 @@ COPY requirements.txt .
 
 # Instalamos sin docling (pesado y no necesario en producción)
 RUN pip install --no-cache-dir \
-    streamlit>=1.35.0 \
+    "streamlit>=1.36.0" \
     && grep -v "^docling" requirements.txt | pip install --no-cache-dir -r /dev/stdin
 
 # ── Código fuente ──────────────────────────────────────────────────────────────

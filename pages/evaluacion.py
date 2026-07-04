@@ -37,7 +37,7 @@ with tab1:
 
     col1, col2 = st.columns([3, 1])
     with col1:
-        st.info("Rellena `evaluation/golden_dataset_extraccion.json` con los valores reales y ejecuta el evaluador.")
+        st.info("Recalcula los valores y los compara contra el golden record.")
     with col2:
         if st.button("▶ Ejecutar", key="run_ext", use_container_width=True):
             with st.spinner("Evaluando extracción..."):

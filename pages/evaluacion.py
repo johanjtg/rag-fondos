@@ -126,7 +126,7 @@ with tab2:
 
     col1, col2 = st.columns([3, 1])
     with col1:
-        st.info("Compara 6 configuraciones de pesos para justificar empíricamente la ponderación 60/40.")
+        st.info("Compara 6 configuraciones de pesos.")
     with col2:
         if st.button("▶ Ejecutar", key="run_rec", use_container_width=True):
             with st.spinner("Evaluando recomendaciones..."):

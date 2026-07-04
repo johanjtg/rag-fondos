@@ -1,5 +1,6 @@
 """
-Página de evaluación — Evaluador 1 (extracción) y Evaluador 2 (recomendación).
+Página de evaluación — Evaluador 1 (extracción), Evaluador 2 (recomendación)
+y Evaluador 3 (modelos de embedding).
 """
 
 import json
@@ -13,12 +14,17 @@ import streamlit as st
 DB_PATH    = Path("database/funds.db")
 GOLDEN_EXT = Path("evaluation/golden_dataset_extraccion.json")
 GOLDEN_REC = Path("evaluation/golden_dataset_recomendacion.json")
+RES_EMB    = Path("evaluation/resultados_embeddings.json")
 RES_EXT    = Path("evaluation/resultados_extraccion.json")
 RES_REC    = Path("evaluation/resultados_recomendacion.json")
 
 st.title("📊 Evaluación del Sistema")
 
-tab1, tab2 = st.tabs(["🔍 Evaluador 1 — Extracción", "🎯 Evaluador 2 — Recomendación"])
+tab1, tab2, tab3 = st.tabs([
+    "🔍 Evaluador 1 — Extracción",
+    "🎯 Evaluador 2 — Recomendación",
+    "🧠 Evaluador 3 — Modelos de Embedding",
+])
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -183,4 +189,83 @@ with tab2:
                     c2.markdown("**Obtenidos (top-5):**")
                     for i, isin in enumerate(p["fondos_obtenidos"], 1):
                         marca = "✅" if isin in p["fondos_esperados"] else "　"
+                        c2.markdown(f"{i}. {marca} `{isin}`")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# EVALUADOR 3 — Comparativa de modelos de embedding
+# ══════════════════════════════════════════════════════════════════════════════
+
+with tab3:
+    st.subheader("Comparativa de modelos de embedding")
+    st.caption(
+        "Compara 3 modelos de embedding sobre el mismo golden dataset "
+        "para justificar la elección de `paraphrase-multilingual-MiniLM-L12-v2`"
+    )
+
+    col1, col2 = st.columns([3, 1])
+    with col1:
+        st.info("Re-indexa ChromaDB con cada modelo y mide Precision@K, Hit@1 y MRR. Tarda ~1-2 minutos.")
+    with col2:
+        if st.button("▶ Ejecutar", key="run_emb", use_container_width=True):
+            with st.spinner("Evaluando modelos de embedding... (puede tardar ~2 min)"):
+                result = subprocess.run(
+                    [sys.executable, "-m", "evaluation.evaluador_embeddings"],
+                    capture_output=True, text=True
+                )
+            if result.returncode == 0:
+                st.success("Completado.")
+                st.rerun()
+            else:
+                st.error(result.stderr[-500:])
+
+    if not RES_EMB.exists():
+        st.warning("Sin resultados aún. Ejecuta el evaluador primero.")
+    else:
+        with open(RES_EMB, encoding="utf-8") as f:
+            res_emb = json.load(f)
+
+        st.subheader("Resultados por modelo")
+
+        df_emb = pd.DataFrame([
+            {
+                "Modelo": r["nombre"],
+                "Descripción": r["descripcion"],
+                "Precision@K": r["precision_media"],
+                "Hit@1": r["hit_at_1_ratio"],
+                "MRR": r["mrr_medio"],
+                "Tiempo indexación (s)": r["tiempo_s"],
+            }
+            for r in res_emb
+        ])
+
+        def highlight_actual_emb(row):
+            if "actual" in row["Modelo"]:
+                return ["background-color: #d4edda"] * len(row)
+            return [""] * len(row)
+
+        st.dataframe(
+            df_emb.style.apply(highlight_actual_emb, axis=1),
+            use_container_width=True, hide_index=True
+        )
+
+        st.bar_chart(df_emb.set_index("Modelo")[["Precision@K", "Hit@1", "MRR"]])
+
+        st.subheader("Detalle por perfil — modelo actual")
+        modelo_actual = next((r for r in res_emb if "actual" in r["nombre"]), None)
+        if modelo_actual:
+            for p in modelo_actual["perfiles"]:
+                prec  = p["precision_at_k"]
+                icono = "🟢" if prec >= 0.8 else "🟡" if prec >= 0.5 else "🔴"
+                with st.expander(
+                    f"{icono} {p['descripcion']} — "
+                    f"P@K={prec:.0%}  MRR={p['mrr']:.2f}  Hit@1={'✓' if p['hit_at_1'] else '✗'}"
+                ):
+                    c1, c2 = st.columns(2)
+                    c1.markdown("**Esperados:**")
+                    for isin in p["esperados"]:
+                        c1.markdown(f"- `{isin}`")
+                    c2.markdown("**Obtenidos (top-5):**")
+                    for i, isin in enumerate(p["obtenidos"], 1):
+                        marca = "✅" if isin in p["esperados"] else "　"
                         c2.markdown(f"{i}. {marca} `{isin}`")

@@ -1,6 +1,5 @@
 """
-Página de evaluación de calidad de extracción (Evaluador 1).
-Muestra los resultados del golden dataset comparados contra la BD.
+Página de evaluación — Evaluador 1 (extracción) y Evaluador 2 (recomendación).
 """
 
 import json
@@ -8,136 +7,184 @@ import subprocess
 import sys
 from pathlib import Path
 
+import pandas as pd
 import streamlit as st
 
-GOLDEN_PATH    = Path("evaluation/golden_dataset_extraccion.json")
-RESULTADOS_PATH = Path("evaluation/resultados_extraccion.json")
-DB_PATH        = Path("database/funds.db")
+DB_PATH     = Path("database/funds.db")
+GOLDEN_EXT  = Path("evaluation/golden_dataset_extraccion.json")
+GOLDEN_REC  = Path("evaluation/golden_dataset_recomendacion.json")
+RES_EXT     = Path("evaluation/resultados_extraccion.json")
+RES_REC     = Path("evaluation/resultados_recomendacion.json")
 
-st.title("📊 Evaluación de Extracción")
-st.caption("Calidad de los datos extraídos por Gemini comparados contra los valores reales del PDF")
+st.title("📊 Evaluación del Sistema")
 
-# ── Comprobaciones previas ─────────────────────────────────────────────────────
+tab1, tab2 = st.tabs(["🔍 Evaluador 1 — Extracción", "🎯 Evaluador 2 — Recomendación"])
 
-if not GOLDEN_PATH.exists():
-    st.error("No se encontró el golden dataset (`evaluation/golden_dataset_extraccion.json`).")
-    st.stop()
 
-if not DB_PATH.exists():
-    st.error("No se encontró la base de datos (`database/funds.db`).")
-    st.stop()
+# ══════════════════════════════════════════════════════════════════════════════
+# EVALUADOR 1 — Calidad de extracción
+# ══════════════════════════════════════════════════════════════════════════════
 
-# ── Botón para ejecutar el evaluador ─────────────────────────────────────────
+with tab1:
+    st.subheader("Calidad de extracción de datos")
+    st.caption("Compara los campos extraídos por Gemini contra los valores reales del PDF (golden dataset)")
 
-col1, col2 = st.columns([2, 1])
-with col1:
-    st.info("Ejecuta el evaluador para comparar los datos extraídos contra el golden dataset.")
-with col2:
-    if st.button("▶ Ejecutar evaluador", use_container_width=True):
-        with st.spinner("Evaluando..."):
-            result = subprocess.run(
-                [sys.executable, "-m", "evaluation.evaluador_extraccion"],
-                capture_output=True, text=True
-            )
-        if result.returncode == 0:
-            st.success("Evaluación completada.")
-        else:
-            st.error(f"Error: {result.stderr}")
+    col1, col2 = st.columns([3, 1])
+    with col1:
+        st.info("Rellena `evaluation/golden_dataset_extraccion.json` con los valores reales de los PDFs y ejecuta el evaluador.")
+    with col2:
+        if st.button("▶ Ejecutar", key="run_ext", use_container_width=True):
+            with st.spinner("Evaluando extracción..."):
+                result = subprocess.run(
+                    [sys.executable, "-m", "evaluation.evaluador_extraccion"],
+                    capture_output=True, text=True
+                )
+            if result.returncode == 0:
+                st.success("Completado.")
+                st.rerun()
+            else:
+                st.error(result.stderr[-500:])
 
-# ── Cargar resultados ──────────────────────────────────────────────────────────
+    if not RES_EXT.exists():
+        st.warning("Sin resultados aún. Ejecuta el evaluador.")
+        st.stop()
 
-if not RESULTADOS_PATH.exists():
-    st.warning("Aún no hay resultados. Ejecuta el evaluador primero.")
-    st.stop()
+    with open(RES_EXT, encoding="utf-8") as f:
+        res_ext = json.load(f)
 
-with open(RESULTADOS_PATH, encoding="utf-8") as f:
-    resultados = json.load(f)
+    fondos_eval = [r for r in res_ext if r["total"] > 0]
+    if not fondos_eval:
+        st.warning("El golden dataset tiene todos los campos en `null`. Rellénalo y vuelve a ejecutar.")
+    else:
+        total  = sum(r["total"] for r in fondos_eval)
+        ok     = sum(r["correctos"] for r in fondos_eval)
+        prec   = ok / total if total > 0 else 0
 
-fondos_evaluados = [r for r in resultados if r["total"] > 0]
+        c1, c2, c3 = st.columns(3)
+        c1.metric("Fondos evaluados", len(fondos_eval))
+        c2.metric("Campos evaluados", total)
+        c3.metric("Precisión global", f"{prec:.0%}")
 
-if not fondos_evaluados:
-    st.warning(
-        "El golden dataset tiene todos los campos en `null`. "
-        "Rellena los valores reales en `evaluation/golden_dataset_extraccion.json` y vuelve a ejecutar."
+        st.subheader("Precisión por fondo")
+        df_f = pd.DataFrame([
+            {"Fondo": r["nombre_fondo"], "ISIN": r["isin"],
+             "Correctos": r["correctos"], "Total": r["total"],
+             "Precisión": r["precision"]}
+            for r in fondos_eval
+        ]).sort_values("Precisión")
+        st.dataframe(df_f, use_container_width=True, hide_index=True)
+
+        st.subheader("Precisión por campo")
+        conteo: dict[str, dict] = {}
+        for r in fondos_eval:
+            for c in r["campos"]:
+                if c["esperado"] is None:
+                    continue
+                campo = c["campo"]
+                if campo not in conteo:
+                    conteo[campo] = {"ok": 0, "total": 0}
+                conteo[campo]["total"] += 1
+                if c["correcto"]:
+                    conteo[campo]["ok"] += 1
+
+        df_c = pd.DataFrame([
+            {"Campo": k, "Precisión": round(v["ok"] / v["total"], 2),
+             "Correctos": v["ok"], "Total": v["total"]}
+            for k, v in conteo.items()
+        ]).sort_values("Precisión")
+
+        st.bar_chart(df_c.set_index("Campo")["Precisión"])
+
+        st.subheader("Detalle por fondo")
+        for r in fondos_eval:
+            campos = [c for c in r["campos"] if c["esperado"] is not None]
+            prec_f = r["precision"]
+            icono  = "🟢" if prec_f >= 0.8 else "🟡" if prec_f >= 0.5 else "🔴"
+            with st.expander(f"{icono} {r['nombre_fondo']} — {prec_f:.0%}"):
+                for c in campos:
+                    mark = "✅" if c["correcto"] else "❌"
+                    st.markdown(
+                        f"{mark} **{c['campo']}** — "
+                        f"esperado: `{c['esperado']}` | "
+                        f"obtenido: `{c['obtenido']}` | _{c['motivo']}_"
+                    )
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# EVALUADOR 2 — Calidad de recomendación
+# ══════════════════════════════════════════════════════════════════════════════
+
+with tab2:
+    st.subheader("Calidad de recomendación")
+    st.caption("Mide si el sistema recomienda los fondos correctos para perfiles conocidos y compara configuraciones de pesos")
+
+    col1, col2 = st.columns([3, 1])
+    with col1:
+        st.info("Compara 6 configuraciones de pesos coseno/semántico para justificar la ponderación 60/40.")
+    with col2:
+        if st.button("▶ Ejecutar", key="run_rec", use_container_width=True):
+            with st.spinner("Evaluando recomendaciones..."):
+                result = subprocess.run(
+                    [sys.executable, "-m", "evaluation.evaluador_recomendacion"],
+                    capture_output=True, text=True
+                )
+            if result.returncode == 0:
+                st.success("Completado.")
+                st.rerun()
+            else:
+                st.error(result.stderr[-500:])
+
+    if not RES_REC.exists():
+        st.warning("Sin resultados aún. Ejecuta el evaluador.")
+        st.stop()
+
+    with open(RES_REC, encoding="utf-8") as f:
+        res_rec = json.load(f)
+
+    # ── Tabla comparativa de configuraciones ──────────────────────────────────
+
+    st.subheader("Comparativa de configuraciones de pesos")
+
+    df_config = pd.DataFrame([
+        {
+            "Configuración": r["configuracion"],
+            "Coseno": f"{r['coseno']:.0%}",
+            "Semántico": f"{r['semantico']:.0%}",
+            "Precision@K": r["precision_media"],
+            "Hit@1": r["hit_at_1_ratio"],
+            "MRR": r["mrr_medio"],
+        }
+        for r in res_rec
+    ])
+
+    # Destacar la configuración actual
+    def highlight_actual(row):
+        if row["Configuración"] == "60/40 (actual)":
+            return ["background-color: #d4edda"] * len(row)
+        return [""] * len(row)
+
+    st.dataframe(
+        df_config.style.apply(highlight_actual, axis=1),
+        use_container_width=True, hide_index=True
     )
-    st.stop()
 
-# ── Métricas globales ─────────────────────────────────────────────────────────
+    st.bar_chart(df_config.set_index("Configuración")[["Precision@K", "Hit@1", "MRR"]])
 
-total_campos  = sum(r["total"] for r in fondos_evaluados)
-campos_ok     = sum(r["correctos"] for r in fondos_evaluados)
-precision_global = campos_ok / total_campos if total_campos > 0 else 0.0
+    # ── Detalle por perfil (configuración actual) ──────────────────────────────
 
-st.divider()
-c1, c2, c3 = st.columns(3)
-c1.metric("Fondos evaluados",  len(fondos_evaluados))
-c2.metric("Campos evaluados",  total_campos)
-c3.metric("Precisión global",  f"{precision_global:.0%}")
+    st.subheader("Detalle por perfil — configuración 60/40")
 
-# ── Precisión por fondo ───────────────────────────────────────────────────────
-
-st.subheader("Precisión por fondo")
-
-import pandas as pd
-
-df_fondos = pd.DataFrame([
-    {
-        "Fondo": r["nombre_fondo"],
-        "ISIN": r["isin"],
-        "Correctos": r["correctos"],
-        "Total": r["total"],
-        "Precisión": f"{r['precision']:.0%}",
-    }
-    for r in fondos_evaluados
-]).sort_values("Precisión", ascending=True)
-
-st.dataframe(df_fondos, use_container_width=True, hide_index=True)
-
-# ── Precisión por campo ───────────────────────────────────────────────────────
-
-st.subheader("Precisión por campo")
-
-conteo: dict[str, dict] = {}
-for r in fondos_evaluados:
-    for c in r["campos"]:
-        campo = c["campo"]
-        if campo not in conteo:
-            conteo[campo] = {"ok": 0, "total": 0}
-        conteo[campo]["total"] += 1
-        if c["correcto"]:
-            conteo[campo]["ok"] += 1
-
-df_campos = pd.DataFrame([
-    {
-        "Campo": campo,
-        "Correctos": v["ok"],
-        "Total": v["total"],
-        "Precisión": round(v["ok"] / v["total"], 2),
-    }
-    for campo, v in conteo.items()
-]).sort_values("Precisión", ascending=True)
-
-st.bar_chart(df_campos.set_index("Campo")["Precisión"])
-st.dataframe(df_campos, use_container_width=True, hide_index=True)
-
-# ── Detalle por fondo ─────────────────────────────────────────────────────────
-
-st.subheader("Detalle por fondo")
-
-for r in resultados:
-    campos_con_valor = [c for c in r["campos"] if c["esperado"] is not None]
-    if not campos_con_valor:
-        continue
-
-    precision = r["precision"]
-    color = "🟢" if precision >= 0.8 else "🟡" if precision >= 0.5 else "🔴"
-
-    with st.expander(f"{color} {r['nombre_fondo']} — {precision:.0%}"):
-        for c in campos_con_valor:
-            icono = "✅" if c["correcto"] else "❌"
-            st.markdown(
-                f"{icono} **{c['campo']}** — "
-                f"esperado: `{c['esperado']}` | "
-                f"obtenido: `{c['obtenido']}` | "
-                f"_{c['motivo']}_"
-            )
+    config_actual = next((r for r in res_rec if r["configuracion"] == "60/40 (actual)"), None)
+    if config_actual:
+        for p in config_actual["perfiles"]:
+            prec  = p["precision_at_k"]
+            icono = "🟢" if prec >= 0.8 else "🟡" if prec >= 0.5 else "🔴"
+            with st.expander(f"{icono} {p['descripcion']} — P@K={prec:.0%}  MRR={p['mrr']:.2f}  Hit@1={'✓' if p['hit_at_1'] else '✗'}"):
+                c1, c2 = st.columns(2)
+                c1.markdown("**Esperados:**")
+                for isin in p["fondos_esperados"]:
+                    c1.markdown(f"- `{isin}`")
+                c2.markdown("**Obtenidos (top-5):**")
+                for i, isin in enumerate(p["fondos_obtenidos"], 1):
+                    marca = "✅" if isin in p["fondos_esperados"] else "  "
+                    c2.markdown(f"{i}. {marca} `{isin}`")

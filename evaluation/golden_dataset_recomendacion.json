@@ -1,0 +1,92 @@
+[
+  {
+    "id": "perfil_conservador_corto",
+    "descripcion": "Inversor muy conservador, capital bajo, horizonte corto, alta liquidez",
+    "respuestas": {
+      "capital":    "10000 euros",
+      "horizonte":  "1 año",
+      "riesgo":     "me preocuparía mucho y retiraría el dinero, quiero proteger mis ahorros",
+      "liquidez":   "necesito poder retirarlo cuando quiera",
+      "tematica":   "no tengo preferencia geográfica ni sectorial",
+      "estrategia": "gestión activa, no me importa la sostenibilidad"
+    },
+    "fondos_esperados": ["ES0108283005", "ES0156873004"],
+    "fondo_top1_esperado": "ES0108283005",
+    "justificacion": "Riesgo 1-2, horizonte 1 año, sin restricciones de liquidez"
+  },
+  {
+    "id": "perfil_moderado_medio_plazo",
+    "descripcion": "Inversor moderado, horizonte 3 años, sin preferencia de gestión",
+    "respuestas": {
+      "capital":    "15000 euros",
+      "horizonte":  "3 años",
+      "riesgo":     "lo mantendría y esperaría a que el mercado se recupere",
+      "liquidez":   "podría bloquearlo 6 meses si fuera necesario",
+      "tematica":   "no tengo preferencia",
+      "estrategia": "me da igual activa o pasiva"
+    },
+    "fondos_esperados": ["ES0108164007", "ES0108373004", "ES0105812004", "ES0109191009"],
+    "fondo_top1_esperado": "ES0108164007",
+    "justificacion": "Riesgo 2-3, horizonte 3 años, gestión indiferente"
+  },
+  {
+    "id": "perfil_moderado_esg",
+    "descripcion": "Inversor moderado con sensibilidad ESG, horizonte 5 años",
+    "respuestas": {
+      "capital":    "10000 euros",
+      "horizonte":  "5 años",
+      "riesgo":     "lo mantendría, busco crecimiento moderado",
+      "liquidez":   "no me importa bloquearlo si la rentabilidad es buena",
+      "tematica":   "me interesan fondos sostenibles y responsables",
+      "estrategia": "activa, y sí quiero que sea sostenible ESG"
+    },
+    "fondos_esperados": ["ES0105011037", "ES0109652034"],
+    "fondo_top1_esperado": "ES0105011037",
+    "justificacion": "Riesgo 3, horizonte 5 años, ESG=true, gestión activa"
+  },
+  {
+    "id": "perfil_agresivo_pasivo",
+    "descripcion": "Inversor agresivo que prefiere gestión pasiva y bajo coste",
+    "respuestas": {
+      "capital":    "10000 euros",
+      "horizonte":  "más de 5 años",
+      "riesgo":     "lo vería como una oportunidad para invertir más, maximizar rentabilidad",
+      "liquidez":   "no me importa bloquearlo años si la rentabilidad es buena",
+      "tematica":   "Europa, mercados desarrollados",
+      "estrategia": "gestión pasiva, prefiero ETF con menos comisiones"
+    },
+    "fondos_esperados": ["ES0105321030", "ES0105336038", "ES0162956009"],
+    "fondo_top1_esperado": "ES0105321030",
+    "justificacion": "Riesgo 4+, gestión pasiva, Europa"
+  },
+  {
+    "id": "perfil_agresivo_esg",
+    "descripcion": "Inversor decidido con alta sensibilidad ESG, largo plazo",
+    "respuestas": {
+      "capital":    "20000 euros",
+      "horizonte":  "más de 5 años",
+      "riesgo":     "invertiría más, soy agresivo y quiero maximizar rentabilidad",
+      "liquidez":   "no necesito liquidez, largo plazo",
+      "tematica":   "sostenibilidad, inversión responsable, criterios ESG",
+      "estrategia": "activa, y es muy importante que sea sostenible y ético"
+    },
+    "fondos_esperados": ["ES0105263000", "ES0157934003"],
+    "fondo_top1_esperado": "ES0105263000",
+    "justificacion": "Riesgo 4, ESG=true, gestión activa, largo plazo"
+  },
+  {
+    "id": "perfil_muy_agresivo",
+    "descripcion": "Inversor muy agresivo, sin restricciones, largo plazo",
+    "respuestas": {
+      "capital":    "50000 euros",
+      "horizonte":  "largo plazo",
+      "riesgo":     "invertiría más, soy muy decidido y quiero maximizar rentabilidad",
+      "liquidez":   "no me importa en absoluto bloquear el dinero",
+      "tematica":   "global, sin preferencia sectorial",
+      "estrategia": "activa, no me importa la sostenibilidad"
+    },
+    "fondos_esperados": ["V86467461", "ES0111089001"],
+    "fondo_top1_esperado": "V86467461",
+    "justificacion": "Riesgo 6, horizonte largo, sin restricciones"
+  }
+]

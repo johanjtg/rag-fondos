@@ -25,7 +25,5 @@ python-dotenv>=1.0.0
 numpy>=1.26.0
 scikit-learn>=1.4.0
 
-# Evaluation
-ragas>=0.2.0
 
 # sqlite3 is part of Python stdlib — no pip install needed

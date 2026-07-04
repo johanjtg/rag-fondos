@@ -26,7 +26,7 @@ scoring/
 chatbot/conversation.py     →  6 preguntas de perfilado → top-5 fondos recomendados
     │
     ▼
-evaluation/ragas_eval.py    →  métricas RAGAS (faithfulness, answer relevancy, context precision)
+evaluation/                 →  evaluadores de extracción, recomendación y modelos de embedding
 ```
 
 ---
@@ -121,12 +121,6 @@ python scripts/inspect_data.py --nulls
 
 # Búsqueda semántica en ChromaDB
 python scripts/inspect_data.py --chroma "tecnología americana"
-```
-
-#### 5. Ejecutar evaluación RAGAS
-
-```bash
-python -m evaluation.ragas_eval
 ```
 
 ---

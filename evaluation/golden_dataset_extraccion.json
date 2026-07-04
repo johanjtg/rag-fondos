@@ -1,0 +1,162 @@
+[
+  {
+    "isin": "ES0156873004",
+    "nombre_fondo": "A&G RENTA FIJA CORTO PLAZO. FI",
+    "descripcion_caso": "Fondo con campos bien extraídos, riesgo bajo, gestión activa",
+    "esperado": {
+      "nivel_riesgo": null,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": null,
+      "comision_suscripcion": null,
+      "comision_reembolso": null,
+      "esg": null,
+      "tipo_gestion": null,
+      "importe_minimo_inversion": null,
+      "politica_inversion_contiene": []
+    }
+  },
+  {
+    "isin": "ES0162956009",
+    "nombre_fondo": "ABANCA INDICE RENTA VARIABLE EMERGENTE, FI",
+    "descripcion_caso": "Fondo de gestión pasiva, ESG negativo, comisión baja",
+    "esperado": {
+      "nivel_riesgo": null,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": null,
+      "comision_suscripcion": null,
+      "comision_reembolso": null,
+      "esg": null,
+      "tipo_gestion": null,
+      "importe_minimo_inversion": null,
+      "politica_inversion_contiene": []
+    }
+  },
+  {
+    "isin": "ES0105321030",
+    "nombre_fondo": "ACCIÓN EUROSTOXX 50 ETF, FI COTIZADO ARMONIZADO",
+    "descripcion_caso": "ETF de gestión pasiva, referenciado a índice",
+    "esperado": {
+      "nivel_riesgo": null,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": null,
+      "comision_suscripcion": null,
+      "comision_reembolso": null,
+      "esg": null,
+      "tipo_gestion": null,
+      "importe_minimo_inversion": null,
+      "politica_inversion_contiene": []
+    }
+  },
+  {
+    "isin": "ES0108283005",
+    "nombre_fondo": "ALLIANZ RENDIMIENTO, FI",
+    "descripcion_caso": "Riesgo mínimo (nivel 1), horizonte corto",
+    "esperado": {
+      "nivel_riesgo": null,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": null,
+      "comision_suscripcion": null,
+      "comision_reembolso": null,
+      "esg": null,
+      "tipo_gestion": null,
+      "importe_minimo_inversion": null,
+      "politica_inversion_contiene": []
+    }
+  },
+  {
+    "isin": "V86467461",
+    "nombre_fondo": "ABACO RENTA FIJA MIXTA GLOBAL, FI",
+    "descripcion_caso": "Riesgo alto (nivel 6), gestión activa global",
+    "esperado": {
+      "nivel_riesgo": null,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": null,
+      "comision_suscripcion": null,
+      "comision_reembolso": null,
+      "esg": null,
+      "tipo_gestion": null,
+      "importe_minimo_inversion": null,
+      "politica_inversion_contiene": []
+    }
+  },
+  {
+    "isin": "ES0105011037",
+    "nombre_fondo": "ABANTE BOLSA, FI",
+    "descripcion_caso": "ESG positivo, gestión activa, riesgo medio",
+    "esperado": {
+      "nivel_riesgo": null,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": null,
+      "comision_suscripcion": null,
+      "comision_reembolso": null,
+      "esg": null,
+      "tipo_gestion": null,
+      "importe_minimo_inversion": null,
+      "politica_inversion_contiene": []
+    }
+  },
+  {
+    "isin": "ES0105263000",
+    "nombre_fondo": "ACACIA PREMIUM FI",
+    "descripcion_caso": "ESG positivo, riesgo medio-alto",
+    "esperado": {
+      "nivel_riesgo": null,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": null,
+      "comision_suscripcion": null,
+      "comision_reembolso": null,
+      "esg": null,
+      "tipo_gestion": null,
+      "importe_minimo_inversion": null,
+      "politica_inversion_contiene": []
+    }
+  },
+  {
+    "isin": "ES0124524002",
+    "nombre_fondo": "ABANCA RENTA FIJA GOBIERNOS, FI",
+    "descripcion_caso": "Caso con campos null en BD — validar si Gemini falló o el PDF no los tenía",
+    "esperado": {
+      "nivel_riesgo": null,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": null,
+      "comision_suscripcion": null,
+      "comision_reembolso": null,
+      "esg": null,
+      "tipo_gestion": null,
+      "importe_minimo_inversion": null,
+      "politica_inversion_contiene": []
+    }
+  },
+  {
+    "isin": "ES0111089001",
+    "nombre_fondo": "ATMOS GLOBAL, FI",
+    "descripcion_caso": "Comisión alta (1.49%), ESG desconocido en BD",
+    "esperado": {
+      "nivel_riesgo": null,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": null,
+      "comision_suscripcion": null,
+      "comision_reembolso": null,
+      "esg": null,
+      "tipo_gestion": null,
+      "importe_minimo_inversion": null,
+      "politica_inversion_contiene": []
+    }
+  },
+  {
+    "isin": "ES0109656001",
+    "nombre_fondo": "ABANDO EQUITIES, FI",
+    "descripcion_caso": "Comisión de gestión alta (1.48%), horizonte largo",
+    "esperado": {
+      "nivel_riesgo": null,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": null,
+      "comision_suscripcion": null,
+      "comision_reembolso": null,
+      "esg": null,
+      "tipo_gestion": null,
+      "importe_minimo_inversion": null,
+      "politica_inversion_contiene": []
+    }
+  }
+]

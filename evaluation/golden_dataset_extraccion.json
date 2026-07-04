@@ -66,17 +66,17 @@
   {
     "isin": "V86467461",
     "nombre_fondo": "ABACO RENTA FIJA MIXTA GLOBAL, FI",
-    "descripcion_caso": "Riesgo alto (nivel 6), gestión activa global",
+    "descripcion_caso": "Fondo multi-clase (I/R/C) sin ISIN único; el PDF asociado al NIF era el Reglamento de Gestión, no el DFI real (mismo bug del scraper vista=2/3) — DFI real recuperado desde la vista de clases de CNMV. Riesgo real 3 (no 6 como figuraba en BD), comisión de gestión varía por clase (I 0,86% / R 1,06% / C 1,51%)",
     "esperado": {
-      "nivel_riesgo": null,
-      "horizonte_recomendado_anios": null,
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 3,
       "comision_gestion": null,
-      "comision_suscripcion": null,
-      "comision_reembolso": null,
-      "esg": null,
-      "tipo_gestion": null,
+      "comision_suscripcion": 0,
+      "comision_reembolso": 0,
+      "esg": false,
+      "tipo_gestion": "activa",
       "importe_minimo_inversion": null,
-      "politica_inversion_contiene": []
+      "politica_inversion_contiene": ["renta fija mixta internacional", "gestión activa", "IIC financieras", "instrumentos financieros derivados", "máxima rentabilidad a largo plazo"]
     }
   },
   {
@@ -84,15 +84,15 @@
     "nombre_fondo": "ABANTE BOLSA, FI",
     "descripcion_caso": "ESG positivo, gestión activa, riesgo medio",
     "esperado": {
-      "nivel_riesgo": null,
-      "horizonte_recomendado_anios": null,
-      "comision_gestion": null,
-      "comision_suscripcion": null,
-      "comision_reembolso": null,
-      "esg": null,
-      "tipo_gestion": null,
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 1.91,
+      "comision_suscripcion": 0,
+      "comision_reembolso": 0,
+      "esg": true,
+      "tipo_gestion": "activa",
       "importe_minimo_inversion": null,
-      "politica_inversion_contiene": []
+      "politica_inversion_contiene": ["fondo de fondos", "renta variable mixta internacional", "IIC armonizadas", "MSCI World Net Total Return Index", "características medioambientales o sociales"]
     }
   },
   {
@@ -100,15 +100,15 @@
     "nombre_fondo": "ACACIA PREMIUM FI",
     "descripcion_caso": "ESG positivo, riesgo medio-alto",
     "esperado": {
-      "nivel_riesgo": null,
-      "horizonte_recomendado_anios": null,
-      "comision_gestion": null,
-      "comision_suscripcion": null,
-      "comision_reembolso": null,
-      "esg": null,
-      "tipo_gestion": null,
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 4,
+      "comision_gestion": 1.68,
+      "comision_suscripcion": 0,
+      "comision_reembolso": 0,
+      "esg": true,
+      "tipo_gestion": "activa",
       "importe_minimo_inversion": null,
-      "politica_inversion_contiene": []
+      "politica_inversion_contiene": ["renta variable internacional", "OCDE", "IIC financieras", "MSCI World Net Total Return EUR Index", "características medioambientales o sociales"]
     }
   },
   {
@@ -116,31 +116,31 @@
     "nombre_fondo": "ABANCA RENTA FIJA GOBIERNOS, FI",
     "descripcion_caso": "Caso con campos null en BD — validar si Gemini falló o el PDF no los tenía",
     "esperado": {
-      "nivel_riesgo": null,
-      "horizonte_recomendado_anios": null,
-      "comision_gestion": null,
-      "comision_suscripcion": null,
-      "comision_reembolso": null,
-      "esg": null,
-      "tipo_gestion": null,
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 0.23,
+      "comision_suscripcion": 0,
+      "comision_reembolso": 0,
+      "esg": true,
+      "tipo_gestion": "activa",
       "importe_minimo_inversion": null,
-      "politica_inversion_contiene": []
+      "politica_inversion_contiene": ["renta fija euro", "Deuda Pública de Gobiernos", "bonos verdes, sociales y sostenibles", "BLOOMBERG EURO GOVERMENT BOND", "criterios ASG"]
     }
   },
   {
     "isin": "ES0111089001",
     "nombre_fondo": "ATMOS GLOBAL, FI",
-    "descripcion_caso": "Comisión alta (1.49%), ESG desconocido en BD",
+    "descripcion_caso": "Comisión alta (1.49%), ESG desconocido en BD — PDF no estaba en disco, redescargado desde CNMV con la URL del manifest",
     "esperado": {
-      "nivel_riesgo": null,
-      "horizonte_recomendado_anios": null,
-      "comision_gestion": null,
-      "comision_suscripcion": null,
-      "comision_reembolso": null,
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 1.49,
+      "comision_suscripcion": 0,
+      "comision_reembolso": 0,
       "esg": null,
-      "tipo_gestion": null,
+      "tipo_gestion": "activa",
       "importe_minimo_inversion": null,
-      "politica_inversion_contiene": []
+      "politica_inversion_contiene": ["renta variable y renta fija", "gestión activa y flexible", "IIC financieras", "alta rotación de la cartera"]
     }
   },
   {
@@ -148,15 +148,15 @@
     "nombre_fondo": "ABANDO EQUITIES, FI",
     "descripcion_caso": "Comisión de gestión alta (1.48%), horizonte largo",
     "esperado": {
-      "nivel_riesgo": null,
-      "horizonte_recomendado_anios": null,
-      "comision_gestion": null,
-      "comision_suscripcion": null,
-      "comision_reembolso": null,
-      "esg": null,
-      "tipo_gestion": null,
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 1.48,
+      "comision_suscripcion": 0,
+      "comision_reembolso": 0,
+      "esg": false,
+      "tipo_gestion": "activa",
       "importe_minimo_inversion": null,
-      "politica_inversion_contiene": []
+      "politica_inversion_contiene": ["renta variable", "OCDE", "IIC financieras", "alta rotación de la cartera", "categoría Global"]
     }
   }
 ]

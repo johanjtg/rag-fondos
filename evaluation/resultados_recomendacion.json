@@ -4,16 +4,16 @@
     "coseno": 0.6,
     "semantico": 0.4,
     "precision_media": 1.0,
-    "mrr_medio": 0.9167,
-    "hit_at_1_ratio": 0.3333,
+    "mrr_medio": 1.0,
+    "hit_at_1_ratio": 1.0,
     "perfiles": [
       {
         "id": "perfil_conservador_corto",
         "descripcion": "Inversor muy conservador, capital bajo, horizonte corto, alta liquidez",
         "fondos_esperados": [
+          "ES0119376012",
           "ES0111166031",
           "ES0190051039",
-          "ES0119376012",
           "ES0108203003"
         ],
         "fondos_obtenidos": [
@@ -23,13 +23,14 @@
           "ES0108203003"
         ],
         "precision_at_k": 1.0,
-        "hit_at_1": false,
+        "hit_at_1": true,
         "mrr": 1.0
       },
       {
         "id": "perfil_moderado_medio_plazo",
         "descripcion": "Inversor moderado, horizonte 3 años, sin preferencia de gestión",
         "fondos_esperados": [
+          "ES0182798019",
           "ES0111127009",
           "ES0108232002",
           "ES0111128007",
@@ -43,17 +44,17 @@
           "ES0110196005"
         ],
         "precision_at_k": 1.0,
-        "hit_at_1": false,
-        "mrr": 0.5
+        "hit_at_1": true,
+        "mrr": 1.0
       },
       {
         "id": "perfil_moderado_esg",
         "descripcion": "Inversor moderado con sensibilidad ESG, horizonte 5 años",
         "fondos_esperados": [
+          "ES0106949003",
           "ES0124524002",
           "ES0105207007",
           "ES0105263000",
-          "ES0106949003",
           "ES0109266009"
         ],
         "fondos_obtenidos": [
@@ -64,7 +65,7 @@
           "ES0105207007"
         ],
         "precision_at_k": 1.0,
-        "hit_at_1": false,
+        "hit_at_1": true,
         "mrr": 1.0
       },
       {
@@ -109,11 +110,11 @@
         "id": "perfil_muy_agresivo",
         "descripcion": "Inversor muy agresivo, sin restricciones, largo plazo",
         "fondos_esperados": [
-          "ES0105959003",
           "ES0162957007",
           "ES0119377002",
           "ES0176409003",
-          "ES0152505006"
+          "ES0152505006",
+          "ES0105959003"
         ],
         "fondos_obtenidos": [
           "ES0162957007",
@@ -123,7 +124,7 @@
           "ES0105959003"
         ],
         "precision_at_k": 1.0,
-        "hit_at_1": false,
+        "hit_at_1": true,
         "mrr": 1.0
       }
     ]
@@ -133,16 +134,16 @@
     "coseno": 0.7,
     "semantico": 0.3,
     "precision_media": 0.9333,
-    "mrr_medio": 0.9167,
-    "hit_at_1_ratio": 0.3333,
+    "mrr_medio": 1.0,
+    "hit_at_1_ratio": 0.8333,
     "perfiles": [
       {
         "id": "perfil_conservador_corto",
         "descripcion": "Inversor muy conservador, capital bajo, horizonte corto, alta liquidez",
         "fondos_esperados": [
+          "ES0119376012",
           "ES0111166031",
           "ES0190051039",
-          "ES0119376012",
           "ES0108203003"
         ],
         "fondos_obtenidos": [
@@ -152,13 +153,14 @@
           "ES0108203003"
         ],
         "precision_at_k": 1.0,
-        "hit_at_1": false,
+        "hit_at_1": true,
         "mrr": 1.0
       },
       {
         "id": "perfil_moderado_medio_plazo",
         "descripcion": "Inversor moderado, horizonte 3 años, sin preferencia de gestión",
         "fondos_esperados": [
+          "ES0182798019",
           "ES0111127009",
           "ES0108232002",
           "ES0111128007",
@@ -172,17 +174,17 @@
           "ES0111128007"
         ],
         "precision_at_k": 1.0,
-        "hit_at_1": false,
-        "mrr": 0.5
+        "hit_at_1": true,
+        "mrr": 1.0
       },
       {
         "id": "perfil_moderado_esg",
         "descripcion": "Inversor moderado con sensibilidad ESG, horizonte 5 años",
         "fondos_esperados": [
+          "ES0106949003",
           "ES0124524002",
           "ES0105207007",
           "ES0105263000",
-          "ES0106949003",
           "ES0109266009"
         ],
         "fondos_obtenidos": [
@@ -238,11 +240,11 @@
         "id": "perfil_muy_agresivo",
         "descripcion": "Inversor muy agresivo, sin restricciones, largo plazo",
         "fondos_esperados": [
-          "ES0105959003",
           "ES0162957007",
           "ES0119377002",
           "ES0176409003",
-          "ES0152505006"
+          "ES0152505006",
+          "ES0105959003"
         ],
         "fondos_obtenidos": [
           "ES0162957007",
@@ -252,7 +254,7 @@
           "ES0147714002"
         ],
         "precision_at_k": 0.8,
-        "hit_at_1": false,
+        "hit_at_1": true,
         "mrr": 1.0
       }
     ]
@@ -269,9 +271,9 @@
         "id": "perfil_conservador_corto",
         "descripcion": "Inversor muy conservador, capital bajo, horizonte corto, alta liquidez",
         "fondos_esperados": [
+          "ES0119376012",
           "ES0111166031",
           "ES0190051039",
-          "ES0119376012",
           "ES0108203003"
         ],
         "fondos_obtenidos": [
@@ -281,13 +283,14 @@
           "ES0108203003"
         ],
         "precision_at_k": 1.0,
-        "hit_at_1": false,
+        "hit_at_1": true,
         "mrr": 1.0
       },
       {
         "id": "perfil_moderado_medio_plazo",
         "descripcion": "Inversor moderado, horizonte 3 años, sin preferencia de gestión",
         "fondos_esperados": [
+          "ES0182798019",
           "ES0111127009",
           "ES0108232002",
           "ES0111128007",
@@ -301,17 +304,17 @@
           "ES0110196005"
         ],
         "precision_at_k": 1.0,
-        "hit_at_1": true,
+        "hit_at_1": false,
         "mrr": 1.0
       },
       {
         "id": "perfil_moderado_esg",
         "descripcion": "Inversor moderado con sensibilidad ESG, horizonte 5 años",
         "fondos_esperados": [
+          "ES0106949003",
           "ES0124524002",
           "ES0105207007",
           "ES0105263000",
-          "ES0106949003",
           "ES0109266009"
         ],
         "fondos_obtenidos": [
@@ -322,7 +325,7 @@
           "ES0109266009"
         ],
         "precision_at_k": 0.8,
-        "hit_at_1": true,
+        "hit_at_1": false,
         "mrr": 1.0
       },
       {
@@ -367,11 +370,11 @@
         "id": "perfil_muy_agresivo",
         "descripcion": "Inversor muy agresivo, sin restricciones, largo plazo",
         "fondos_esperados": [
-          "ES0105959003",
           "ES0162957007",
           "ES0119377002",
           "ES0176409003",
-          "ES0152505006"
+          "ES0152505006",
+          "ES0105959003"
         ],
         "fondos_obtenidos": [
           "ES0162957007",
@@ -381,7 +384,7 @@
           "ES0152505006"
         ],
         "precision_at_k": 1.0,
-        "hit_at_1": false,
+        "hit_at_1": true,
         "mrr": 1.0
       }
     ]
@@ -391,16 +394,16 @@
     "coseno": 0.8,
     "semantico": 0.2,
     "precision_media": 0.9333,
-    "mrr_medio": 0.9167,
-    "hit_at_1_ratio": 0.5,
+    "mrr_medio": 1.0,
+    "hit_at_1_ratio": 0.6667,
     "perfiles": [
       {
         "id": "perfil_conservador_corto",
         "descripcion": "Inversor muy conservador, capital bajo, horizonte corto, alta liquidez",
         "fondos_esperados": [
+          "ES0119376012",
           "ES0111166031",
           "ES0190051039",
-          "ES0119376012",
           "ES0108203003"
         ],
         "fondos_obtenidos": [
@@ -410,13 +413,14 @@
           "ES0119376012"
         ],
         "precision_at_k": 1.0,
-        "hit_at_1": true,
+        "hit_at_1": false,
         "mrr": 1.0
       },
       {
         "id": "perfil_moderado_medio_plazo",
         "descripcion": "Inversor moderado, horizonte 3 años, sin preferencia de gestión",
         "fondos_esperados": [
+          "ES0182798019",
           "ES0111127009",
           "ES0108232002",
           "ES0111128007",
@@ -430,17 +434,17 @@
           "ES0111128007"
         ],
         "precision_at_k": 1.0,
-        "hit_at_1": false,
-        "mrr": 0.5
+        "hit_at_1": true,
+        "mrr": 1.0
       },
       {
         "id": "perfil_moderado_esg",
         "descripcion": "Inversor moderado con sensibilidad ESG, horizonte 5 años",
         "fondos_esperados": [
+          "ES0106949003",
           "ES0124524002",
           "ES0105207007",
           "ES0105263000",
-          "ES0106949003",
           "ES0109266009"
         ],
         "fondos_obtenidos": [
@@ -496,11 +500,11 @@
         "id": "perfil_muy_agresivo",
         "descripcion": "Inversor muy agresivo, sin restricciones, largo plazo",
         "fondos_esperados": [
-          "ES0105959003",
           "ES0162957007",
           "ES0119377002",
           "ES0176409003",
-          "ES0152505006"
+          "ES0152505006",
+          "ES0105959003"
         ],
         "fondos_obtenidos": [
           "ES0162957007",
@@ -510,7 +514,7 @@
           "ES0147714002"
         ],
         "precision_at_k": 0.8,
-        "hit_at_1": false,
+        "hit_at_1": true,
         "mrr": 1.0
       }
     ]
@@ -519,7 +523,7 @@
     "configuracion": "100/0",
     "coseno": 1.0,
     "semantico": 0.0,
-    "precision_media": 0.6528,
+    "precision_media": 0.6444,
     "mrr_medio": 0.6806,
     "hit_at_1_ratio": 0.3333,
     "perfiles": [
@@ -527,9 +531,9 @@
         "id": "perfil_conservador_corto",
         "descripcion": "Inversor muy conservador, capital bajo, horizonte corto, alta liquidez",
         "fondos_esperados": [
+          "ES0119376012",
           "ES0111166031",
           "ES0190051039",
-          "ES0119376012",
           "ES0108203003"
         ],
         "fondos_obtenidos": [
@@ -539,13 +543,14 @@
           "ES0119376012"
         ],
         "precision_at_k": 1.0,
-        "hit_at_1": true,
+        "hit_at_1": false,
         "mrr": 1.0
       },
       {
         "id": "perfil_moderado_medio_plazo",
         "descripcion": "Inversor moderado, horizonte 3 años, sin preferencia de gestión",
         "fondos_esperados": [
+          "ES0182798019",
           "ES0111127009",
           "ES0108232002",
           "ES0111128007",
@@ -558,7 +563,7 @@
           "ES0108240005",
           "ES0115418008"
         ],
-        "precision_at_k": 0.25,
+        "precision_at_k": 0.2,
         "hit_at_1": false,
         "mrr": 0.3333
       },
@@ -566,10 +571,10 @@
         "id": "perfil_moderado_esg",
         "descripcion": "Inversor moderado con sensibilidad ESG, horizonte 5 años",
         "fondos_esperados": [
+          "ES0106949003",
           "ES0124524002",
           "ES0105207007",
           "ES0105263000",
-          "ES0106949003",
           "ES0109266009"
         ],
         "fondos_obtenidos": [
@@ -625,11 +630,11 @@
         "id": "perfil_muy_agresivo",
         "descripcion": "Inversor muy agresivo, sin restricciones, largo plazo",
         "fondos_esperados": [
-          "ES0105959003",
           "ES0162957007",
           "ES0119377002",
           "ES0176409003",
-          "ES0152505006"
+          "ES0152505006",
+          "ES0105959003"
         ],
         "fondos_obtenidos": [
           "ES0162957007",
@@ -639,7 +644,7 @@
           "ES0110252006"
         ],
         "precision_at_k": 0.6,
-        "hit_at_1": false,
+        "hit_at_1": true,
         "mrr": 1.0
       }
     ]
@@ -648,17 +653,17 @@
     "configuracion": "0/100",
     "coseno": 0.0,
     "semantico": 1.0,
-    "precision_media": 0.4972,
+    "precision_media": 0.4889,
     "mrr_medio": 0.6389,
-    "hit_at_1_ratio": 0.1667,
+    "hit_at_1_ratio": 0.3333,
     "perfiles": [
       {
         "id": "perfil_conservador_corto",
         "descripcion": "Inversor muy conservador, capital bajo, horizonte corto, alta liquidez",
         "fondos_esperados": [
+          "ES0119376012",
           "ES0111166031",
           "ES0190051039",
-          "ES0119376012",
           "ES0108203003"
         ],
         "fondos_obtenidos": [
@@ -668,13 +673,14 @@
           "ES0190051039"
         ],
         "precision_at_k": 1.0,
-        "hit_at_1": false,
+        "hit_at_1": true,
         "mrr": 1.0
       },
       {
         "id": "perfil_moderado_medio_plazo",
         "descripcion": "Inversor moderado, horizonte 3 años, sin preferencia de gestión",
         "fondos_esperados": [
+          "ES0182798019",
           "ES0111127009",
           "ES0108232002",
           "ES0111128007",
@@ -687,7 +693,7 @@
           "ES0180709018",
           "ES0111167005"
         ],
-        "precision_at_k": 0.25,
+        "precision_at_k": 0.2,
         "hit_at_1": false,
         "mrr": 0.5
       },
@@ -695,10 +701,10 @@
         "id": "perfil_moderado_esg",
         "descripcion": "Inversor moderado con sensibilidad ESG, horizonte 5 años",
         "fondos_esperados": [
+          "ES0106949003",
           "ES0124524002",
           "ES0105207007",
           "ES0105263000",
-          "ES0106949003",
           "ES0109266009"
         ],
         "fondos_obtenidos": [
@@ -754,11 +760,11 @@
         "id": "perfil_muy_agresivo",
         "descripcion": "Inversor muy agresivo, sin restricciones, largo plazo",
         "fondos_esperados": [
-          "ES0105959003",
           "ES0162957007",
           "ES0119377002",
           "ES0176409003",
-          "ES0152505006"
+          "ES0152505006",
+          "ES0105959003"
         ],
         "fondos_obtenidos": [
           "ES0119376012",

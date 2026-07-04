@@ -52,15 +52,15 @@
     "nombre_fondo": "ALLIANZ RENDIMIENTO, FI",
     "descripcion_caso": "Riesgo mínimo (nivel 1), horizonte corto",
     "esperado": {
-      "nivel_riesgo": null,
-      "horizonte_recomendado_anios": null,
-      "comision_gestion": null,
-      "comision_suscripcion": null,
-      "comision_reembolso": null,
-      "esg": null,
-      "tipo_gestion": null,
+      "nivel_riesgo": 1,
+      "horizonte_recomendado_anios": 1,
+      "comision_gestion": 1.00,
+      "comision_suscripcion": 0,
+      "comision_reembolso": 0,
+      "esg": false,
+      "tipo_gestion": "activa",
       "importe_minimo_inversion": null,
-      "politica_inversion_contiene": []
+      "politica_inversion_contiene": ["renta fija corto euro", "IIC financieras", "renta fija pública", "renta fija privada", "instrumentos del mercado monetario"]
     }
   },
   {

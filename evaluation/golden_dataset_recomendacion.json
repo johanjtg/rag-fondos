@@ -10,9 +10,9 @@
       "tematica":   "no tengo preferencia geográfica ni sectorial",
       "estrategia": "gestión activa, no me importa la sostenibilidad"
     },
-    "fondos_esperados": ["ES0108283005", "ES0156873004"],
-    "fondo_top1_esperado": "ES0108283005",
-    "justificacion": "Riesgo 1-2, horizonte 1 año, sin restricciones de liquidez"
+    "fondos_esperados": ["ES0111166031", "ES0190051039", "ES0119376012", "ES0108203003"],
+    "fondo_top1_esperado": "ES0111166031",
+    "justificacion": "Riesgo 1-2, horizonte 1 año, renta fija corto plazo"
   },
   {
     "id": "perfil_moderado_medio_plazo",
@@ -25,9 +25,9 @@
       "tematica":   "no tengo preferencia",
       "estrategia": "me da igual activa o pasiva"
     },
-    "fondos_esperados": ["ES0108164007", "ES0108373004", "ES0105812004", "ES0109191009"],
-    "fondo_top1_esperado": "ES0108164007",
-    "justificacion": "Riesgo 2-3, horizonte 3 años, gestión indiferente"
+    "fondos_esperados": ["ES0111127009", "ES0108232002", "ES0111128007", "ES0110196005"],
+    "fondo_top1_esperado": "ES0111127009",
+    "justificacion": "Riesgo 2-3, horizonte 3 años, carteras mixtas moderadas"
   },
   {
     "id": "perfil_moderado_esg",
@@ -40,9 +40,9 @@
       "tematica":   "me interesan fondos sostenibles y responsables",
       "estrategia": "activa, y sí quiero que sea sostenible ESG"
     },
-    "fondos_esperados": ["ES0105011037", "ES0109652034"],
-    "fondo_top1_esperado": "ES0105011037",
-    "justificacion": "Riesgo 3, horizonte 5 años, ESG=true, gestión activa"
+    "fondos_esperados": ["ES0124524002", "ES0105207007", "ES0105263000", "ES0106949003", "ES0109266009"],
+    "fondo_top1_esperado": "ES0124524002",
+    "justificacion": "Riesgo 3-4, horizonte 5 años, ESG=true, gestión activa"
   },
   {
     "id": "perfil_agresivo_pasivo",
@@ -57,7 +57,7 @@
     },
     "fondos_esperados": ["ES0105321030", "ES0105336038", "ES0162956009"],
     "fondo_top1_esperado": "ES0105321030",
-    "justificacion": "Riesgo 4+, gestión pasiva, Europa"
+    "justificacion": "Riesgo 4, gestión pasiva, ETFs europeos"
   },
   {
     "id": "perfil_agresivo_esg",
@@ -70,9 +70,9 @@
       "tematica":   "sostenibilidad, inversión responsable, criterios ESG",
       "estrategia": "activa, y es muy importante que sea sostenible y ético"
     },
-    "fondos_esperados": ["ES0105263000", "ES0157934003"],
-    "fondo_top1_esperado": "ES0105263000",
-    "justificacion": "Riesgo 4, ESG=true, gestión activa, largo plazo"
+    "fondos_esperados": ["ES0110247006", "ES0110256007", "ES0180709018"],
+    "fondo_top1_esperado": "ES0110247006",
+    "justificacion": "Riesgo 4-5, ESG=true, gestión activa, largo plazo"
   },
   {
     "id": "perfil_muy_agresivo",
@@ -85,8 +85,8 @@
       "tematica":   "global, sin preferencia sectorial",
       "estrategia": "activa, no me importa la sostenibilidad"
     },
-    "fondos_esperados": ["V86467461", "ES0111089001"],
-    "fondo_top1_esperado": "V86467461",
-    "justificacion": "Riesgo 6, horizonte largo, sin restricciones"
+    "fondos_esperados": ["ES0105959003", "ES0162957007", "ES0119377002", "ES0176409003", "ES0152505006"],
+    "fondo_top1_esperado": "ES0105959003",
+    "justificacion": "Riesgo 7 top1 (ADAMANTIUM), riesgo 4-5 complementarios, global"
   }
 ]

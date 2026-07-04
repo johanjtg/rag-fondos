@@ -18,6 +18,7 @@ from urllib.parse import urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup
+from pypdf import PdfReader
 
 # ── Constantes ───────────────────────────────────────────────────────────────
 
@@ -27,6 +28,13 @@ LIST_URL = (
     "?id=3&lang=es&page={page}"
 )
 FUND_URL = "https://www.cnmv.es/portal/consultas/iic/fondo.aspx?nif={nif}"
+
+# Documentos que se han observado ocupando por error el hueco del DFI/KID
+# (p.ej. cuando el fallback posicional cogía el único enlace disponible).
+DOC_INVALIDO_MARCADORES: list[tuple[str, str]] = [
+    ("INFORMACIÓN PRECONTRACTUAL DE LOS PRODUCTOS FINANCIEROS", "anexo SFDR Art. 8, no es el DFI"),
+    ("REGLAMENTO DE GESTIÓN DE", "reglamento de gestión del fondo, no es el DFI"),
+]
 
 HEADERS = {
     "User-Agent": (
@@ -147,7 +155,58 @@ def _parse_fund_list(soup: BeautifulSoup) -> list[dict]:
 
 # ── Parseo de la página de detalle del fondo ─────────────────────────────────
 
-def _parse_fund_detail(soup: BeautifulSoup, nif: str) -> dict:
+def _find_classes_view_url(soup: BeautifulSoup, nif: str) -> str | None:
+    """
+    Localiza, en la barra de navegación de la página de detalle, el enlace a
+    la vista por unidad de inversión: "Clases de participaciones sin
+    compartimentos" o "Compartimentos", según la estructura del fondo. Ahí es
+    donde CNMV publica el ISIN y el DFI (*) fila a fila cuando el fondo tiene
+    varias unidades.
+    """
+    nav = soup.find("div", class_="NavegApdo")
+    if not nav:
+        return None
+    enlace = nav.find("a", id=re.compile(r"hlParticipaciones|hlCompartimentos", re.I))
+    if enlace and enlace.get("href"):
+        # El href es relativo al directorio de fondo.aspx, no al dominio raíz.
+        return urljoin(FUND_URL.format(nif=nif), enlace["href"])
+    return None
+
+
+def _parse_dfi_from_classes_view(session: requests.Session, soup: BeautifulSoup, nif: str) -> tuple[str | None, str | None]:
+    """
+    Busca ISIN + DFI en la vista por unidad de inversión del fondo (clases de
+    participación o compartimentos). Los fondos con varias unidades no llevan
+    estas columnas en la vista por defecto; CNMV las publica una fila por
+    unidad en esta vista aparte.
+
+    Devuelve (isin, pdf_url) de la primera unidad con enlace a DFI, o (None, None).
+    """
+    url_clases = _find_classes_view_url(soup, nif)
+    if url_clases is None:
+        return None, None
+
+    time.sleep(RATE_LIMIT_SECS)
+    resp = _get(session, url_clases)
+    if resp is None:
+        return None, None
+
+    soup_clases = BeautifulSoup(resp.text, "html.parser")
+    for fila in soup_clases.find_all("tr"):
+        celda_dfi = fila.find("td", attrs={"data-th": re.compile(r"DFI", re.I)})
+        if not celda_dfi:
+            continue
+        enlace_dfi = celda_dfi.find("a", href=True)
+        if not enlace_dfi:
+            continue
+        celda_isin = fila.find("td", attrs={"data-th": "ISIN"})
+        isin = celda_isin.get_text(strip=True) if celda_isin else None
+        return isin, urljoin(BASE_URL, enlace_dfi["href"])
+
+    return None, None
+
+
+def _parse_fund_detail(session: requests.Session, soup: BeautifulSoup, nif: str) -> dict:
     """
     Extrae el ISIN y la URL del PDF DFI desde la página de detalle del fondo.
 
@@ -156,8 +215,10 @@ def _parse_fund_detail(soup: BeautifulSoup, nif: str) -> dict:
       data-th="ISIN"    → enlace con el código ISIN
       data-th="DFI (*)" → enlace al PDF del Documento de Datos Fundamentales
 
-    Fallback: si la tabla no está, busca el primer enlace a verdocumento
-    que no sea Folleto ni Reglamento (posición 1 de 3).
+    En fondos con varias clases o compartimentos estas columnas no están en
+    la vista por defecto, así que se consulta la vista de clases/compartimentos
+    (ver `_parse_dfi_from_classes_view`) antes de recurrir al fallback
+    posicional.
     """
     isin: str | None = None
     pdf_url: str | None = None
@@ -175,7 +236,7 @@ def _parse_fund_detail(soup: BeautifulSoup, nif: str) -> dict:
         if enlace_dfi:
             pdf_url = urljoin(BASE_URL, enlace_dfi["href"])
 
-    # ── Fallback 1: buscar celda con texto "DFI" o "KID" en su columna ──────────
+    # ── Fallback 1: buscar celda con texto "DFI" o "KID" en su columna ────────
     if not pdf_url:
         for td in soup.find_all("td"):
             td_text = (td.get("data-th", "") + " " + td.get_text(" ")).lower()
@@ -192,20 +253,39 @@ def _parse_fund_detail(soup: BeautifulSoup, nif: str) -> dict:
                 pdf_url = urljoin(BASE_URL, a["href"])
                 break
 
-    # ── Fallback 3: posicional (Folleto/DFI/Reglamento) — última opción ────────
+    # ── Fallback 3: fondo multi-clase/compartimentos — el DFI vive en esa vista ─
+    if not pdf_url:
+        isin_clase, pdf_url_clase = _parse_dfi_from_classes_view(session, soup, nif)
+        if pdf_url_clase:
+            pdf_url = pdf_url_clase
+            isin = isin_clase or isin
+
+    # ── Fallback 4: posicional — último recurso, sin garantía de acierto ──────
     if not pdf_url:
         doc_links = [
             a["href"] for a in soup.find_all("a", href=True)
             if "verdocumento" in a["href"]
         ]
         if len(doc_links) >= 3:
+            log.warning(
+                "NIF %s: no se pudo confirmar el DFI por columnas ni por vista "
+                "de clases — usando fallback posicional (doc_links[1]), revisar manualmente",
+                nif,
+            )
             pdf_url = urljoin(BASE_URL, doc_links[1])   # posición DFI en orden habitual
         elif len(doc_links) == 2:
             log.warning("NIF %s: solo 2 documentos, probablemente sin DFI — omitiendo", nif)
             # No asignar pdf_url: es más probable que sean Folleto + Reglamento
         elif doc_links:
-            log.warning("NIF %s: sin columna DFI — usando único documento disponible", nif)
+            log.warning(
+                "NIF %s: no se pudo confirmar el DFI por columnas ni por vista "
+                "de clases — usando único documento disponible como fallback posicional, revisar manualmente",
+                nif,
+            )
             pdf_url = urljoin(BASE_URL, doc_links[0])
+
+    if not pdf_url:
+        log.warning("NIF %s: no se encontró ningún enlace a documento", nif)
 
     # ── Fallback ISIN: regex sobre texto completo ─────────────────────────────
     if not isin:
@@ -245,6 +325,25 @@ def _download_pdf(
     dest_path.write_bytes(resp.content)
     log.info("PDF descargado: %s (%.1f KB)", dest_path.name, len(resp.content) / 1024)
     return dest_path
+
+
+def _validar_pdf_es_dfi(pdf_path: Path) -> tuple[bool, str | None]:
+    """
+    Comprueba, tras la descarga, que el PDF no sea uno de los documentos que
+    se han observado ocupando por error el hueco del DFI (anexo SFDR Art. 8,
+    Reglamento de gestión). No confirma que SEA el DFI, solo descarta esos
+    falsos positivos ya detectados.
+    """
+    try:
+        texto = (PdfReader(str(pdf_path)).pages[0].extract_text() or "").upper()
+    except Exception as exc:
+        log.warning("No se pudo validar el contenido de %s: %s", pdf_path.name, exc)
+        return True, None
+
+    for marcador, motivo in DOC_INVALIDO_MARCADORES:
+        if marcador in texto:
+            return False, motivo
+    return True, None
 
 
 # ── Manifest CSV ──────────────────────────────────────────────────────────────
@@ -337,7 +436,7 @@ def run_scraper(
 
             if resp_detalle:
                 detalle = BeautifulSoup(resp_detalle.text, "html.parser")
-                info = _parse_fund_detail(detalle, nif)
+                info = _parse_fund_detail(session, detalle, nif)
                 isin = info["isin"]
                 pdf_url = info["pdf_url"]
             else:
@@ -350,6 +449,15 @@ def run_scraper(
                 safe_id = isin if isin else nif
                 filename = f"{safe_id}.pdf"
                 descargado = _download_pdf(session, pdf_url, output_dir, filename)
+                if descargado:
+                    es_valido, motivo = _validar_pdf_es_dfi(descargado)
+                    if not es_valido:
+                        log.warning(
+                            "PDF descartado para %s (%s): %s — %s",
+                            nombre, nif, descargado.name, motivo,
+                        )
+                        descargado.unlink(missing_ok=True)
+                        descargado = None
                 pdf_path_str = str(descargado) if descargado else ""
             else:
                 log.warning("Sin enlace PDF para %s (%s)", nombre, nif)

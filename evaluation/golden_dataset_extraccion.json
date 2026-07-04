@@ -4,15 +4,15 @@
     "nombre_fondo": "A&G RENTA FIJA CORTO PLAZO. FI",
     "descripcion_caso": "Fondo con campos bien extraídos, riesgo bajo, gestión activa",
     "esperado": {
-      "nivel_riesgo": null,
-      "horizonte_recomendado_anios": null,
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 1,
       "comision_gestion": null,
       "comision_suscripcion": null,
       "comision_reembolso": null,
-      "esg": null,
-      "tipo_gestion": null,
-      "importe_minimo_inversion": null,
-      "politica_inversion_contiene": []
+      "esg": false,
+      "tipo_gestion": "activa",
+      "importe_minimo_inversion": 10000,
+      "politica_inversion_contiene": ["renta fija pública", "renta fija privada", "depósitos", "deuda subordinada", "OCDE", "zona euro"]
     }
   },
   {
@@ -20,13 +20,13 @@
     "nombre_fondo": "ABANCA INDICE RENTA VARIABLE EMERGENTE, FI",
     "descripcion_caso": "Fondo de gestión pasiva, ESG negativo, comisión baja",
     "esperado": {
-      "nivel_riesgo": null,
+      "nivel_riesgo": 4,
       "horizonte_recomendado_anios": null,
       "comision_gestion": null,
       "comision_suscripcion": null,
       "comision_reembolso": null,
       "esg": null,
-      "tipo_gestion": null,
+      "tipo_gestion": "pasiva",
       "importe_minimo_inversion": null,
       "politica_inversion_contiene": []
     }
@@ -36,15 +36,15 @@
     "nombre_fondo": "ACCIÓN EUROSTOXX 50 ETF, FI COTIZADO ARMONIZADO",
     "descripcion_caso": "ETF de gestión pasiva, referenciado a índice",
     "esperado": {
-      "nivel_riesgo": null,
-      "horizonte_recomendado_anios": null,
-      "comision_gestion": null,
-      "comision_suscripcion": null,
-      "comision_reembolso": null,
-      "esg": null,
-      "tipo_gestion": null,
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 0.40,
+      "comision_suscripcion": 0,
+      "comision_reembolso": 0,
+      "esg": false,
+      "tipo_gestion": "pasiva",
       "importe_minimo_inversion": null,
-      "politica_inversion_contiene": []
+      "politica_inversion_contiene": ["EURO STOXX 50", "réplica de índice", "renta variable", "zona euro"]
     }
   },
   {

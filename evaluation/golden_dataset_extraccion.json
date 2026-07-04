@@ -12,7 +12,14 @@
       "esg": false,
       "tipo_gestion": "activa",
       "importe_minimo_inversion": 10000,
-      "politica_inversion_contiene": ["renta fija pública", "renta fija privada", "depósitos", "deuda subordinada", "OCDE", "zona euro"]
+      "politica_inversion_contiene": [
+        "renta fija pública",
+        "renta fija privada",
+        "depósitos",
+        "deuda subordinada",
+        "OCDE",
+        "zona euro"
+      ]
     }
   },
   {
@@ -38,13 +45,18 @@
     "esperado": {
       "nivel_riesgo": 4,
       "horizonte_recomendado_anios": 3,
-      "comision_gestion": 0.40,
+      "comision_gestion": 0.4,
       "comision_suscripcion": 0,
       "comision_reembolso": 0,
       "esg": false,
       "tipo_gestion": "pasiva",
       "importe_minimo_inversion": null,
-      "politica_inversion_contiene": ["EURO STOXX 50", "réplica de índice", "renta variable", "zona euro"]
+      "politica_inversion_contiene": [
+        "EURO STOXX 50",
+        "réplica de índice",
+        "renta variable",
+        "zona euro"
+      ]
     }
   },
   {
@@ -54,18 +66,24 @@
     "esperado": {
       "nivel_riesgo": 1,
       "horizonte_recomendado_anios": 1,
-      "comision_gestion": 1.00,
+      "comision_gestion": 1.0,
       "comision_suscripcion": 0,
       "comision_reembolso": 0,
       "esg": false,
       "tipo_gestion": "activa",
       "importe_minimo_inversion": null,
-      "politica_inversion_contiene": ["renta fija corto euro", "IIC financieras", "renta fija pública", "renta fija privada", "instrumentos del mercado monetario"]
+      "politica_inversion_contiene": [
+        "renta fija corto euro",
+        "IIC financieras",
+        "renta fija pública",
+        "renta fija privada",
+        "instrumentos del mercado monetario"
+      ]
     }
   },
   {
-    "isin": "V86467461",
-    "nombre_fondo": "ABACO RENTA FIJA MIXTA GLOBAL, FI",
+    "isin": "ES0140072002",
+    "nombre_fondo": "ABACO RENTA FIJA MIXTA GLOBAL, FI CLASE I",
     "descripcion_caso": "Fondo multi-clase (I/R/C) sin ISIN único; el PDF asociado al NIF era el Reglamento de Gestión, no el DFI real (mismo bug del scraper vista=2/3) — DFI real recuperado desde la vista de clases de CNMV. Riesgo real 3 (no 6 como figuraba en BD), comisión de gestión varía por clase (I 0,86% / R 1,06% / C 1,51%)",
     "esperado": {
       "nivel_riesgo": 3,
@@ -76,7 +94,13 @@
       "esg": false,
       "tipo_gestion": "activa",
       "importe_minimo_inversion": null,
-      "politica_inversion_contiene": ["renta fija mixta internacional", "gestión activa", "IIC financieras", "instrumentos financieros derivados", "máxima rentabilidad a largo plazo"]
+      "politica_inversion_contiene": [
+        "renta fija mixta internacional",
+        "gestión activa",
+        "IIC financieras",
+        "instrumentos financieros derivados",
+        "máxima rentabilidad a largo plazo"
+      ]
     }
   },
   {
@@ -92,7 +116,13 @@
       "esg": true,
       "tipo_gestion": "activa",
       "importe_minimo_inversion": null,
-      "politica_inversion_contiene": ["fondo de fondos", "renta variable mixta internacional", "IIC armonizadas", "MSCI World Net Total Return Index", "características medioambientales o sociales"]
+      "politica_inversion_contiene": [
+        "fondo de fondos",
+        "renta variable mixta internacional",
+        "IIC armonizadas",
+        "MSCI World Net Total Return Index",
+        "características medioambientales o sociales"
+      ]
     }
   },
   {
@@ -108,7 +138,13 @@
       "esg": true,
       "tipo_gestion": "activa",
       "importe_minimo_inversion": null,
-      "politica_inversion_contiene": ["renta variable internacional", "OCDE", "IIC financieras", "MSCI World Net Total Return EUR Index", "características medioambientales o sociales"]
+      "politica_inversion_contiene": [
+        "renta variable internacional",
+        "OCDE",
+        "IIC financieras",
+        "MSCI World Net Total Return EUR Index",
+        "características medioambientales o sociales"
+      ]
     }
   },
   {
@@ -124,7 +160,13 @@
       "esg": true,
       "tipo_gestion": "activa",
       "importe_minimo_inversion": null,
-      "politica_inversion_contiene": ["renta fija euro", "Deuda Pública de Gobiernos", "bonos verdes, sociales y sostenibles", "BLOOMBERG EURO GOVERMENT BOND", "criterios ASG"]
+      "politica_inversion_contiene": [
+        "renta fija euro",
+        "Deuda Pública de Gobiernos",
+        "bonos verdes, sociales y sostenibles",
+        "BLOOMBERG EURO GOVERMENT BOND",
+        "criterios ASG"
+      ]
     }
   },
   {
@@ -140,7 +182,12 @@
       "esg": null,
       "tipo_gestion": "activa",
       "importe_minimo_inversion": null,
-      "politica_inversion_contiene": ["renta variable y renta fija", "gestión activa y flexible", "IIC financieras", "alta rotación de la cartera"]
+      "politica_inversion_contiene": [
+        "renta variable y renta fija",
+        "gestión activa y flexible",
+        "IIC financieras",
+        "alta rotación de la cartera"
+      ]
     }
   },
   {
@@ -156,7 +203,13 @@
       "esg": false,
       "tipo_gestion": "activa",
       "importe_minimo_inversion": null,
-      "politica_inversion_contiene": ["renta variable", "OCDE", "IIC financieras", "alta rotación de la cartera", "categoría Global"]
+      "politica_inversion_contiene": [
+        "renta variable",
+        "OCDE",
+        "IIC financieras",
+        "alta rotación de la cartera",
+        "categoría Global"
+      ]
     }
   }
 ]

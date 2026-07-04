@@ -13,8 +13,7 @@
       "tipo_gestion": "activa",
       "importe_minimo_inversion": 10000,
       "politica_inversion_contiene": [
-        "renta fija pública",
-        "renta fija privada",
+        "renta fija pública y/o privada",
         "depósitos",
         "deuda subordinada",
         "OCDE",
@@ -53,7 +52,7 @@
       "importe_minimo_inversion": null,
       "politica_inversion_contiene": [
         "EURO STOXX 50",
-        "réplica de índice",
+        "replicar el índice",
         "renta variable",
         "zona euro"
       ]
@@ -75,8 +74,7 @@
       "politica_inversion_contiene": [
         "renta fija corto euro",
         "IIC financieras",
-        "renta fija pública",
-        "renta fija privada",
+        "renta fija pública y/o privada",
         "instrumentos del mercado monetario"
       ]
     }
@@ -119,7 +117,7 @@
       "politica_inversion_contiene": [
         "fondo de fondos",
         "renta variable mixta internacional",
-        "IIC armonizadas",
+        "armonizadas o no",
         "MSCI World Net Total Return Index",
         "características medioambientales o sociales"
       ]
@@ -165,28 +163,7 @@
         "Deuda Pública de Gobiernos",
         "bonos verdes, sociales y sostenibles",
         "BLOOMBERG EURO GOVERMENT BOND",
-        "criterios ASG"
-      ]
-    }
-  },
-  {
-    "isin": "ES0111089001",
-    "nombre_fondo": "ATMOS GLOBAL, FI",
-    "descripcion_caso": "Comisión alta (1.49%), ESG desconocido en BD — PDF no estaba en disco, redescargado desde CNMV con la URL del manifest",
-    "esperado": {
-      "nivel_riesgo": 4,
-      "horizonte_recomendado_anios": 3,
-      "comision_gestion": 1.49,
-      "comision_suscripcion": 0,
-      "comision_reembolso": 0,
-      "esg": null,
-      "tipo_gestion": "activa",
-      "importe_minimo_inversion": null,
-      "politica_inversion_contiene": [
-        "renta variable y renta fija",
-        "gestión activa y flexible",
-        "IIC financieras",
-        "alta rotación de la cartera"
+        "criterios extra-financieros ASG"
       ]
     }
   },

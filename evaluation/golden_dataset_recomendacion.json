@@ -10,8 +10,8 @@
       "tematica":   "no tengo preferencia geográfica ni sectorial",
       "estrategia": "gestión activa, no me importa la sostenibilidad"
     },
-    "fondos_esperados": ["ES0111166031", "ES0190051039", "ES0119376012", "ES0108203003"],
-    "fondo_top1_esperado": "ES0111166031",
+    "fondos_esperados": ["ES0119376012", "ES0111166031", "ES0190051039", "ES0108203003"],
+    "fondo_top1_esperado": "ES0119376012",
     "justificacion": "Riesgo 1-2, horizonte 1 año, renta fija corto plazo"
   },
   {
@@ -25,8 +25,8 @@
       "tematica":   "no tengo preferencia",
       "estrategia": "me da igual activa o pasiva"
     },
-    "fondos_esperados": ["ES0111127009", "ES0108232002", "ES0111128007", "ES0110196005"],
-    "fondo_top1_esperado": "ES0111127009",
+    "fondos_esperados": ["ES0182798019", "ES0111127009", "ES0108232002", "ES0111128007", "ES0110196005"],
+    "fondo_top1_esperado": "ES0182798019",
     "justificacion": "Riesgo 2-3, horizonte 3 años, carteras mixtas moderadas"
   },
   {
@@ -40,8 +40,8 @@
       "tematica":   "me interesan fondos sostenibles y responsables",
       "estrategia": "activa, y sí quiero que sea sostenible ESG"
     },
-    "fondos_esperados": ["ES0124524002", "ES0105207007", "ES0105263000", "ES0106949003", "ES0109266009"],
-    "fondo_top1_esperado": "ES0124524002",
+    "fondos_esperados": ["ES0106949003", "ES0124524002", "ES0105207007", "ES0105263000", "ES0109266009"],
+    "fondo_top1_esperado": "ES0106949003",
     "justificacion": "Riesgo 3-4, horizonte 5 años, ESG=true, gestión activa"
   },
   {
@@ -85,8 +85,8 @@
       "tematica":   "global, sin preferencia sectorial",
       "estrategia": "activa, no me importa la sostenibilidad"
     },
-    "fondos_esperados": ["ES0105959003", "ES0162957007", "ES0119377002", "ES0176409003", "ES0152505006"],
-    "fondo_top1_esperado": "ES0105959003",
+    "fondos_esperados": ["ES0162957007", "ES0119377002", "ES0176409003", "ES0152505006", "ES0105959003"],
+    "fondo_top1_esperado": "ES0162957007",
     "justificacion": "Riesgo 7 top1 (ADAMANTIUM), riesgo 4-5 complementarios, global"
   }
 ]

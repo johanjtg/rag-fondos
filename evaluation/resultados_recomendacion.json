@@ -3,7 +3,7 @@
     "configuracion": "60/40 (actual)",
     "coseno": 0.6,
     "semantico": 0.4,
-    "precision_media": 0.8917,
+    "precision_media": 0.925,
     "mrr_medio": 1.0,
     "hit_at_1_ratio": 0.8333,
     "perfiles": [
@@ -34,7 +34,7 @@
           "ES0111127009",
           "ES0108232002",
           "ES0109191009",
-          "ES0108164007"
+          "ES0111128007"
         ],
         "fondos_obtenidos": [
           "ES0182798019",
@@ -43,7 +43,7 @@
           "ES0111128007",
           "ES0110196005"
         ],
-        "precision_at_k": 0.6,
+        "precision_at_k": 0.8,
         "hit_at_1": true,
         "mrr": 1.0
       },
@@ -133,7 +133,7 @@
     "configuracion": "70/30",
     "coseno": 0.7,
     "semantico": 0.3,
-    "precision_media": 0.825,
+    "precision_media": 0.8583,
     "mrr_medio": 1.0,
     "hit_at_1_ratio": 0.6667,
     "perfiles": [
@@ -164,7 +164,7 @@
           "ES0111127009",
           "ES0108232002",
           "ES0109191009",
-          "ES0108164007"
+          "ES0111128007"
         ],
         "fondos_obtenidos": [
           "ES0182798019",
@@ -173,7 +173,7 @@
           "ES0110196005",
           "ES0111128007"
         ],
-        "precision_at_k": 0.6,
+        "precision_at_k": 0.8,
         "hit_at_1": true,
         "mrr": 1.0
       },
@@ -263,7 +263,7 @@
     "configuracion": "50/50",
     "coseno": 0.5,
     "semantico": 0.5,
-    "precision_media": 0.8583,
+    "precision_media": 0.8917,
     "mrr_medio": 1.0,
     "hit_at_1_ratio": 0.5,
     "perfiles": [
@@ -294,7 +294,7 @@
           "ES0111127009",
           "ES0108232002",
           "ES0109191009",
-          "ES0108164007"
+          "ES0111128007"
         ],
         "fondos_obtenidos": [
           "ES0111127009",
@@ -303,7 +303,7 @@
           "ES0108232002",
           "ES0110196005"
         ],
-        "precision_at_k": 0.6,
+        "precision_at_k": 0.8,
         "hit_at_1": false,
         "mrr": 1.0
       },
@@ -393,7 +393,7 @@
     "configuracion": "80/20",
     "coseno": 0.8,
     "semantico": 0.2,
-    "precision_media": 0.825,
+    "precision_media": 0.8583,
     "mrr_medio": 1.0,
     "hit_at_1_ratio": 0.8333,
     "perfiles": [
@@ -424,7 +424,7 @@
           "ES0111127009",
           "ES0108232002",
           "ES0109191009",
-          "ES0108164007"
+          "ES0111128007"
         ],
         "fondos_obtenidos": [
           "ES0182798019",
@@ -433,7 +433,7 @@
           "ES0111127009",
           "ES0111128007"
         ],
-        "precision_at_k": 0.6,
+        "precision_at_k": 0.8,
         "hit_at_1": true,
         "mrr": 1.0
       },
@@ -554,7 +554,7 @@
           "ES0111127009",
           "ES0108232002",
           "ES0109191009",
-          "ES0108164007"
+          "ES0111128007"
         ],
         "fondos_obtenidos": [
           "ES0108192008",
@@ -684,7 +684,7 @@
           "ES0111127009",
           "ES0108232002",
           "ES0109191009",
-          "ES0108164007"
+          "ES0111128007"
         ],
         "fondos_obtenidos": [
           "ES0119376012",

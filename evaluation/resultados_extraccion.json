@@ -229,8 +229,8 @@
   {
     "isin": "ES0140072002",
     "nombre_fondo": "ABACO RENTA FIJA MIXTA GLOBAL, FI CLASE I",
-    "precision": 0.8571,
-    "correctos": 6,
+    "precision": 1.0,
+    "correctos": 7,
     "total": 7,
     "campos": [
       {
@@ -278,94 +278,23 @@
       {
         "campo": "politica_inversion_contiene",
         "esperado": [
-          "renta fija mixta internacional",
-          "gestión activa",
+          "máxima rentabilidad a largo plazo",
           "IIC financieras",
           "instrumentos financieros derivados",
-          "máxima rentabilidad a largo plazo"
+          "derivados cotizados",
+          "35% del patrimonio"
         ],
         "obtenido": "Objetivos de Inversión: Tratar de obtener la máxima rentabilidad a largo plazo d…",
-        "correcto": false,
-        "motivo": "palabras no encontradas: ['renta fija mixta internacional', 'gestión activa']"
-      }
-    ]
-  },
-  {
-    "isin": "ES0105011037",
-    "nombre_fondo": "ABANTE BOLSA, FI",
-    "precision": 0.5,
-    "correctos": 4,
-    "total": 8,
-    "campos": [
-      {
-        "campo": "nivel_riesgo",
-        "esperado": 3,
-        "obtenido": 3,
         "correcto": true,
-        "motivo": "esperado=3.0, obtenido=3.0, diff=0.0%"
-      },
-      {
-        "campo": "horizonte_recomendado_anios",
-        "esperado": 5,
-        "obtenido": 5,
-        "correcto": true,
-        "motivo": "esperado=5.0, obtenido=5.0, diff=0.0%"
-      },
-      {
-        "campo": "comision_gestion",
-        "esperado": 1.91,
-        "obtenido": null,
-        "correcto": false,
-        "motivo": "campo null en BD"
-      },
-      {
-        "campo": "comision_suscripcion",
-        "esperado": 0,
-        "obtenido": null,
-        "correcto": false,
-        "motivo": "campo null en BD"
-      },
-      {
-        "campo": "comision_reembolso",
-        "esperado": 0,
-        "obtenido": null,
-        "correcto": false,
-        "motivo": "campo null en BD"
-      },
-      {
-        "campo": "esg",
-        "esperado": true,
-        "obtenido": 1,
-        "correcto": true,
-        "motivo": "esperado=True, obtenido=True"
-      },
-      {
-        "campo": "tipo_gestion",
-        "esperado": "activa",
-        "obtenido": "activa",
-        "correcto": true,
-        "motivo": "esperado='activa', obtenido='activa'"
-      },
-      {
-        "campo": "politica_inversion_contiene",
-        "esperado": [
-          "fondo de fondos",
-          "renta variable mixta internacional",
-          "armonizadas o no",
-          "MSCI World Net Total Return Index",
-          "características medioambientales o sociales"
-        ],
-        "obtenido": "El fondo invierte más del 50% del patrimonio a través de IIC que sean activo apt…",
-        "correcto": false,
-        "motivo": "palabras no encontradas: ['fondo de fondos', 'renta variable mixta internacional', 'MSCI World Net Total Return Index', 'características medioambientales o sociales']"
+        "motivo": "OK"
       }
     ]
   },
   {
     "isin": "ES0105263000",
     "nombre_fondo": "ACACIA PREMIUM FI",
-    "precision": 0.75,
-    "correctos": 6,
+    "precision": 0.875,
+    "correctos": 7,
     "total": 8,
     "campos": [
       {
@@ -420,15 +349,15 @@
       {
         "campo": "politica_inversion_contiene",
         "esperado": [
-          "renta variable internacional",
+          "renta variable",
           "OCDE",
           "IIC financieras",
           "MSCI World Net Total Return EUR Index",
           "características medioambientales o sociales"
         ],
         "obtenido": "El fondo invertirá, directa o indirectamente a través de IIC (máximo 10% del pat…",
-        "correcto": false,
-        "motivo": "palabras no encontradas: ['renta variable internacional']"
+        "correcto": true,
+        "motivo": "OK"
       }
     ]
   },
@@ -504,10 +433,81 @@
     ]
   },
   {
+    "isin": "ES0115418008",
+    "nombre_fondo": "FUNDO MISTO AÇOES, ABANCA RENTA VARIABLE MIXTA, FI",
+    "precision": 1.0,
+    "correctos": 8,
+    "total": 8,
+    "campos": [
+      {
+        "campo": "nivel_riesgo",
+        "esperado": 3,
+        "obtenido": 3,
+        "correcto": true,
+        "motivo": "esperado=3.0, obtenido=3.0, diff=0.0%"
+      },
+      {
+        "campo": "horizonte_recomendado_anios",
+        "esperado": 3,
+        "obtenido": 3,
+        "correcto": true,
+        "motivo": "esperado=3.0, obtenido=3.0, diff=0.0%"
+      },
+      {
+        "campo": "comision_gestion",
+        "esperado": 1.54,
+        "obtenido": 1.54,
+        "correcto": true,
+        "motivo": "esperado=1.54, obtenido=1.54, diff=0.0%"
+      },
+      {
+        "campo": "comision_suscripcion",
+        "esperado": 0,
+        "obtenido": 0.0,
+        "correcto": true,
+        "motivo": "esperado=0, obtenido=0.0"
+      },
+      {
+        "campo": "comision_reembolso",
+        "esperado": 0,
+        "obtenido": 0.0,
+        "correcto": true,
+        "motivo": "esperado=0, obtenido=0.0"
+      },
+      {
+        "campo": "esg",
+        "esperado": false,
+        "obtenido": 0,
+        "correcto": true,
+        "motivo": "esperado=False, obtenido=False"
+      },
+      {
+        "campo": "tipo_gestion",
+        "esperado": "activa",
+        "obtenido": "activa",
+        "correcto": true,
+        "motivo": "esperado='activa', obtenido='activa'"
+      },
+      {
+        "campo": "politica_inversion_contiene",
+        "esperado": [
+          "renta variable mixta internacional",
+          "renta fija pública y/o privada",
+          "países OCDE",
+          "gestión activa",
+          "IIC financieras"
+        ],
+        "obtenido": "Se invierte, directa o indirectamente a través de IIC (máximo 30% del patrimonio…",
+        "correcto": true,
+        "motivo": "OK"
+      }
+    ]
+  },
+  {
     "isin": "ES0109656001",
     "nombre_fondo": "ABANDO EQUITIES, FI",
-    "precision": 0.875,
-    "correctos": 7,
+    "precision": 1.0,
+    "correctos": 8,
     "total": 8,
     "campos": [
       {
@@ -566,11 +566,11 @@
           "OCDE",
           "IIC financieras",
           "alta rotación de la cartera",
-          "categoría Global"
+          "países emergentes"
         ],
         "obtenido": "Tratar de obtener una revalorización a largo plazo del capital, con un nivel de …",
-        "correcto": false,
-        "motivo": "palabras no encontradas: ['categoría Global']"
+        "correcto": true,
+        "motivo": "OK"
       }
     ]
   }

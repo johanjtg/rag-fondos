@@ -93,33 +93,11 @@
       "tipo_gestion": "activa",
       "importe_minimo_inversion": null,
       "politica_inversion_contiene": [
-        "renta fija mixta internacional",
-        "gestión activa",
+        "máxima rentabilidad a largo plazo",
         "IIC financieras",
         "instrumentos financieros derivados",
-        "máxima rentabilidad a largo plazo"
-      ]
-    }
-  },
-  {
-    "isin": "ES0105011037",
-    "nombre_fondo": "ABANTE BOLSA, FI",
-    "descripcion_caso": "ESG positivo, gestión activa, riesgo medio",
-    "esperado": {
-      "nivel_riesgo": 3,
-      "horizonte_recomendado_anios": 5,
-      "comision_gestion": 1.91,
-      "comision_suscripcion": 0,
-      "comision_reembolso": 0,
-      "esg": true,
-      "tipo_gestion": "activa",
-      "importe_minimo_inversion": null,
-      "politica_inversion_contiene": [
-        "fondo de fondos",
-        "renta variable mixta internacional",
-        "armonizadas o no",
-        "MSCI World Net Total Return Index",
-        "características medioambientales o sociales"
+        "derivados cotizados",
+        "35% del patrimonio"
       ]
     }
   },
@@ -137,7 +115,7 @@
       "tipo_gestion": "activa",
       "importe_minimo_inversion": null,
       "politica_inversion_contiene": [
-        "renta variable internacional",
+        "renta variable",
         "OCDE",
         "IIC financieras",
         "MSCI World Net Total Return EUR Index",
@@ -168,6 +146,28 @@
     }
   },
   {
+    "isin": "ES0115418008",
+    "nombre_fondo": "FUNDO MISTO AÇOES, ABANCA RENTA VARIABLE MIXTA, FI",
+    "descripcion_caso": "Fondo mixto RV internacional, gestión activa, comisión extraída correctamente",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 1.54,
+      "comision_suscripcion": 0,
+      "comision_reembolso": 0,
+      "esg": false,
+      "tipo_gestion": "activa",
+      "importe_minimo_inversion": null,
+      "politica_inversion_contiene": [
+        "renta variable mixta internacional",
+        "renta fija pública y/o privada",
+        "países OCDE",
+        "gestión activa",
+        "IIC financieras"
+      ]
+    }
+  },
+  {
     "isin": "ES0109656001",
     "nombre_fondo": "ABANDO EQUITIES, FI",
     "descripcion_caso": "Comisión de gestión alta (1.48%), horizonte largo",
@@ -185,7 +185,7 @@
         "OCDE",
         "IIC financieras",
         "alta rotación de la cartera",
-        "categoría Global"
+        "países emergentes"
       ]
     }
   }

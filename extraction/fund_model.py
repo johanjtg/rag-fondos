@@ -32,9 +32,9 @@ class FundModel(BaseModel):
     importe_minimo_inversion: Optional[float] = Field(None, description="Capital mínimo requerido para suscribir el fondo, en euros")
 
     # ── Comisiones ──────────────────────────────────────────────────
-    comision_suscripcion: Optional[float] = Field(None, description="Comisión de entrada o suscripción en porcentaje")
-    comision_reembolso: Optional[float] = Field(None, description="Comisión de salida o reembolso en porcentaje")
-    comision_gestion: Optional[float] = Field(None, description="Comisión anual de gestión en porcentaje")
+    comision_suscripcion: Optional[float] = Field(None, description="Comisión de entrada o suscripción en porcentaje. Si el documento indica 'no hay comisión de entrada', 'comisión de entrada: 0%' o similar, devuelve 0.0")
+    comision_reembolso: Optional[float] = Field(None, description="Comisión de salida o reembolso en porcentaje. Si el documento indica 'no hay comisión de salida', 'comisión de reembolso: 0%' o similar, devuelve 0.0")
+    comision_gestion: Optional[float] = Field(None, description="Comisión anual de gestión en porcentaje. Buscar: 'comisión de gestión X%', 'gastos corrientes X%', 'TER X%' o 'impacto del coste anual X%'. Si solo aparece el coste total agregado (p.ej. 'impacto del coste anual 1.94%'), usa ese valor.")
     comision_exito: Optional[float] = Field(None, description="Comisión de éxito sobre rendimientos positivos en porcentaje")
     comision_deposito: Optional[float] = Field(None, description="Comisión de depósito o custodia en porcentaje")
 

@@ -128,11 +128,19 @@ def _formatear_fondos(fondos: list[FundScore], perfil: UserProfile) -> str:
     lineas.append("")
     lineas.append(f"TOP {len(fondos)} FONDOS RECOMENDADOS:")
 
+    # Normalizar scores al rango [70%, 100%] para presentación al usuario
+    score_min = fondos[-1].score_total
+    score_max = fondos[0].score_total
+    def score_visual(s):
+        if score_max == score_min:
+            return 100.0
+        return 70.0 + (s - score_min) / (score_max - score_min) * 30.0
+
     for i, f in enumerate(fondos, 1):
         lineas.append(f"\n{i}. {f.nombre_fondo}")
         lineas.append(f"   ISIN: {f.isin}")
         lineas.append(f"   Gestora: {f.gestora}")
-        lineas.append(f"   Puntuación de compatibilidad: {f.score_total * 100:.1f}%")
+        lineas.append(f"   Puntuación de compatibilidad: {score_visual(f.score_total):.1f}%")
         lineas.append(f"   Desglose: coseno={f.score_coseno:.3f} | semántico={f.score_semantico:.3f} | ESG boost={f.esg_boost:.2f}")
         lineas.append(f"   Riesgo: {f.nivel_riesgo or '—'}/7 | Gestión: {f.tipo_gestion or '—'} | ESG: {f.esg} | Horizonte: {f.horizonte_anios or '—'} años")
         if f.politica_inversion:

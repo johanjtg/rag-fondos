@@ -1,0 +1,577 @@
+[
+  {
+    "isin": "ES0156873004",
+    "nombre_fondo": "A&G RENTA FIJA CORTO PLAZO. FI",
+    "precision": 1.0,
+    "correctos": 6,
+    "total": 6,
+    "campos": [
+      {
+        "campo": "nivel_riesgo",
+        "esperado": 2,
+        "obtenido": 2,
+        "correcto": true,
+        "motivo": "esperado=2.0, obtenido=2.0, diff=0.0%"
+      },
+      {
+        "campo": "horizonte_recomendado_anios",
+        "esperado": 1,
+        "obtenido": 1,
+        "correcto": true,
+        "motivo": "esperado=1.0, obtenido=1.0, diff=0.0%"
+      },
+      {
+        "campo": "esg",
+        "esperado": false,
+        "obtenido": 0,
+        "correcto": true,
+        "motivo": "esperado=False, obtenido=False"
+      },
+      {
+        "campo": "tipo_gestion",
+        "esperado": "activa",
+        "obtenido": "activa",
+        "correcto": true,
+        "motivo": "esperado='activa', obtenido='activa'"
+      },
+      {
+        "campo": "importe_minimo_inversion",
+        "esperado": 10000,
+        "obtenido": 10000.0,
+        "correcto": true,
+        "motivo": "esperado=10000.0, obtenido=10000.0, diff=0.0%"
+      },
+      {
+        "campo": "politica_inversion_contiene",
+        "esperado": [
+          "renta fija pública y/o privada",
+          "depósitos",
+          "deuda subordinada",
+          "OCDE",
+          "zona euro"
+        ],
+        "obtenido": "Se invierte el 100% de la exposición total en activos de renta fija pública y/o …",
+        "correcto": true,
+        "motivo": "OK"
+      }
+    ]
+  },
+  {
+    "isin": "ES0162956009",
+    "nombre_fondo": "ABANCA INDICE RENTA VARIABLE EMERGENTE, FI",
+    "precision": 1.0,
+    "correctos": 3,
+    "total": 3,
+    "campos": [
+      {
+        "campo": "nivel_riesgo",
+        "esperado": 4,
+        "obtenido": 4,
+        "correcto": true,
+        "motivo": "esperado=4.0, obtenido=4.0, diff=0.0%"
+      },
+      {
+        "campo": "tipo_gestion",
+        "esperado": "pasiva",
+        "obtenido": "pasiva",
+        "correcto": true,
+        "motivo": "esperado='pasiva', obtenido='pasiva'"
+      },
+      {
+        "campo": "politica_inversion_contiene",
+        "esperado": [],
+        "obtenido": "El partícipe podrá suscribir y reembolsar sus participaciones con una frecuencia…",
+        "correcto": true,
+        "motivo": "sin palabras clave definidas"
+      }
+    ]
+  },
+  {
+    "isin": "ES0105321030",
+    "nombre_fondo": "ACCIÓN EUROSTOXX 50 ETF, FI COTIZADO ARMONIZADO",
+    "precision": 1.0,
+    "correctos": 8,
+    "total": 8,
+    "campos": [
+      {
+        "campo": "nivel_riesgo",
+        "esperado": 4,
+        "obtenido": 4,
+        "correcto": true,
+        "motivo": "esperado=4.0, obtenido=4.0, diff=0.0%"
+      },
+      {
+        "campo": "horizonte_recomendado_anios",
+        "esperado": 3,
+        "obtenido": 3,
+        "correcto": true,
+        "motivo": "esperado=3.0, obtenido=3.0, diff=0.0%"
+      },
+      {
+        "campo": "comision_gestion",
+        "esperado": 0.4,
+        "obtenido": 0.4,
+        "correcto": true,
+        "motivo": "esperado=0.4, obtenido=0.4, diff=0.0%"
+      },
+      {
+        "campo": "comision_suscripcion",
+        "esperado": 0,
+        "obtenido": 0.0,
+        "correcto": true,
+        "motivo": "esperado=0, obtenido=0.0"
+      },
+      {
+        "campo": "comision_reembolso",
+        "esperado": 0,
+        "obtenido": 0.0,
+        "correcto": true,
+        "motivo": "esperado=0, obtenido=0.0"
+      },
+      {
+        "campo": "esg",
+        "esperado": false,
+        "obtenido": 0,
+        "correcto": true,
+        "motivo": "esperado=False, obtenido=False"
+      },
+      {
+        "campo": "tipo_gestion",
+        "esperado": "pasiva",
+        "obtenido": "pasiva",
+        "correcto": true,
+        "motivo": "esperado='pasiva', obtenido='pasiva'"
+      },
+      {
+        "campo": "politica_inversion_contiene",
+        "esperado": [
+          "EURO STOXX 50",
+          "replicar el índice",
+          "renta variable",
+          "zona euro"
+        ],
+        "obtenido": "Fondo Cotizado. IIC QUE REPLICA UN ÍNDICE. Su objetivo de gestión es replicar el…",
+        "correcto": true,
+        "motivo": "OK"
+      }
+    ]
+  },
+  {
+    "isin": "ES0108283005",
+    "nombre_fondo": "ALLIANZ RENDIMIENTO, FI",
+    "precision": 0.625,
+    "correctos": 5,
+    "total": 8,
+    "campos": [
+      {
+        "campo": "nivel_riesgo",
+        "esperado": 1,
+        "obtenido": 1,
+        "correcto": true,
+        "motivo": "esperado=1.0, obtenido=1.0, diff=0.0%"
+      },
+      {
+        "campo": "horizonte_recomendado_anios",
+        "esperado": 1,
+        "obtenido": 1,
+        "correcto": true,
+        "motivo": "esperado=1.0, obtenido=1.0, diff=0.0%"
+      },
+      {
+        "campo": "comision_gestion",
+        "esperado": 1.0,
+        "obtenido": null,
+        "correcto": false,
+        "motivo": "campo null en BD"
+      },
+      {
+        "campo": "comision_suscripcion",
+        "esperado": 0,
+        "obtenido": null,
+        "correcto": false,
+        "motivo": "campo null en BD"
+      },
+      {
+        "campo": "comision_reembolso",
+        "esperado": 0,
+        "obtenido": null,
+        "correcto": false,
+        "motivo": "campo null en BD"
+      },
+      {
+        "campo": "esg",
+        "esperado": false,
+        "obtenido": 0,
+        "correcto": true,
+        "motivo": "esperado=False, obtenido=False"
+      },
+      {
+        "campo": "tipo_gestion",
+        "esperado": "activa",
+        "obtenido": "activa",
+        "correcto": true,
+        "motivo": "esperado='activa', obtenido='activa'"
+      },
+      {
+        "campo": "politica_inversion_contiene",
+        "esperado": [
+          "renta fija corto euro",
+          "IIC financieras",
+          "renta fija pública y/o privada",
+          "instrumentos del mercado monetario"
+        ],
+        "obtenido": "El Fondo invertirá entre el 0-100% del patrimonio en IIC financieras (activo apt…",
+        "correcto": true,
+        "motivo": "OK"
+      }
+    ]
+  },
+  {
+    "isin": "ES0140072002",
+    "nombre_fondo": "ABACO RENTA FIJA MIXTA GLOBAL, FI CLASE I",
+    "precision": 0.8571,
+    "correctos": 6,
+    "total": 7,
+    "campos": [
+      {
+        "campo": "nivel_riesgo",
+        "esperado": 3,
+        "obtenido": 3,
+        "correcto": true,
+        "motivo": "esperado=3.0, obtenido=3.0, diff=0.0%"
+      },
+      {
+        "campo": "horizonte_recomendado_anios",
+        "esperado": 3,
+        "obtenido": 3,
+        "correcto": true,
+        "motivo": "esperado=3.0, obtenido=3.0, diff=0.0%"
+      },
+      {
+        "campo": "comision_suscripcion",
+        "esperado": 0,
+        "obtenido": 0.0,
+        "correcto": true,
+        "motivo": "esperado=0, obtenido=0.0"
+      },
+      {
+        "campo": "comision_reembolso",
+        "esperado": 0,
+        "obtenido": 0.0,
+        "correcto": true,
+        "motivo": "esperado=0, obtenido=0.0"
+      },
+      {
+        "campo": "esg",
+        "esperado": false,
+        "obtenido": 0,
+        "correcto": true,
+        "motivo": "esperado=False, obtenido=False"
+      },
+      {
+        "campo": "tipo_gestion",
+        "esperado": "activa",
+        "obtenido": "activa",
+        "correcto": true,
+        "motivo": "esperado='activa', obtenido='activa'"
+      },
+      {
+        "campo": "politica_inversion_contiene",
+        "esperado": [
+          "renta fija mixta internacional",
+          "gestión activa",
+          "IIC financieras",
+          "instrumentos financieros derivados",
+          "máxima rentabilidad a largo plazo"
+        ],
+        "obtenido": "Objetivos de Inversión: Tratar de obtener la máxima rentabilidad a largo plazo d…",
+        "correcto": false,
+        "motivo": "palabras no encontradas: ['renta fija mixta internacional', 'gestión activa']"
+      }
+    ]
+  },
+  {
+    "isin": "ES0105011037",
+    "nombre_fondo": "ABANTE BOLSA, FI",
+    "precision": 0.5,
+    "correctos": 4,
+    "total": 8,
+    "campos": [
+      {
+        "campo": "nivel_riesgo",
+        "esperado": 3,
+        "obtenido": 3,
+        "correcto": true,
+        "motivo": "esperado=3.0, obtenido=3.0, diff=0.0%"
+      },
+      {
+        "campo": "horizonte_recomendado_anios",
+        "esperado": 5,
+        "obtenido": 5,
+        "correcto": true,
+        "motivo": "esperado=5.0, obtenido=5.0, diff=0.0%"
+      },
+      {
+        "campo": "comision_gestion",
+        "esperado": 1.91,
+        "obtenido": null,
+        "correcto": false,
+        "motivo": "campo null en BD"
+      },
+      {
+        "campo": "comision_suscripcion",
+        "esperado": 0,
+        "obtenido": null,
+        "correcto": false,
+        "motivo": "campo null en BD"
+      },
+      {
+        "campo": "comision_reembolso",
+        "esperado": 0,
+        "obtenido": null,
+        "correcto": false,
+        "motivo": "campo null en BD"
+      },
+      {
+        "campo": "esg",
+        "esperado": true,
+        "obtenido": 1,
+        "correcto": true,
+        "motivo": "esperado=True, obtenido=True"
+      },
+      {
+        "campo": "tipo_gestion",
+        "esperado": "activa",
+        "obtenido": "activa",
+        "correcto": true,
+        "motivo": "esperado='activa', obtenido='activa'"
+      },
+      {
+        "campo": "politica_inversion_contiene",
+        "esperado": [
+          "fondo de fondos",
+          "renta variable mixta internacional",
+          "armonizadas o no",
+          "MSCI World Net Total Return Index",
+          "características medioambientales o sociales"
+        ],
+        "obtenido": "El fondo invierte más del 50% del patrimonio a través de IIC que sean activo apt…",
+        "correcto": false,
+        "motivo": "palabras no encontradas: ['fondo de fondos', 'renta variable mixta internacional', 'MSCI World Net Total Return Index', 'características medioambientales o sociales']"
+      }
+    ]
+  },
+  {
+    "isin": "ES0105263000",
+    "nombre_fondo": "ACACIA PREMIUM FI",
+    "precision": 0.75,
+    "correctos": 6,
+    "total": 8,
+    "campos": [
+      {
+        "campo": "nivel_riesgo",
+        "esperado": 4,
+        "obtenido": 4,
+        "correcto": true,
+        "motivo": "esperado=4.0, obtenido=4.0, diff=0.0%"
+      },
+      {
+        "campo": "horizonte_recomendado_anios",
+        "esperado": 4,
+        "obtenido": 4,
+        "correcto": true,
+        "motivo": "esperado=4.0, obtenido=4.0, diff=0.0%"
+      },
+      {
+        "campo": "comision_gestion",
+        "esperado": 1.68,
+        "obtenido": null,
+        "correcto": false,
+        "motivo": "campo null en BD"
+      },
+      {
+        "campo": "comision_suscripcion",
+        "esperado": 0,
+        "obtenido": 0.0,
+        "correcto": true,
+        "motivo": "esperado=0, obtenido=0.0"
+      },
+      {
+        "campo": "comision_reembolso",
+        "esperado": 0,
+        "obtenido": 0.0,
+        "correcto": true,
+        "motivo": "esperado=0, obtenido=0.0"
+      },
+      {
+        "campo": "esg",
+        "esperado": true,
+        "obtenido": 1,
+        "correcto": true,
+        "motivo": "esperado=True, obtenido=True"
+      },
+      {
+        "campo": "tipo_gestion",
+        "esperado": "activa",
+        "obtenido": "activa",
+        "correcto": true,
+        "motivo": "esperado='activa', obtenido='activa'"
+      },
+      {
+        "campo": "politica_inversion_contiene",
+        "esperado": [
+          "renta variable internacional",
+          "OCDE",
+          "IIC financieras",
+          "MSCI World Net Total Return EUR Index",
+          "características medioambientales o sociales"
+        ],
+        "obtenido": "El fondo invertirá, directa o indirectamente a través de IIC (máximo 10% del pat…",
+        "correcto": false,
+        "motivo": "palabras no encontradas: ['renta variable internacional']"
+      }
+    ]
+  },
+  {
+    "isin": "ES0124524002",
+    "nombre_fondo": "ABANCA RENTA FIJA GOBIERNOS, FI",
+    "precision": 1.0,
+    "correctos": 8,
+    "total": 8,
+    "campos": [
+      {
+        "campo": "nivel_riesgo",
+        "esperado": 3,
+        "obtenido": 3,
+        "correcto": true,
+        "motivo": "esperado=3.0, obtenido=3.0, diff=0.0%"
+      },
+      {
+        "campo": "horizonte_recomendado_anios",
+        "esperado": 5,
+        "obtenido": 5,
+        "correcto": true,
+        "motivo": "esperado=5.0, obtenido=5.0, diff=0.0%"
+      },
+      {
+        "campo": "comision_gestion",
+        "esperado": 0.23,
+        "obtenido": 0.23,
+        "correcto": true,
+        "motivo": "esperado=0.23, obtenido=0.23, diff=0.0%"
+      },
+      {
+        "campo": "comision_suscripcion",
+        "esperado": 0,
+        "obtenido": 0.0,
+        "correcto": true,
+        "motivo": "esperado=0, obtenido=0.0"
+      },
+      {
+        "campo": "comision_reembolso",
+        "esperado": 0,
+        "obtenido": 0.0,
+        "correcto": true,
+        "motivo": "esperado=0, obtenido=0.0"
+      },
+      {
+        "campo": "esg",
+        "esperado": true,
+        "obtenido": 1,
+        "correcto": true,
+        "motivo": "esperado=True, obtenido=True"
+      },
+      {
+        "campo": "tipo_gestion",
+        "esperado": "activa",
+        "obtenido": "activa",
+        "correcto": true,
+        "motivo": "esperado='activa', obtenido='activa'"
+      },
+      {
+        "campo": "politica_inversion_contiene",
+        "esperado": [
+          "renta fija euro",
+          "Deuda Pública de Gobiernos",
+          "bonos verdes, sociales y sostenibles",
+          "BLOOMBERG EURO GOVERMENT BOND",
+          "criterios extra-financieros ASG"
+        ],
+        "obtenido": "Este producto es un Fondo de Inversión, regulado por la Ley 35/2003, de 4 de nov…",
+        "correcto": true,
+        "motivo": "OK"
+      }
+    ]
+  },
+  {
+    "isin": "ES0109656001",
+    "nombre_fondo": "ABANDO EQUITIES, FI",
+    "precision": 0.875,
+    "correctos": 7,
+    "total": 8,
+    "campos": [
+      {
+        "campo": "nivel_riesgo",
+        "esperado": 3,
+        "obtenido": 3,
+        "correcto": true,
+        "motivo": "esperado=3.0, obtenido=3.0, diff=0.0%"
+      },
+      {
+        "campo": "horizonte_recomendado_anios",
+        "esperado": 5,
+        "obtenido": 5,
+        "correcto": true,
+        "motivo": "esperado=5.0, obtenido=5.0, diff=0.0%"
+      },
+      {
+        "campo": "comision_gestion",
+        "esperado": 1.48,
+        "obtenido": 1.48,
+        "correcto": true,
+        "motivo": "esperado=1.48, obtenido=1.48, diff=0.0%"
+      },
+      {
+        "campo": "comision_suscripcion",
+        "esperado": 0,
+        "obtenido": 0.0,
+        "correcto": true,
+        "motivo": "esperado=0, obtenido=0.0"
+      },
+      {
+        "campo": "comision_reembolso",
+        "esperado": 0,
+        "obtenido": 0.0,
+        "correcto": true,
+        "motivo": "esperado=0, obtenido=0.0"
+      },
+      {
+        "campo": "esg",
+        "esperado": false,
+        "obtenido": 0,
+        "correcto": true,
+        "motivo": "esperado=False, obtenido=False"
+      },
+      {
+        "campo": "tipo_gestion",
+        "esperado": "activa",
+        "obtenido": "activa",
+        "correcto": true,
+        "motivo": "esperado='activa', obtenido='activa'"
+      },
+      {
+        "campo": "politica_inversion_contiene",
+        "esperado": [
+          "renta variable",
+          "OCDE",
+          "IIC financieras",
+          "alta rotación de la cartera",
+          "categoría Global"
+        ],
+        "obtenido": "Tratar de obtener una revalorización a largo plazo del capital, con un nivel de …",
+        "correcto": false,
+        "motivo": "palabras no encontradas: ['categoría Global']"
+      }
+    ]
+  }
+]

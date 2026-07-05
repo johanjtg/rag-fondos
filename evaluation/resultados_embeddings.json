@@ -3,19 +3,19 @@
     "nombre": "paraphrase-multilingual-MiniLM-L12-v2 (actual)",
     "model_name": "paraphrase-multilingual-MiniLM-L12-v2",
     "descripcion": "Multilingüe, 384 dims — modelo actual del sistema",
-    "tiempo_s": 7.85,
-    "precision_media": 1.0,
+    "tiempo_s": 16.75,
+    "precision_media": 0.925,
     "mrr_medio": 1.0,
-    "hit_at_1_ratio": 1.0,
+    "hit_at_1_ratio": 0.8333,
     "perfiles": [
       {
         "id": "perfil_conservador_corto",
         "descripcion": "Inversor muy conservador, capital bajo, horizonte corto, alta liquidez",
         "esperados": [
-          "ES0119376012",
           "ES0111166031",
           "ES0190051039",
-          "ES0108203003"
+          "ES0119376012",
+          "ES0126542036"
         ],
         "obtenidos": [
           "ES0119376012",
@@ -23,9 +23,9 @@
           "ES0190051039",
           "ES0108203003"
         ],
-        "precision_at_k": 1.0,
+        "precision_at_k": 0.75,
         "mrr": 1.0,
-        "hit_at_1": true
+        "hit_at_1": false
       },
       {
         "id": "perfil_moderado_medio_plazo",
@@ -34,8 +34,8 @@
           "ES0182798019",
           "ES0111127009",
           "ES0108232002",
-          "ES0111128007",
-          "ES0110196005"
+          "ES0109191009",
+          "ES0111128007"
         ],
         "obtenidos": [
           "ES0182798019",
@@ -44,7 +44,7 @@
           "ES0111128007",
           "ES0110196005"
         ],
-        "precision_at_k": 1.0,
+        "precision_at_k": 0.8,
         "mrr": 1.0,
         "hit_at_1": true
       },
@@ -134,19 +134,19 @@
     "nombre": "all-MiniLM-L6-v2 (baseline inglés)",
     "model_name": "all-MiniLM-L6-v2",
     "descripcion": "Solo inglés, 384 dims — baseline rápido",
-    "tiempo_s": 3.79,
-    "precision_media": 0.8333,
+    "tiempo_s": 9.15,
+    "precision_media": 0.825,
     "mrr_medio": 1.0,
-    "hit_at_1_ratio": 0.6667,
+    "hit_at_1_ratio": 0.8333,
     "perfiles": [
       {
         "id": "perfil_conservador_corto",
         "descripcion": "Inversor muy conservador, capital bajo, horizonte corto, alta liquidez",
         "esperados": [
-          "ES0119376012",
           "ES0111166031",
           "ES0190051039",
-          "ES0108203003"
+          "ES0119376012",
+          "ES0126542036"
         ],
         "obtenidos": [
           "ES0111166031",
@@ -154,9 +154,9 @@
           "ES0108203003",
           "ES0119376012"
         ],
-        "precision_at_k": 1.0,
+        "precision_at_k": 0.75,
         "mrr": 1.0,
-        "hit_at_1": false
+        "hit_at_1": true
       },
       {
         "id": "perfil_moderado_medio_plazo",
@@ -165,8 +165,8 @@
           "ES0182798019",
           "ES0111127009",
           "ES0108232002",
-          "ES0111128007",
-          "ES0110196005"
+          "ES0109191009",
+          "ES0111128007"
         ],
         "obtenidos": [
           "ES0108232002",
@@ -175,7 +175,7 @@
           "ES0109191009",
           "ES0111127009"
         ],
-        "precision_at_k": 0.4,
+        "precision_at_k": 0.6,
         "mrr": 1.0,
         "hit_at_1": false
       },
@@ -265,19 +265,19 @@
     "nombre": "distiluse-base-multilingual-cased-v2",
     "model_name": "distiluse-base-multilingual-cased-v2",
     "descripcion": "Multilingüe alternativo, 512 dims",
-    "tiempo_s": 4.77,
-    "precision_media": 0.9,
+    "tiempo_s": 10.9,
+    "precision_media": 0.8583,
     "mrr_medio": 1.0,
-    "hit_at_1_ratio": 0.6667,
+    "hit_at_1_ratio": 0.8333,
     "perfiles": [
       {
         "id": "perfil_conservador_corto",
         "descripcion": "Inversor muy conservador, capital bajo, horizonte corto, alta liquidez",
         "esperados": [
-          "ES0119376012",
           "ES0111166031",
           "ES0190051039",
-          "ES0108203003"
+          "ES0119376012",
+          "ES0126542036"
         ],
         "obtenidos": [
           "ES0111166031",
@@ -285,9 +285,9 @@
           "ES0108203003",
           "ES0119376012"
         ],
-        "precision_at_k": 1.0,
+        "precision_at_k": 0.75,
         "mrr": 1.0,
-        "hit_at_1": false
+        "hit_at_1": true
       },
       {
         "id": "perfil_moderado_medio_plazo",
@@ -296,8 +296,8 @@
           "ES0182798019",
           "ES0111127009",
           "ES0108232002",
-          "ES0111128007",
-          "ES0110196005"
+          "ES0109191009",
+          "ES0111128007"
         ],
         "obtenidos": [
           "ES0182798019",

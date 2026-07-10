@@ -4,6 +4,8 @@ y Evaluador 3 (modelos de embedding).
 """
 
 import json
+import subprocess
+import sys
 from pathlib import Path
 
 import pandas as pd

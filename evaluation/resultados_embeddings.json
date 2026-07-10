@@ -3,10 +3,10 @@
     "nombre": "paraphrase-multilingual-MiniLM-L12-v2 (actual)",
     "model_name": "paraphrase-multilingual-MiniLM-L12-v2",
     "descripcion": "Multilingüe, 384 dims — modelo actual del sistema",
-    "tiempo_s": 15.85,
-    "precision_media": 0.6746,
-    "mrr_medio": 0.8333,
-    "hit_at_1_ratio": 0.6667,
+    "tiempo_s": 15.9,
+    "precision_media": 0.9056,
+    "mrr_medio": 0.9167,
+    "hit_at_1_ratio": 0.8333,
     "perfiles": [
       {
         "id": "perfil_conservador_corto",
@@ -16,8 +16,7 @@
           "ES0106933031",
           "ES0111166031",
           "ES0114129036",
-          "ES0108283005",
-          "ES0110251008"
+          "ES0108283005"
         ],
         "obtenidos": [
           "ES0137398006",
@@ -26,7 +25,7 @@
           "ES0111166031",
           "ES0114129036"
         ],
-        "precision_at_k": 0.6666666666666666,
+        "precision_at_k": 0.8,
         "mrr": 0.5,
         "hit_at_1": false
       },
@@ -34,13 +33,11 @@
         "id": "perfil_moderado_medio_plazo",
         "descripcion": "Inversor moderado, horizonte 3 años, sin preferencia de gestión",
         "esperados": [
+          "ES0119179002",
           "ES0156944003",
           "ES0164691000",
           "ES0138253002",
-          "ES0138861036",
-          "ES0114984034",
-          "ES0105207007",
-          "ES0105244000"
+          "ES0138861036"
         ],
         "obtenidos": [
           "ES0119179002",
@@ -49,9 +46,9 @@
           "ES0138253002",
           "ES0138861036"
         ],
-        "precision_at_k": 0.5714285714285714,
-        "mrr": 0.5,
-        "hit_at_1": false
+        "precision_at_k": 1.0,
+        "mrr": 1.0,
+        "hit_at_1": true
       },
       {
         "id": "perfil_moderado_esg",
@@ -61,9 +58,7 @@
           "ES0109652034",
           "ES0110256007",
           "ES0124524002",
-          "ES0162948014",
-          "ES0109266009",
-          "ES0162946034"
+          "ES0162948014"
         ],
         "obtenidos": [
           "ES0106949003",
@@ -72,7 +67,7 @@
           "ES0124524002",
           "ES0162948014"
         ],
-        "precision_at_k": 0.7142857142857143,
+        "precision_at_k": 1.0,
         "mrr": 1.0,
         "hit_at_1": true
       },
@@ -84,9 +79,7 @@
           "ES0110098037",
           "ES0162956009",
           "ES0114564000",
-          "ES0110182039",
-          "ES0105336038",
-          "ES0113572012"
+          "ES0110182039"
         ],
         "obtenidos": [
           "ES0105321030",
@@ -95,7 +88,7 @@
           "ES0114564000",
           "ES0110182039"
         ],
-        "precision_at_k": 0.7142857142857143,
+        "precision_at_k": 1.0,
         "mrr": 1.0,
         "hit_at_1": true
       },
@@ -107,8 +100,7 @@
           "ES0147196036",
           "ES0172243000",
           "ES0183339037",
-          "ES0109266009",
-          "ES0110247006"
+          "ES0109266009"
         ],
         "obtenidos": [
           "ES0165092034",
@@ -117,7 +109,7 @@
           "ES0172243000",
           "ES0183339037"
         ],
-        "precision_at_k": 0.6666666666666666,
+        "precision_at_k": 0.8,
         "mrr": 1.0,
         "hit_at_1": true
       },
@@ -130,7 +122,6 @@
           "ES0115068035",
           "ES0138984036",
           "ES0179692001",
-          "ES0105959003",
           "ES0111193001"
         ],
         "obtenidos": [
@@ -140,7 +131,7 @@
           "ES0138984036",
           "ES0179692001"
         ],
-        "precision_at_k": 0.7142857142857143,
+        "precision_at_k": 0.8333333333333334,
         "mrr": 1.0,
         "hit_at_1": true
       }
@@ -150,9 +141,9 @@
     "nombre": "all-MiniLM-L6-v2 (baseline inglés)",
     "model_name": "all-MiniLM-L6-v2",
     "descripcion": "Solo inglés, 384 dims — baseline rápido",
-    "tiempo_s": 13.77,
-    "precision_media": 0.2302,
-    "mrr_medio": 0.4,
+    "tiempo_s": 14.22,
+    "precision_media": 0.3278,
+    "mrr_medio": 0.4417,
     "hit_at_1_ratio": 0.3333,
     "perfiles": [
       {
@@ -163,8 +154,7 @@
           "ES0106933031",
           "ES0111166031",
           "ES0114129036",
-          "ES0108283005",
-          "ES0110251008"
+          "ES0108283005"
         ],
         "obtenidos": [
           "ES0126551037",
@@ -173,7 +163,7 @@
           "ES0114129036",
           "ES0113752002"
         ],
-        "precision_at_k": 0.6666666666666666,
+        "precision_at_k": 0.8,
         "mrr": 1.0,
         "hit_at_1": true
       },
@@ -181,13 +171,11 @@
         "id": "perfil_moderado_medio_plazo",
         "descripcion": "Inversor moderado, horizonte 3 años, sin preferencia de gestión",
         "esperados": [
+          "ES0119179002",
           "ES0156944003",
           "ES0164691000",
           "ES0138253002",
-          "ES0138861036",
-          "ES0114984034",
-          "ES0105207007",
-          "ES0105244000"
+          "ES0138861036"
         ],
         "obtenidos": [
           "ES0146296001",
@@ -196,8 +184,8 @@
           "ES0119179002",
           "ES0114546031"
         ],
-        "precision_at_k": 0.0,
-        "mrr": 0.0,
+        "precision_at_k": 0.2,
+        "mrr": 0.25,
         "hit_at_1": false
       },
       {
@@ -208,9 +196,7 @@
           "ES0109652034",
           "ES0110256007",
           "ES0124524002",
-          "ES0162948014",
-          "ES0109266009",
-          "ES0162946034"
+          "ES0162948014"
         ],
         "obtenidos": [
           "ES0137355006",
@@ -219,7 +205,7 @@
           "ES0114222005",
           "ES0162948014"
         ],
-        "precision_at_k": 0.14285714285714285,
+        "precision_at_k": 0.2,
         "mrr": 0.2,
         "hit_at_1": false
       },
@@ -231,9 +217,7 @@
           "ES0110098037",
           "ES0162956009",
           "ES0114564000",
-          "ES0110182039",
-          "ES0105336038",
-          "ES0113572012"
+          "ES0110182039"
         ],
         "obtenidos": [
           "ES0105321030",
@@ -242,7 +226,7 @@
           "ES0114754007",
           "ES0114565007"
         ],
-        "precision_at_k": 0.42857142857142855,
+        "precision_at_k": 0.6,
         "mrr": 1.0,
         "hit_at_1": true
       },
@@ -254,8 +238,7 @@
           "ES0147196036",
           "ES0172243000",
           "ES0183339037",
-          "ES0109266009",
-          "ES0110247006"
+          "ES0109266009"
         ],
         "obtenidos": [
           "ES0178487007",
@@ -277,7 +260,6 @@
           "ES0115068035",
           "ES0138984036",
           "ES0179692001",
-          "ES0105959003",
           "ES0111193001"
         ],
         "obtenidos": [
@@ -287,7 +269,7 @@
           "ES0141222036",
           "ES0140634033"
         ],
-        "precision_at_k": 0.14285714285714285,
+        "precision_at_k": 0.16666666666666666,
         "mrr": 0.2,
         "hit_at_1": false
       }
@@ -297,10 +279,10 @@
     "nombre": "distiluse-base-multilingual-cased-v2",
     "model_name": "distiluse-base-multilingual-cased-v2",
     "descripcion": "Multilingüe alternativo, 512 dims",
-    "tiempo_s": 18.77,
-    "precision_media": 0.3095,
-    "mrr_medio": 0.4722,
-    "hit_at_1_ratio": 0.3333,
+    "tiempo_s": 19.09,
+    "precision_media": 0.4222,
+    "mrr_medio": 0.6389,
+    "hit_at_1_ratio": 0.5,
     "perfiles": [
       {
         "id": "perfil_conservador_corto",
@@ -310,8 +292,7 @@
           "ES0106933031",
           "ES0111166031",
           "ES0114129036",
-          "ES0108283005",
-          "ES0110251008"
+          "ES0108283005"
         ],
         "obtenidos": [
           "ES0126551037",
@@ -320,7 +301,7 @@
           "ES0114129036",
           "ES0113752002"
         ],
-        "precision_at_k": 0.6666666666666666,
+        "precision_at_k": 0.8,
         "mrr": 1.0,
         "hit_at_1": true
       },
@@ -328,24 +309,22 @@
         "id": "perfil_moderado_medio_plazo",
         "descripcion": "Inversor moderado, horizonte 3 años, sin preferencia de gestión",
         "esperados": [
+          "ES0119179002",
           "ES0156944003",
           "ES0164691000",
           "ES0138253002",
-          "ES0138861036",
-          "ES0114984034",
-          "ES0105207007",
-          "ES0105244000"
+          "ES0138861036"
         ],
         "obtenidos": [
+          "ES0119179002",
           "ES0135708008",
           "ES0113536009",
           "ES0156453005",
-          "ES0110195007",
-          "ES0182798019"
+          "ES0110195007"
         ],
-        "precision_at_k": 0.0,
-        "mrr": 0.0,
-        "hit_at_1": false
+        "precision_at_k": 0.2,
+        "mrr": 1.0,
+        "hit_at_1": true
       },
       {
         "id": "perfil_moderado_esg",
@@ -355,9 +334,7 @@
           "ES0109652034",
           "ES0110256007",
           "ES0124524002",
-          "ES0162948014",
-          "ES0109266009",
-          "ES0162946034"
+          "ES0162948014"
         ],
         "obtenidos": [
           "ES0184246009",
@@ -378,9 +355,7 @@
           "ES0110098037",
           "ES0162956009",
           "ES0114564000",
-          "ES0110182039",
-          "ES0105336038",
-          "ES0113572012"
+          "ES0110182039"
         ],
         "obtenidos": [
           "ES0105321030",
@@ -389,7 +364,7 @@
           "ES0114564000",
           "ES0110088038"
         ],
-        "precision_at_k": 0.5714285714285714,
+        "precision_at_k": 0.8,
         "mrr": 1.0,
         "hit_at_1": true
       },
@@ -401,8 +376,7 @@
           "ES0147196036",
           "ES0172243000",
           "ES0183339037",
-          "ES0109266009",
-          "ES0110247006"
+          "ES0109266009"
         ],
         "obtenidos": [
           "ES0178487007",
@@ -411,7 +385,7 @@
           "ES0172243000",
           "ES0158304008"
         ],
-        "precision_at_k": 0.3333333333333333,
+        "precision_at_k": 0.4,
         "mrr": 0.5,
         "hit_at_1": false
       },
@@ -424,7 +398,6 @@
           "ES0115068035",
           "ES0138984036",
           "ES0179692001",
-          "ES0105959003",
           "ES0111193001"
         ],
         "obtenidos": [
@@ -434,7 +407,7 @@
           "ES0140634033",
           "ES0111175008"
         ],
-        "precision_at_k": 0.2857142857142857,
+        "precision_at_k": 0.3333333333333333,
         "mrr": 0.3333333333333333,
         "hit_at_1": false
       }

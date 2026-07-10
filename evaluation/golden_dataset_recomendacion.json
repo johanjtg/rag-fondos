@@ -12,10 +12,10 @@
     },
     "fondos_esperados": [
       "ES0126551037", "ES0106933031", "ES0111166031", "ES0114129036",
-      "ES0108283005", "ES0110251008"
+      "ES0108283005"
     ],
     "fondo_top1_esperado": "ES0126551037",
-    "justificacion": "Riesgo 1-2, horizonte 1 año, renta fija corto plazo, alta liquidez. Incluye ALLIANZ RENDIMIENTO y ARQUIA AHORRO CORTO PLAZO como fondos objetivamente válidos adicionales."
+    "justificacion": "Riesgo 1-2, horizonte 1 año, renta fija corto plazo. ALLIANZ RENDIMIENTO (riesgo=1, horizonte=1) como fondo adicional objetivamente válido."
   },
   {
     "id": "perfil_moderado_medio_plazo",
@@ -29,11 +29,10 @@
       "estrategia": "me da igual activa o pasiva"
     },
     "fondos_esperados": [
-      "ES0156944003", "ES0164691000", "ES0138253002", "ES0138861036", "ES0114984034",
-      "ES0105207007", "ES0105244000"
+      "ES0119179002", "ES0156944003", "ES0164691000", "ES0138253002", "ES0138861036"
     ],
-    "fondo_top1_esperado": "ES0156944003",
-    "justificacion": "Riesgo 2-4, horizonte 3-5 años, carteras mixtas moderadas. Incluye ACACIA INVERMIX 30-60 y ACACIA GLOBALMIX 60-90 como alternativas objetivamente válidas."
+    "fondo_top1_esperado": "ES0119179002",
+    "justificacion": "Riesgo 3-4, horizonte 3 años, carteras mixtas moderadas. BBVA MI INVERSIÓN MIXTA (riesgo=3, horizonte=3) como top1 objetivo."
   },
   {
     "id": "perfil_moderado_esg",
@@ -47,11 +46,10 @@
       "estrategia": "activa, y sí quiero que sea sostenible ESG"
     },
     "fondos_esperados": [
-      "ES0106949003", "ES0109652034", "ES0110256007", "ES0124524002", "ES0162948014",
-      "ES0109266009", "ES0162946034"
+      "ES0106949003", "ES0109652034", "ES0110256007", "ES0124524002", "ES0162948014"
     ],
     "fondo_top1_esperado": "ES0106949003",
-    "justificacion": "Riesgo 3-4, horizonte 5 años, ESG=true, gestión activa. Incluye ANTA QUALITY RV GLOBAL y ABANTE SELECCION como fondos ESG adicionales objetivamente válidos."
+    "justificacion": "Riesgo 3-4, horizonte 5 años, ESG=true, gestión activa."
   },
   {
     "id": "perfil_agresivo_pasivo",
@@ -65,11 +63,10 @@
       "estrategia": "gestión pasiva, prefiero ETF con menos comisiones"
     },
     "fondos_esperados": [
-      "ES0105321030", "ES0110098037", "ES0162956009", "ES0114564000", "ES0110182039",
-      "ES0105336038", "ES0113572012"
+      "ES0105321030", "ES0110098037", "ES0162956009", "ES0114564000", "ES0110182039"
     ],
     "fondo_top1_esperado": "ES0105321030",
-    "justificacion": "Riesgo 4-6, gestión pasiva, indexados europeos/globales. Incluye ACCION IBEX 35 ETF y BANKINTER INDICE GLOBAL como alternativas pasivas válidas."
+    "justificacion": "Riesgo 4-6, gestión pasiva, indexados europeos/globales."
   },
   {
     "id": "perfil_agresivo_esg",
@@ -84,10 +81,10 @@
     },
     "fondos_esperados": [
       "ES0165092034", "ES0147196036", "ES0172243000", "ES0183339037",
-      "ES0109266009", "ES0110247006"
+      "ES0109266009"
     ],
     "fondo_top1_esperado": "ES0165092034",
-    "justificacion": "Riesgo 4-6, ESG=true, gestión activa, largo plazo. Incluye ANTA QUALITY RV GLOBAL y ARQUIA BANCA LIDERES DEL FUTURO como fondos ESG agresivos objetivamente válidos."
+    "justificacion": "Riesgo 4-6, ESG=true, gestión activa, largo plazo. ANTA QUALITY RV GLOBAL como fondo ESG adicional objetivamente válido."
   },
   {
     "id": "perfil_muy_agresivo",
@@ -102,9 +99,9 @@
     },
     "fondos_esperados": [
       "ES0140634033", "ES0125434003", "ES0115068035", "ES0138984036", "ES0179692001",
-      "ES0105959003", "ES0111193001"
+      "ES0111193001"
     ],
     "fondo_top1_esperado": "ES0140634033",
-    "justificacion": "Riesgo 6-7, global, largo plazo, alta exposición a renta variable. Incluye ADAMANTIUM FI y ATTITUDE SHERPA como fondos de muy alto riesgo objetivamente válidos."
+    "justificacion": "Riesgo 6-7, global, largo plazo. ATTITUDE SHERPA (riesgo=6) como fondo de muy alto riesgo adicional objetivamente válido."
   }
 ]

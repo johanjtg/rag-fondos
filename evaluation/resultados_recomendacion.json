@@ -3,9 +3,9 @@
     "configuracion": "60/40 (actual)",
     "coseno": 0.6,
     "semantico": 0.4,
-    "precision_media": 0.6984,
+    "precision_media": 0.8722,
     "mrr_medio": 0.9167,
-    "hit_at_1_ratio": 0.8333,
+    "hit_at_1_ratio": 0.6667,
     "perfiles": [
       {
         "id": "perfil_conservador_corto",
@@ -15,8 +15,7 @@
           "ES0106933031",
           "ES0111166031",
           "ES0114129036",
-          "ES0108283005",
-          "ES0110251008"
+          "ES0108283005"
         ],
         "fondos_obtenidos": [
           "ES0137398006",
@@ -25,7 +24,7 @@
           "ES0111166031",
           "ES0114129036"
         ],
-        "precision_at_k": 0.6667,
+        "precision_at_k": 0.8,
         "hit_at_1": false,
         "mrr": 0.5
       },
@@ -33,13 +32,11 @@
         "id": "perfil_moderado_medio_plazo",
         "descripcion": "Inversor moderado, horizonte 3 años, sin preferencia de gestión",
         "fondos_esperados": [
+          "ES0119179002",
           "ES0156944003",
           "ES0164691000",
           "ES0138253002",
-          "ES0138861036",
-          "ES0114984034",
-          "ES0105207007",
-          "ES0105244000"
+          "ES0138861036"
         ],
         "fondos_obtenidos": [
           "ES0156944003",
@@ -48,8 +45,8 @@
           "ES0138861036",
           "ES0114984034"
         ],
-        "precision_at_k": 0.7143,
-        "hit_at_1": true,
+        "precision_at_k": 0.8,
+        "hit_at_1": false,
         "mrr": 1.0
       },
       {
@@ -60,9 +57,7 @@
           "ES0109652034",
           "ES0110256007",
           "ES0124524002",
-          "ES0162948014",
-          "ES0109266009",
-          "ES0162946034"
+          "ES0162948014"
         ],
         "fondos_obtenidos": [
           "ES0106949003",
@@ -71,7 +66,7 @@
           "ES0124524002",
           "ES0162948014"
         ],
-        "precision_at_k": 0.7143,
+        "precision_at_k": 1.0,
         "hit_at_1": true,
         "mrr": 1.0
       },
@@ -83,9 +78,7 @@
           "ES0110098037",
           "ES0162956009",
           "ES0114564000",
-          "ES0110182039",
-          "ES0105336038",
-          "ES0113572012"
+          "ES0110182039"
         ],
         "fondos_obtenidos": [
           "ES0105321030",
@@ -94,7 +87,7 @@
           "ES0114564000",
           "ES0110182039"
         ],
-        "precision_at_k": 0.7143,
+        "precision_at_k": 1.0,
         "hit_at_1": true,
         "mrr": 1.0
       },
@@ -106,8 +99,7 @@
           "ES0147196036",
           "ES0172243000",
           "ES0183339037",
-          "ES0109266009",
-          "ES0110247006"
+          "ES0109266009"
         ],
         "fondos_obtenidos": [
           "ES0165092034",
@@ -116,7 +108,7 @@
           "ES0172243000",
           "ES0183339037"
         ],
-        "precision_at_k": 0.6667,
+        "precision_at_k": 0.8,
         "hit_at_1": true,
         "mrr": 1.0
       },
@@ -129,7 +121,6 @@
           "ES0115068035",
           "ES0138984036",
           "ES0179692001",
-          "ES0105959003",
           "ES0111193001"
         ],
         "fondos_obtenidos": [
@@ -139,7 +130,7 @@
           "ES0138984036",
           "ES0179692001"
         ],
-        "precision_at_k": 0.7143,
+        "precision_at_k": 0.8333,
         "hit_at_1": true,
         "mrr": 1.0
       }
@@ -149,9 +140,9 @@
     "configuracion": "70/30",
     "coseno": 0.7,
     "semantico": 0.3,
-    "precision_media": 0.4762,
+    "precision_media": 0.6111,
     "mrr_medio": 0.7556,
-    "hit_at_1_ratio": 0.6667,
+    "hit_at_1_ratio": 0.5,
     "perfiles": [
       {
         "id": "perfil_conservador_corto",
@@ -161,8 +152,7 @@
           "ES0106933031",
           "ES0111166031",
           "ES0114129036",
-          "ES0108283005",
-          "ES0110251008"
+          "ES0108283005"
         ],
         "fondos_obtenidos": [
           "ES0126551037",
@@ -171,7 +161,7 @@
           "ES0114129036",
           "ES0113752002"
         ],
-        "precision_at_k": 0.6667,
+        "precision_at_k": 0.8,
         "hit_at_1": true,
         "mrr": 1.0
       },
@@ -179,13 +169,11 @@
         "id": "perfil_moderado_medio_plazo",
         "descripcion": "Inversor moderado, horizonte 3 años, sin preferencia de gestión",
         "fondos_esperados": [
+          "ES0119179002",
           "ES0156944003",
           "ES0164691000",
           "ES0138253002",
-          "ES0138861036",
-          "ES0114984034",
-          "ES0105207007",
-          "ES0105244000"
+          "ES0138861036"
         ],
         "fondos_obtenidos": [
           "ES0156944003",
@@ -194,8 +182,8 @@
           "ES0138861036",
           "ES0156453005"
         ],
-        "precision_at_k": 0.5714,
-        "hit_at_1": true,
+        "precision_at_k": 0.8,
+        "hit_at_1": false,
         "mrr": 1.0
       },
       {
@@ -206,9 +194,7 @@
           "ES0109652034",
           "ES0110256007",
           "ES0124524002",
-          "ES0162948014",
-          "ES0109266009",
-          "ES0162946034"
+          "ES0162948014"
         ],
         "fondos_obtenidos": [
           "ES0105011037",
@@ -217,7 +203,7 @@
           "ES0105263000",
           "ES0106949003"
         ],
-        "precision_at_k": 0.1429,
+        "precision_at_k": 0.2,
         "hit_at_1": false,
         "mrr": 0.2
       },
@@ -229,9 +215,7 @@
           "ES0110098037",
           "ES0162956009",
           "ES0114564000",
-          "ES0110182039",
-          "ES0105336038",
-          "ES0113572012"
+          "ES0110182039"
         ],
         "fondos_obtenidos": [
           "ES0105321030",
@@ -240,7 +224,7 @@
           "ES0110182039",
           "ES0119203034"
         ],
-        "precision_at_k": 0.5714,
+        "precision_at_k": 0.8,
         "hit_at_1": true,
         "mrr": 1.0
       },
@@ -252,8 +236,7 @@
           "ES0147196036",
           "ES0172243000",
           "ES0183339037",
-          "ES0109266009",
-          "ES0110247006"
+          "ES0109266009"
         ],
         "fondos_obtenidos": [
           "ES0110101039",
@@ -262,7 +245,7 @@
           "ES0164948004",
           "ES0165092034"
         ],
-        "precision_at_k": 0.3333,
+        "precision_at_k": 0.4,
         "hit_at_1": false,
         "mrr": 0.3333
       },
@@ -275,7 +258,6 @@
           "ES0115068035",
           "ES0138984036",
           "ES0179692001",
-          "ES0105959003",
           "ES0111193001"
         ],
         "fondos_obtenidos": [
@@ -285,7 +267,7 @@
           "ES0138984036",
           "ES0114581004"
         ],
-        "precision_at_k": 0.5714,
+        "precision_at_k": 0.6667,
         "hit_at_1": true,
         "mrr": 1.0
       }
@@ -295,9 +277,9 @@
     "configuracion": "50/50",
     "coseno": 0.5,
     "semantico": 0.5,
-    "precision_media": 0.6032,
+    "precision_media": 0.7444,
     "mrr_medio": 0.9167,
-    "hit_at_1_ratio": 0.6667,
+    "hit_at_1_ratio": 0.5,
     "perfiles": [
       {
         "id": "perfil_conservador_corto",
@@ -307,8 +289,7 @@
           "ES0106933031",
           "ES0111166031",
           "ES0114129036",
-          "ES0108283005",
-          "ES0110251008"
+          "ES0108283005"
         ],
         "fondos_obtenidos": [
           "ES0137398006",
@@ -317,7 +298,7 @@
           "ES0111166031",
           "ES0114129036"
         ],
-        "precision_at_k": 0.6667,
+        "precision_at_k": 0.8,
         "hit_at_1": false,
         "mrr": 0.5
       },
@@ -325,13 +306,11 @@
         "id": "perfil_moderado_medio_plazo",
         "descripcion": "Inversor moderado, horizonte 3 años, sin preferencia de gestión",
         "fondos_esperados": [
+          "ES0119179002",
           "ES0156944003",
           "ES0164691000",
           "ES0138253002",
-          "ES0138861036",
-          "ES0114984034",
-          "ES0105207007",
-          "ES0105244000"
+          "ES0138861036"
         ],
         "fondos_obtenidos": [
           "ES0156944003",
@@ -340,8 +319,8 @@
           "ES0138253002",
           "ES0138861036"
         ],
-        "precision_at_k": 0.7143,
-        "hit_at_1": true,
+        "precision_at_k": 0.8,
+        "hit_at_1": false,
         "mrr": 1.0
       },
       {
@@ -352,9 +331,7 @@
           "ES0109652034",
           "ES0110256007",
           "ES0124524002",
-          "ES0162948014",
-          "ES0109266009",
-          "ES0162946034"
+          "ES0162948014"
         ],
         "fondos_obtenidos": [
           "ES0110256007",
@@ -363,7 +340,7 @@
           "ES0113608006",
           "ES0114202007"
         ],
-        "precision_at_k": 0.2857,
+        "precision_at_k": 0.4,
         "hit_at_1": false,
         "mrr": 1.0
       },
@@ -375,9 +352,7 @@
           "ES0110098037",
           "ES0162956009",
           "ES0114564000",
-          "ES0110182039",
-          "ES0105336038",
-          "ES0113572012"
+          "ES0110182039"
         ],
         "fondos_obtenidos": [
           "ES0105321030",
@@ -386,7 +361,7 @@
           "ES0114564000",
           "ES0110182039"
         ],
-        "precision_at_k": 0.7143,
+        "precision_at_k": 1.0,
         "hit_at_1": true,
         "mrr": 1.0
       },
@@ -398,8 +373,7 @@
           "ES0147196036",
           "ES0172243000",
           "ES0183339037",
-          "ES0109266009",
-          "ES0110247006"
+          "ES0109266009"
         ],
         "fondos_obtenidos": [
           "ES0165092034",
@@ -408,7 +382,7 @@
           "ES0172243000",
           "ES0183339037"
         ],
-        "precision_at_k": 0.6667,
+        "precision_at_k": 0.8,
         "hit_at_1": true,
         "mrr": 1.0
       },
@@ -421,7 +395,6 @@
           "ES0115068035",
           "ES0138984036",
           "ES0179692001",
-          "ES0105959003",
           "ES0111193001"
         ],
         "fondos_obtenidos": [
@@ -431,7 +404,7 @@
           "ES0138984036",
           "ES0141113037"
         ],
-        "precision_at_k": 0.5714,
+        "precision_at_k": 0.6667,
         "hit_at_1": true,
         "mrr": 1.0
       }
@@ -441,7 +414,7 @@
     "configuracion": "80/20",
     "coseno": 0.8,
     "semantico": 0.2,
-    "precision_media": 0.377,
+    "precision_media": 0.4833,
     "mrr_medio": 0.7083,
     "hit_at_1_ratio": 0.5,
     "perfiles": [
@@ -453,8 +426,7 @@
           "ES0106933031",
           "ES0111166031",
           "ES0114129036",
-          "ES0108283005",
-          "ES0110251008"
+          "ES0108283005"
         ],
         "fondos_obtenidos": [
           "ES0126551037",
@@ -463,7 +435,7 @@
           "ES0114129036",
           "ES0113752002"
         ],
-        "precision_at_k": 0.6667,
+        "precision_at_k": 0.8,
         "hit_at_1": true,
         "mrr": 1.0
       },
@@ -471,13 +443,11 @@
         "id": "perfil_moderado_medio_plazo",
         "descripcion": "Inversor moderado, horizonte 3 años, sin preferencia de gestión",
         "fondos_esperados": [
+          "ES0119179002",
           "ES0156944003",
           "ES0164691000",
           "ES0138253002",
-          "ES0138861036",
-          "ES0114984034",
-          "ES0105207007",
-          "ES0105244000"
+          "ES0138861036"
         ],
         "fondos_obtenidos": [
           "ES0164691000",
@@ -486,7 +456,7 @@
           "ES0156453005",
           "ES0125102030"
         ],
-        "precision_at_k": 0.4286,
+        "precision_at_k": 0.6,
         "hit_at_1": false,
         "mrr": 1.0
       },
@@ -498,9 +468,7 @@
           "ES0109652034",
           "ES0110256007",
           "ES0124524002",
-          "ES0162948014",
-          "ES0109266009",
-          "ES0162946034"
+          "ES0162948014"
         ],
         "fondos_obtenidos": [
           "ES0105011037",
@@ -521,9 +489,7 @@
           "ES0110098037",
           "ES0162956009",
           "ES0114564000",
-          "ES0110182039",
-          "ES0105336038",
-          "ES0113572012"
+          "ES0110182039"
         ],
         "fondos_obtenidos": [
           "ES0105321030",
@@ -532,7 +498,7 @@
           "ES0110182039",
           "ES0119203034"
         ],
-        "precision_at_k": 0.5714,
+        "precision_at_k": 0.8,
         "hit_at_1": true,
         "mrr": 1.0
       },
@@ -544,8 +510,7 @@
           "ES0147196036",
           "ES0172243000",
           "ES0183339037",
-          "ES0109266009",
-          "ES0110247006"
+          "ES0109266009"
         ],
         "fondos_obtenidos": [
           "ES0105578001",
@@ -554,7 +519,7 @@
           "ES0147196036",
           "ES0157327000"
         ],
-        "precision_at_k": 0.1667,
+        "precision_at_k": 0.2,
         "hit_at_1": false,
         "mrr": 0.25
       },
@@ -567,7 +532,6 @@
           "ES0115068035",
           "ES0138984036",
           "ES0179692001",
-          "ES0105959003",
           "ES0111193001"
         ],
         "fondos_obtenidos": [
@@ -577,7 +541,7 @@
           "ES0179692001",
           "ES0138984036"
         ],
-        "precision_at_k": 0.4286,
+        "precision_at_k": 0.5,
         "hit_at_1": true,
         "mrr": 1.0
       }
@@ -587,7 +551,7 @@
     "configuracion": "100/0",
     "coseno": 1.0,
     "semantico": 0.0,
-    "precision_media": 0.2063,
+    "precision_media": 0.2611,
     "mrr_medio": 0.2778,
     "hit_at_1_ratio": 0.1667,
     "perfiles": [
@@ -599,8 +563,7 @@
           "ES0106933031",
           "ES0111166031",
           "ES0114129036",
-          "ES0108283005",
-          "ES0110251008"
+          "ES0108283005"
         ],
         "fondos_obtenidos": [
           "ES0126551037",
@@ -609,7 +572,7 @@
           "ES0114129036",
           "ES0113752002"
         ],
-        "precision_at_k": 0.6667,
+        "precision_at_k": 0.8,
         "hit_at_1": true,
         "mrr": 1.0
       },
@@ -617,13 +580,11 @@
         "id": "perfil_moderado_medio_plazo",
         "descripcion": "Inversor moderado, horizonte 3 años, sin preferencia de gestión",
         "fondos_esperados": [
+          "ES0119179002",
           "ES0156944003",
           "ES0164691000",
           "ES0138253002",
-          "ES0138861036",
-          "ES0114984034",
-          "ES0105207007",
-          "ES0105244000"
+          "ES0138861036"
         ],
         "fondos_obtenidos": [
           "ES0135708008",
@@ -644,9 +605,7 @@
           "ES0109652034",
           "ES0110256007",
           "ES0124524002",
-          "ES0162948014",
-          "ES0109266009",
-          "ES0162946034"
+          "ES0162948014"
         ],
         "fondos_obtenidos": [
           "ES0105011037",
@@ -667,9 +626,7 @@
           "ES0110098037",
           "ES0162956009",
           "ES0114564000",
-          "ES0110182039",
-          "ES0105336038",
-          "ES0113572012"
+          "ES0110182039"
         ],
         "fondos_obtenidos": [
           "ES0119203034",
@@ -678,7 +635,7 @@
           "ES0110098037",
           "ES0110182039"
         ],
-        "precision_at_k": 0.4286,
+        "precision_at_k": 0.6,
         "hit_at_1": false,
         "mrr": 0.3333
       },
@@ -690,8 +647,7 @@
           "ES0147196036",
           "ES0172243000",
           "ES0183339037",
-          "ES0109266009",
-          "ES0110247006"
+          "ES0109266009"
         ],
         "fondos_obtenidos": [
           "ES0162946034",
@@ -713,7 +669,6 @@
           "ES0115068035",
           "ES0138984036",
           "ES0179692001",
-          "ES0105959003",
           "ES0111193001"
         ],
         "fondos_obtenidos": [
@@ -723,7 +678,7 @@
           "ES0123746002",
           "ES0179346004"
         ],
-        "precision_at_k": 0.1429,
+        "precision_at_k": 0.1667,
         "hit_at_1": false,
         "mrr": 0.3333
       }
@@ -733,7 +688,7 @@
     "configuracion": "0/100",
     "coseno": 0.0,
     "semantico": 1.0,
-    "precision_media": 0.1587,
+    "precision_media": 0.2,
     "mrr_medio": 0.3889,
     "hit_at_1_ratio": 0.1667,
     "perfiles": [
@@ -745,8 +700,7 @@
           "ES0106933031",
           "ES0111166031",
           "ES0114129036",
-          "ES0108283005",
-          "ES0110251008"
+          "ES0108283005"
         ],
         "fondos_obtenidos": [
           "ES0137398006",
@@ -755,7 +709,7 @@
           "ES0119483008",
           "ES0126542036"
         ],
-        "precision_at_k": 0.3333,
+        "precision_at_k": 0.4,
         "hit_at_1": false,
         "mrr": 0.5
       },
@@ -763,13 +717,11 @@
         "id": "perfil_moderado_medio_plazo",
         "descripcion": "Inversor moderado, horizonte 3 años, sin preferencia de gestión",
         "fondos_esperados": [
+          "ES0119179002",
           "ES0156944003",
           "ES0164691000",
           "ES0138253002",
-          "ES0138861036",
-          "ES0114984034",
-          "ES0105207007",
-          "ES0105244000"
+          "ES0138861036"
         ],
         "fondos_obtenidos": [
           "ES0182769002",
@@ -778,7 +730,7 @@
           "ES0174767006",
           "ES0174768004"
         ],
-        "precision_at_k": 0.1429,
+        "precision_at_k": 0.2,
         "hit_at_1": false,
         "mrr": 0.3333
       },
@@ -790,9 +742,7 @@
           "ES0109652034",
           "ES0110256007",
           "ES0124524002",
-          "ES0162948014",
-          "ES0109266009",
-          "ES0162946034"
+          "ES0162948014"
         ],
         "fondos_obtenidos": [
           "ES0113608006",
@@ -813,9 +763,7 @@
           "ES0110098037",
           "ES0162956009",
           "ES0114564000",
-          "ES0110182039",
-          "ES0105336038",
-          "ES0113572012"
+          "ES0110182039"
         ],
         "fondos_obtenidos": [
           "ES0173828031",
@@ -824,7 +772,7 @@
           "ES0174356008",
           "ES0152771038"
         ],
-        "precision_at_k": 0.1429,
+        "precision_at_k": 0.2,
         "hit_at_1": false,
         "mrr": 0.5
       },
@@ -836,8 +784,7 @@
           "ES0147196036",
           "ES0172243000",
           "ES0183339037",
-          "ES0109266009",
-          "ES0110247006"
+          "ES0109266009"
         ],
         "fondos_obtenidos": [
           "ES0165092034",
@@ -846,7 +793,7 @@
           "ES0172243000",
           "ES0164956007"
         ],
-        "precision_at_k": 0.3333,
+        "precision_at_k": 0.4,
         "hit_at_1": true,
         "mrr": 1.0
       },
@@ -859,7 +806,6 @@
           "ES0115068035",
           "ES0138984036",
           "ES0179692001",
-          "ES0105959003",
           "ES0111193001"
         ],
         "fondos_obtenidos": [

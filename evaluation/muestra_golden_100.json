@@ -1,0 +1,502 @@
+[
+  {
+    "isin": "ES0114771001",
+    "nombre_fondo": "CAIXABANK DEUDA PUBLICA 2029, FI CLASE ESTANDAR",
+    "pdf_origen": "ES0114771001.pdf"
+  },
+  {
+    "isin": "ES0109191009",
+    "nombre_fondo": "AMEINON RENTA FIJA FI",
+    "pdf_origen": "ES0109191009.pdf"
+  },
+  {
+    "isin": "ES0142451030",
+    "nombre_fondo": "BBVA BOLSA PLUS, FI",
+    "pdf_origen": "ES0142451030.pdf"
+  },
+  {
+    "isin": "ES0138820008",
+    "nombre_fondo": "FONDMAPFRE RENTA FIJA FLEXIBLE, FI CLASE C",
+    "pdf_origen": "ES0138820008.pdf"
+  },
+  {
+    "isin": "ES0137794014",
+    "nombre_fondo": "CAIXABANK RENTA FIJA SUBORDINADA, FI CLASE EXTRA",
+    "pdf_origen": "ES0137794014.pdf"
+  },
+  {
+    "isin": "ES0117091035",
+    "nombre_fondo": "BBVA CRÉDITO EUROPA, FI",
+    "pdf_origen": "ES0117091035.pdf"
+  },
+  {
+    "isin": "ES0114533005",
+    "nombre_fondo": "CAIXABANK DEUDA CORPORATIVA 2031, FI CLASE PLUS",
+    "pdf_origen": "ES0114533005.pdf"
+  },
+  {
+    "isin": "ES0114063037",
+    "nombre_fondo": "SANTANDER ACCIONES EURO, FI- CLASE A",
+    "pdf_origen": "ES0114063037.pdf"
+  },
+  {
+    "isin": "ES0172053029",
+    "nombre_fondo": "PSN MULTIESTRATEGIA/RENTA FIJA MIXTA INTERNACIONAL",
+    "pdf_origen": "ES0172053029.pdf"
+  },
+  {
+    "isin": "ES0110053008",
+    "nombre_fondo": "BANKINTER AHORRO RENTA FIJA FI, CLASE C",
+    "pdf_origen": "ES0110053008.pdf"
+  },
+  {
+    "isin": "ES0109652034",
+    "nombre_fondo": "ABANTE ASESORES GLOBAL, FI",
+    "pdf_origen": "ES0109652034.pdf"
+  },
+  {
+    "isin": "ES0114233002",
+    "nombre_fondo": "KUTXABANK BOLSA EMERGENTES, FI CLASE CARTERA",
+    "pdf_origen": "ES0114233002.pdf"
+  },
+  {
+    "isin": "ES0137475002",
+    "nombre_fondo": "CAIXABANK SMART RENTA FIJA EMERGENTE, FI",
+    "pdf_origen": "ES0137475002.pdf"
+  },
+  {
+    "isin": "ES0138392032",
+    "nombre_fondo": "CAIXABANK BOLSA INDICE ESPAÑA, FI CLASE ESTANDAR",
+    "pdf_origen": "ES0138392032.pdf"
+  },
+  {
+    "isin": "ES0182035032",
+    "nombre_fondo": "UNICAJA MODERADO, CLASE A",
+    "pdf_origen": "ES0182035032.pdf"
+  },
+  {
+    "isin": "ES0109230013",
+    "nombre_fondo": "CALIOPE, FI CLASE ESTANDAR",
+    "pdf_origen": "ES0109230013.pdf"
+  },
+  {
+    "isin": "ES0133400004",
+    "nombre_fondo": "ABANCA GESTIÓN, FI / DECIDIDO",
+    "pdf_origen": "ES0133400004.pdf"
+  },
+  {
+    "isin": "ES0171218011",
+    "nombre_fondo": "LORETO PREMIUM RENTA VARIABLE MIXTA FI, CL I",
+    "pdf_origen": "ES0171218011.pdf"
+  },
+  {
+    "isin": "ES0137627008",
+    "nombre_fondo": "CAIXABANK SMART RENTA FIJA DEUDA PUBLICA 7-10, FI",
+    "pdf_origen": "ES0137627008.pdf"
+  },
+  {
+    "isin": "ES0174367005",
+    "nombre_fondo": "RURAL EURO RENTA VARIABLE, FI CARTERA",
+    "pdf_origen": "ES0174367005.pdf"
+  },
+  {
+    "isin": "ES0143211003",
+    "nombre_fondo": "GREDOS MODERADO. FI",
+    "pdf_origen": "ES0143211003.pdf"
+  },
+  {
+    "isin": "ES0105578001",
+    "nombre_fondo": "CAIXABANK SELECCION COMPROMISO FUTURO 0-60 RV, FI CLASE SIN RETRO",
+    "pdf_origen": "ES0105578001.pdf"
+  },
+  {
+    "isin": "ES0123981005",
+    "nombre_fondo": "RURAL SOSTENIBLE MODERADO, FI CARTERA",
+    "pdf_origen": "ES0123981005.pdf"
+  },
+  {
+    "isin": "ES0172242002",
+    "nombre_fondo": "QUALITY INVERSIÓN MODERADA, FI",
+    "pdf_origen": "ES0172242002.pdf"
+  },
+  {
+    "isin": "ES0157935018",
+    "nombre_fondo": "ACACIA RENTA DINAMICA FI CLASE G",
+    "pdf_origen": "ES0157935018.pdf"
+  },
+  {
+    "isin": "ES0122708037",
+    "nombre_fondo": "CI IBERIAN EQUITY A, FI",
+    "pdf_origen": "ES0122708037.pdf"
+  },
+  {
+    "isin": "ES0137354009",
+    "nombre_fondo": "FINNK RF CORTO PLAZO, FI CLASE CARTERA",
+    "pdf_origen": "ES0137354009.pdf"
+  },
+  {
+    "isin": "ES0157626005",
+    "nombre_fondo": "LAMBDA UNIVERSAL, FI",
+    "pdf_origen": "ES0157626005.pdf"
+  },
+  {
+    "isin": "ES0114222005",
+    "nombre_fondo": "KUTXABANK BOLSA NUEVA ECONOMIA, FI CLASE CARTERA",
+    "pdf_origen": "ES0114222005.pdf"
+  },
+  {
+    "isin": "ES0164453005",
+    "nombre_fondo": "MORABANC-ARCANO RF PRIVADA 2027, F.I.",
+    "pdf_origen": "ES0164453005.pdf"
+  },
+  {
+    "isin": "ES0114289004",
+    "nombre_fondo": "SA OPTIMA GLOBAL, FI",
+    "pdf_origen": "ES0114289004.pdf"
+  },
+  {
+    "isin": "ES0160747004",
+    "nombre_fondo": "MARCH CARTERA DECIDIDA, F.I. A EUR",
+    "pdf_origen": "ES0160747004.pdf"
+  },
+  {
+    "isin": "ES0158306003",
+    "nombre_fondo": "UNICAJA RENTABILIDAD OBJETIVO 2028-II, CLASE A",
+    "pdf_origen": "ES0158306003.pdf"
+  },
+  {
+    "isin": "ES0141102006",
+    "nombre_fondo": "MARKET PORTFOLIO CORPORATE BONDS, FI",
+    "pdf_origen": "ES0141102006.pdf"
+  },
+  {
+    "isin": "ES0110256007",
+    "nombre_fondo": "ARQUIA BANCA LÍDERES GLOBALES FI-Clase A",
+    "pdf_origen": "ES0110256007.pdf"
+  },
+  {
+    "isin": "ES0175164039",
+    "nombre_fondo": "SANTANDER RENTA FIJA PRIVADA, CLASE A",
+    "pdf_origen": "ES0175164039.pdf"
+  },
+  {
+    "isin": "ES0115285035",
+    "nombre_fondo": "BBVA BONOS SOSTENIBLE ISR, FI",
+    "pdf_origen": "ES0115285035.pdf"
+  },
+  {
+    "isin": "ES0162956009",
+    "nombre_fondo": "ABANCA INDICE RENTA VARIABLE EMERGENTE, FI",
+    "pdf_origen": "ES0162956009.pdf"
+  },
+  {
+    "isin": "ES0113593000",
+    "nombre_fondo": "FONDO NARANJA RENTABILIDAD 2029 I, FI",
+    "pdf_origen": "ES0113593000.pdf"
+  },
+  {
+    "isin": "ES0146758000",
+    "nombre_fondo": "IBERCAJA MEGATRENDS, FI CLASE A",
+    "pdf_origen": "ES0146758000.pdf"
+  },
+  {
+    "isin": "ES0160924017",
+    "nombre_fondo": "MARCH RENTA FIJA FLEXIBLE, F.I. A EUR",
+    "pdf_origen": "ES0160924017.pdf"
+  },
+  {
+    "isin": "ES0131369003",
+    "nombre_fondo": "MUTUAFONDO SALUD, FI CLASE A",
+    "pdf_origen": "ES0131369003.pdf"
+  },
+  {
+    "isin": "ES0113200036",
+    "nombre_fondo": "BBVA FONDTESORO CORTO PLAZO, FI",
+    "pdf_origen": "ES0113200036.pdf"
+  },
+  {
+    "isin": "ES0110951037",
+    "nombre_fondo": "UNICAJA RENTAS GARANTIZADO 2030, FI",
+    "pdf_origen": "ES0110951037.pdf"
+  },
+  {
+    "isin": "ES0138217031",
+    "nombre_fondo": "Gesconsult Renta Fija Flexible, FI clase A",
+    "pdf_origen": "ES0138217031.pdf"
+  },
+  {
+    "isin": "ES0145882009",
+    "nombre_fondo": "CAIXABANK MASTER RENTA VARIABLE EUROPA, FI",
+    "pdf_origen": "ES0145882009.pdf"
+  },
+  {
+    "isin": "ES0113606000",
+    "nombre_fondo": "SANTANDER SOSTENIBLE EVOLUCION, FI- A",
+    "pdf_origen": "ES0113606000.pdf"
+  },
+  {
+    "isin": "ES0114434006",
+    "nombre_fondo": "BT FUND SELECTION DEBT",
+    "pdf_origen": "ES0114434006.pdf"
+  },
+  {
+    "isin": "ES0174742017",
+    "nombre_fondo": "SAN.GESTION DINAMICA PRUDENTE, FI- CL. A",
+    "pdf_origen": "ES0174742017.pdf"
+  },
+  {
+    "isin": "ES0161992005",
+    "nombre_fondo": "SIGMA INVESTMENT HOUSE CAPITAL, FI",
+    "pdf_origen": "ES0161992005.pdf"
+  },
+  {
+    "isin": "ES0124504004",
+    "nombre_fondo": "CAIXABANK MASTER RETORNO ABSOLUTO, FI",
+    "pdf_origen": "ES0124504004.pdf"
+  },
+  {
+    "isin": "ES0162701009",
+    "nombre_fondo": "METAVALOR DIVIDENDO, FI",
+    "pdf_origen": "ES0162701009.pdf"
+  },
+  {
+    "isin": "ES0159159005",
+    "nombre_fondo": "BBVA PATRIMONIO GLOBAL DECIDIDO, FI",
+    "pdf_origen": "ES0159159005.pdf"
+  },
+  {
+    "isin": "ES0135709006",
+    "nombre_fondo": "BBVA BONOS 2029, FI A",
+    "pdf_origen": "ES0135709006.pdf"
+  },
+  {
+    "isin": "ES0141231003",
+    "nombre_fondo": "SABADELL GOBIERNOS CORTO PLAZO, F.I. - BASE",
+    "pdf_origen": "ES0141231003.pdf"
+  },
+  {
+    "isin": "ES0113288031",
+    "nombre_fondo": "UBS PREMIUM MODERADO FI A",
+    "pdf_origen": "ES0113288031.pdf"
+  },
+  {
+    "isin": "ES0125588006",
+    "nombre_fondo": "CI CIMS 2027 2E, FI",
+    "pdf_origen": "ES0125588006.pdf"
+  },
+  {
+    "isin": "ES0124524002",
+    "nombre_fondo": "ABANCA RENTA FIJA GOBIERNOS, FI, CLASE CARTERA",
+    "pdf_origen": "ES0124524002.pdf"
+  },
+  {
+    "isin": "ES0175407008",
+    "nombre_fondo": "SELECCION BP 60, FI CLASE A",
+    "pdf_origen": "ES0175407008.pdf"
+  },
+  {
+    "isin": "ES0164384002",
+    "nombre_fondo": "BANKINTER INVERSO EE.UU. CL C",
+    "pdf_origen": "ES0164384002.pdf"
+  },
+  {
+    "isin": "ES0141986010",
+    "nombre_fondo": "RURAL FUTURO ISR, FI CARTERA",
+    "pdf_origen": "ES0141986010.pdf"
+  },
+  {
+    "isin": "ES0137510006",
+    "nombre_fondo": "CAIXABANK SMART RENTA VARIABLE REAL ESTATE, FI",
+    "pdf_origen": "ES0137510006.pdf"
+  },
+  {
+    "isin": "ES0156435002",
+    "nombre_fondo": "JDS CAPITAL GROWTH&VALUE, FI",
+    "pdf_origen": "ES0156435002.pdf"
+  },
+  {
+    "isin": "ES0111192003",
+    "nombre_fondo": "ATTITUDE OPPORTUNITIES, FI",
+    "pdf_origen": "ES0111192003.pdf"
+  },
+  {
+    "isin": "ES0138253002",
+    "nombre_fondo": "CBNK RENTA VARIABLE ESPAÑA FI, CLASE CARTERA",
+    "pdf_origen": "ES0138253002.pdf"
+  },
+  {
+    "isin": "ES0147715009",
+    "nombre_fondo": "ARQUIA BOLSA GARANTIZADO II, FI",
+    "pdf_origen": "ES0147715009.pdf"
+  },
+  {
+    "isin": "ES0165269004",
+    "nombre_fondo": "MUTUAFONDO RENTA VARIABLE EE.UU, FI CLASE D",
+    "pdf_origen": "ES0165269004.pdf"
+  },
+  {
+    "isin": "ES0141580037",
+    "nombre_fondo": "SIGMA INVESTMENT HOUSE AHORRO, FI, CLASE A",
+    "pdf_origen": "ES0141580037.pdf"
+  },
+  {
+    "isin": "ES0112763000",
+    "nombre_fondo": "BESTINVER NORTEAMERICA, F.I",
+    "pdf_origen": "ES0112763000.pdf"
+  },
+  {
+    "isin": "ES0136109008",
+    "nombre_fondo": "FONDO NARANJA RENTABILIDAD 2027 I, FI",
+    "pdf_origen": "ES0136109008.pdf"
+  },
+  {
+    "isin": "ES0147711032",
+    "nombre_fondo": "BBVA MEGATENDENCIA TECNOLOGÍA, FI A",
+    "pdf_origen": "ES0147711032.pdf"
+  },
+  {
+    "isin": "ES0136469006",
+    "nombre_fondo": "FINANCIALS CREDIT FUND, FI / CLASE B",
+    "pdf_origen": "ES0136469006.pdf"
+  },
+  {
+    "isin": "ES0181132004",
+    "nombre_fondo": "LABORAL KUTXA HORIZONTE 2027 3, FI",
+    "pdf_origen": "ES0181132004.pdf"
+  },
+  {
+    "isin": "ES0165144009",
+    "nombre_fondo": "MUTUAFONDO ESPAÑA, FI CLASE A",
+    "pdf_origen": "ES0165144009.pdf"
+  },
+  {
+    "isin": "ES0175083031",
+    "nombre_fondo": "SABADELL BOLSAS EMERGENTES, FI - BASE",
+    "pdf_origen": "ES0175083031.pdf"
+  },
+  {
+    "isin": "ES0118857004",
+    "nombre_fondo": "BBVA ESTRATEGIA 0-50, FI",
+    "pdf_origen": "ES0118857004.pdf"
+  },
+  {
+    "isin": "ES0141113037",
+    "nombre_fondo": "GVCGaesco Japón, FI Clase A",
+    "pdf_origen": "ES0141113037.pdf"
+  },
+  {
+    "isin": "ES0138873007",
+    "nombre_fondo": "CAIXABANK FONDTESORO LARGO PLAZO, FI CLASE SIN RETRO",
+    "pdf_origen": "ES0138873007.pdf"
+  },
+  {
+    "isin": "ES0140963010",
+    "nombre_fondo": "ALGAR GLOBAL FUND CLASE I, FI",
+    "pdf_origen": "ES0140963010.pdf"
+  },
+  {
+    "isin": "ES0173317001",
+    "nombre_fondo": "RENTA 4 DELTA CLASE I",
+    "pdf_origen": "ES0173317001.pdf"
+  },
+  {
+    "isin": "ES0165206006",
+    "nombre_fondo": "FonsVila-Real, F.I",
+    "pdf_origen": "ES0165206006.pdf"
+  },
+  {
+    "isin": "ES0160982031",
+    "nombre_fondo": "MARCH GLOBAL QUALITY, F.I. A EUR",
+    "pdf_origen": "ES0160982031.pdf"
+  },
+  {
+    "isin": "ES0116849003",
+    "nombre_fondo": "GLOBAL MIX FUND, F.I.",
+    "pdf_origen": "ES0116849003.pdf"
+  },
+  {
+    "isin": "ES0182798019",
+    "nombre_fondo": "CLASE I ADRIZA GLOBAL FI",
+    "pdf_origen": "ES0182798019.pdf"
+  },
+  {
+    "isin": "ES0180842009",
+    "nombre_fondo": "UNICAJA CONSERVADOR, CLASE A",
+    "pdf_origen": "ES0180842009.pdf"
+  },
+  {
+    "isin": "ES0114202007",
+    "nombre_fondo": "KUTXABANK BOLSA SMALL & MID CAPS, FI CLASE CARTERA",
+    "pdf_origen": "ES0114202007.pdf"
+  },
+  {
+    "isin": "ES0111013035",
+    "nombre_fondo": "UNICAJA RENTA FIJA FLEXIBLE, CLASE A",
+    "pdf_origen": "ES0111013035.pdf"
+  },
+  {
+    "isin": "ES0114754007",
+    "nombre_fondo": "BANKINTER INDICE EUROPEO FI, CLASE C",
+    "pdf_origen": "ES0114754007.pdf"
+  },
+  {
+    "isin": "ES0121092011",
+    "nombre_fondo": "COMPROMISO MEDIOLANUM FI, CLASE E",
+    "pdf_origen": "ES0121092011.pdf"
+  },
+  {
+    "isin": "ES0123983001",
+    "nombre_fondo": "SABADELL BUY AND WATCH 03 2027, F .I.",
+    "pdf_origen": "ES0123983001.pdf"
+  },
+  {
+    "isin": "ES0112612017",
+    "nombre_fondo": "B&H FLEXIBLE, FI",
+    "pdf_origen": "ES0112612017.pdf"
+  },
+  {
+    "isin": "ES0164705008",
+    "nombre_fondo": "MUTUAFONDO BONOS SUBORDINADOS V, FI CLASE A",
+    "pdf_origen": "ES0164705008.pdf"
+  },
+  {
+    "isin": "ES0164540009",
+    "nombre_fondo": "CAIXABANK SI IMPACTO 0/60 RV, FI CLASE ESTANDAR",
+    "pdf_origen": "ES0164540009.pdf"
+  },
+  {
+    "isin": "ES0175808007",
+    "nombre_fondo": "MUTUAFONDO CRECIMIENTO, FI CLASE A",
+    "pdf_origen": "ES0175808007.pdf"
+  },
+  {
+    "isin": "ES0138922002",
+    "nombre_fondo": "Gesconsult/Horizonte 2025",
+    "pdf_origen": "ES0138922002.pdf"
+  },
+  {
+    "isin": "ES0107441000",
+    "nombre_fondo": "CAIXABANK RENTA FIJA CORPORATIVA FLEXIBLE 2031, FI CLASE PLUS",
+    "pdf_origen": "ES0107441000.pdf"
+  },
+  {
+    "isin": "ES0114821004",
+    "nombre_fondo": "BANKINTER AHORRO ACTIVOS EURO FI, CLASE C",
+    "pdf_origen": "ES0114821004.pdf"
+  },
+  {
+    "isin": "ES0146791001",
+    "nombre_fondo": "IBERCAJA AHORRO RENTA FIJA, FI CLASE A",
+    "pdf_origen": "ES0146791001.pdf"
+  },
+  {
+    "isin": "ES0173985005",
+    "nombre_fondo": "RIVER PATRIMONIO, FI",
+    "pdf_origen": "ES0173985005.pdf"
+  },
+  {
+    "isin": "ES0123747000",
+    "nombre_fondo": "BBVA BP BONOS 2028, FI CARTERA",
+    "pdf_origen": "ES0123747000.pdf"
+  }
+]

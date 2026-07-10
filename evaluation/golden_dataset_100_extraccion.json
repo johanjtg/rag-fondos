@@ -1,0 +1,1502 @@
+[
+  {
+    "isin": "ES0114771001",
+    "nombre_fondo": "CAIXABANK DEUDA PUBLICA 2029, FI CLASE ESTANDAR",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 3.3,
+      "comision_gestion": 0.65,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 4.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0109191009",
+    "nombre_fondo": "AMEINON RENTA FIJA FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 0.72,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": false,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0142451030",
+    "nombre_fondo": "BBVA BOLSA PLUS, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 1.6,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0138820008",
+    "nombre_fondo": "FONDMAPFRE RENTA FIJA FLEXIBLE, FI CLASE C",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 0.3,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": true
+  },
+  {
+    "isin": "ES0137794014",
+    "nombre_fondo": "CAIXABANK RENTA FIJA SUBORDINADA, FI CLASE EXTRA",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion. Sin patrón (null): comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 0.84,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": null,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": true
+  },
+  {
+    "isin": "ES0117091035",
+    "nombre_fondo": "BBVA CRÉDITO EUROPA, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 0.21,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0114533005",
+    "nombre_fondo": "CAIXABANK DEUDA CORPORATIVA 2031, FI CLASE PLUS",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion. Sin patrón (null): comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 5.4,
+      "comision_gestion": 0.97,
+      "comision_suscripcion": null,
+      "comision_reembolso": null,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0114063037",
+    "nombre_fondo": "SANTANDER ACCIONES EURO, FI- CLASE A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, esg. Sin patrón (null): comision_suscripcion, comision_reembolso, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 2.25,
+      "comision_suscripcion": null,
+      "comision_reembolso": null,
+      "esg": true,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0172053029",
+    "nombre_fondo": "PSN MULTIESTRATEGIA/RENTA FIJA MIXTA INTERNACIONAL",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 2,
+      "comision_gestion": 1.4,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0110053008",
+    "nombre_fondo": "BANKINTER AHORRO RENTA FIJA FI, CLASE C",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 2,
+      "comision_gestion": 0.36,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0109652034",
+    "nombre_fondo": "ABANTE ASESORES GLOBAL, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 1.81,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0114233002",
+    "nombre_fondo": "KUTXABANK BOLSA EMERGENTES, FI CLASE CARTERA",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 1.4,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": true
+  },
+  {
+    "isin": "ES0137475002",
+    "nombre_fondo": "CAIXABANK SMART RENTA FIJA EMERGENTE, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 0.55,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0138392032",
+    "nombre_fondo": "CAIXABANK BOLSA INDICE ESPAÑA, FI CLASE ESTANDAR",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, tipo_gestion. Sin patrón (null): esg.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 1.46,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": "pasiva"
+    },
+    "para_verificar_manualmente": true
+  },
+  {
+    "isin": "ES0182035032",
+    "nombre_fondo": "UNICAJA MODERADO, CLASE A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 2.05,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": true
+  },
+  {
+    "isin": "ES0109230013",
+    "nombre_fondo": "CALIOPE, FI CLASE ESTANDAR",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 1.83,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0133400004",
+    "nombre_fondo": "ABANCA GESTIÓN, FI / DECIDIDO",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 1.83,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": false,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0171218011",
+    "nombre_fondo": "LORETO PREMIUM RENTA VARIABLE MIXTA FI, CL I",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, tipo_gestion. Sin patrón (null): esg.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 4,
+      "comision_gestion": 0.48,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": true
+  },
+  {
+    "isin": "ES0137627008",
+    "nombre_fondo": "CAIXABANK SMART RENTA FIJA DEUDA PUBLICA 7-10, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 4,
+      "comision_gestion": 0.36,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0174367005",
+    "nombre_fondo": "RURAL EURO RENTA VARIABLE, FI CARTERA",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg. Sin patrón (null): tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 0.57,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": false,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0143211003",
+    "nombre_fondo": "GREDOS MODERADO. FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 1.5,
+      "comision_gestion": 0.98,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": false,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0105578001",
+    "nombre_fondo": "CAIXABANK SELECCION COMPROMISO FUTURO 0-60 RV, FI CLASE SIN RETRO",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 4,
+      "comision_gestion": 0.74,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0123981005",
+    "nombre_fondo": "RURAL SOSTENIBLE MODERADO, FI CARTERA",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg. Sin patrón (null): tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 4,
+      "comision_gestion": 0.36,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0172242002",
+    "nombre_fondo": "QUALITY INVERSIÓN MODERADA, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 1.65,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0157935018",
+    "nombre_fondo": "ACACIA RENTA DINAMICA FI CLASE G",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg. Sin patrón (null): tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 1,
+      "comision_gestion": 0.7,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0122708037",
+    "nombre_fondo": "CI IBERIAN EQUITY A, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_suscripcion, comision_reembolso, esg. Sin patrón (null): comision_gestion, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": null,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0137354009",
+    "nombre_fondo": "FINNK RF CORTO PLAZO, FI CLASE CARTERA",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg. Sin patrón (null): tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 1,
+      "horizonte_recomendado_anios": 1,
+      "comision_gestion": 0.3,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": false,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0157626005",
+    "nombre_fondo": "LAMBDA UNIVERSAL, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 0.92,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": true
+  },
+  {
+    "isin": "ES0114222005",
+    "nombre_fondo": "KUTXABANK BOLSA NUEVA ECONOMIA, FI CLASE CARTERA",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 0.9,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": true
+  },
+  {
+    "isin": "ES0164453005",
+    "nombre_fondo": "MORABANC-ARCANO RF PRIVADA 2027, F.I.",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, comision_gestion, comision_suscripcion, comision_reembolso, esg. Sin patrón (null): horizonte_recomendado_anios, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": 1.03,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": false,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": true
+  },
+  {
+    "isin": "ES0114289004",
+    "nombre_fondo": "SA OPTIMA GLOBAL, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg. Sin patrón (null): tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 7,
+      "comision_gestion": 1.0,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0160747004",
+    "nombre_fondo": "MARCH CARTERA DECIDIDA, F.I. A EUR",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_suscripcion, comision_reembolso, esg, tipo_gestion. Sin patrón (null): comision_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": null,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": true
+  },
+  {
+    "isin": "ES0158306003",
+    "nombre_fondo": "UNICAJA RENTABILIDAD OBJETIVO 2028-II, CLASE A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, comision_gestion, comision_reembolso, esg, tipo_gestion. Sin patrón (null): horizonte_recomendado_anios, comision_suscripcion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": 0.63,
+      "comision_suscripcion": null,
+      "comision_reembolso": 3.0,
+      "esg": false,
+      "tipo_gestion": "pasiva"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0141102006",
+    "nombre_fondo": "MARKET PORTFOLIO CORPORATE BONDS, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_suscripcion, comision_reembolso, esg, tipo_gestion. Sin patrón (null): comision_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 4,
+      "comision_gestion": null,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": false,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0110256007",
+    "nombre_fondo": "ARQUIA BANCA LÍDERES GLOBALES FI-Clase A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 1.98,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0175164039",
+    "nombre_fondo": "SANTANDER RENTA FIJA PRIVADA, CLASE A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, esg. Sin patrón (null): comision_suscripcion, comision_reembolso, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 4,
+      "comision_gestion": 1.47,
+      "comision_suscripcion": null,
+      "comision_reembolso": null,
+      "esg": true,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": true
+  },
+  {
+    "isin": "ES0115285035",
+    "nombre_fondo": "BBVA BONOS SOSTENIBLE ISR, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg. Sin patrón (null): tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 0.8,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0162956009",
+    "nombre_fondo": "ABANCA INDICE RENTA VARIABLE EMERGENTE, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 0.31,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": false,
+      "tipo_gestion": "pasiva"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0113593000",
+    "nombre_fondo": "FONDO NARANJA RENTABILIDAD 2029 I, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, comision_gestion, comision_suscripcion, comision_reembolso, tipo_gestion. Sin patrón (null): horizonte_recomendado_anios, esg.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": 0.16,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0146758000",
+    "nombre_fondo": "IBERCAJA MEGATRENDS, FI CLASE A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg. Sin patrón (null): tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 2.22,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0160924017",
+    "nombre_fondo": "MARCH RENTA FIJA FLEXIBLE, F.I. A EUR",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_suscripcion, comision_reembolso, tipo_gestion. Sin patrón (null): comision_gestion, esg.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": null,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0131369003",
+    "nombre_fondo": "MUTUAFONDO SALUD, FI CLASE A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 4,
+      "comision_gestion": 0.04,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0113200036",
+    "nombre_fondo": "BBVA FONDTESORO CORTO PLAZO, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 1,
+      "horizonte_recomendado_anios": 1,
+      "comision_gestion": 0.67,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0110951037",
+    "nombre_fondo": "UNICAJA RENTAS GARANTIZADO 2030, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, comision_gestion, comision_reembolso, esg. Sin patrón (null): horizonte_recomendado_anios, comision_suscripcion, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": 0.71,
+      "comision_suscripcion": null,
+      "comision_reembolso": 3.0,
+      "esg": false,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0138217031",
+    "nombre_fondo": "Gesconsult Renta Fija Flexible, FI clase A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_suscripcion, comision_reembolso. Sin patrón (null): comision_gestion, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 2,
+      "comision_gestion": null,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0145882009",
+    "nombre_fondo": "CAIXABANK MASTER RENTA VARIABLE EUROPA, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 0.84,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0113606000",
+    "nombre_fondo": "SANTANDER SOSTENIBLE EVOLUCION, FI- A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, esg. Sin patrón (null): comision_suscripcion, comision_reembolso, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 4,
+      "comision_gestion": 1.7,
+      "comision_suscripcion": null,
+      "comision_reembolso": null,
+      "esg": true,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0114434006",
+    "nombre_fondo": "BT FUND SELECTION DEBT",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 1.35,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": false,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0174742017",
+    "nombre_fondo": "SAN.GESTION DINAMICA PRUDENTE, FI- CL. A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, esg. Sin patrón (null): comision_suscripcion, comision_reembolso, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 2,
+      "comision_gestion": 1.34,
+      "comision_suscripcion": null,
+      "comision_reembolso": null,
+      "esg": true,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0161992005",
+    "nombre_fondo": "SIGMA INVESTMENT HOUSE CAPITAL, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 1.57,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": false,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0124504004",
+    "nombre_fondo": "CAIXABANK MASTER RETORNO ABSOLUTO, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 2,
+      "comision_gestion": 1.04,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0162701009",
+    "nombre_fondo": "METAVALOR DIVIDENDO, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_suscripcion, comision_reembolso. Sin patrón (null): comision_gestion, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": null,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0159159005",
+    "nombre_fondo": "BBVA PATRIMONIO GLOBAL DECIDIDO, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 1.11,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0135709006",
+    "nombre_fondo": "BBVA BONOS 2029, FI A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 3.83,
+      "comision_gestion": 0.86,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0141231003",
+    "nombre_fondo": "SABADELL GOBIERNOS CORTO PLAZO, F.I. - BASE",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg. Sin patrón (null): tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 1,
+      "horizonte_recomendado_anios": 0.5,
+      "comision_gestion": 0.66,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": true
+  },
+  {
+    "isin": "ES0113288031",
+    "nombre_fondo": "UBS PREMIUM MODERADO FI A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 0.6,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0125588006",
+    "nombre_fondo": "CI CIMS 2027 2E, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, comision_reembolso, esg. Sin patrón (null): horizonte_recomendado_anios, comision_gestion, comision_suscripcion, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": null,
+      "comision_suscripcion": null,
+      "comision_reembolso": 3.0,
+      "esg": true,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0124524002",
+    "nombre_fondo": "ABANCA RENTA FIJA GOBIERNOS, FI, CLASE CARTERA",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 0.23,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0175407008",
+    "nombre_fondo": "SELECCION BP 60, FI CLASE A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 1.9,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0164384002",
+    "nombre_fondo": "BANKINTER INVERSO EE.UU. CL C",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): horizonte_recomendado_anios, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 5,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": 0.002,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0141986010",
+    "nombre_fondo": "RURAL FUTURO ISR, FI CARTERA",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg. Sin patrón (null): tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 4,
+      "comision_gestion": 0.63,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0137510006",
+    "nombre_fondo": "CAIXABANK SMART RENTA VARIABLE REAL ESTATE, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 0.62,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0156435002",
+    "nombre_fondo": "JDS CAPITAL GROWTH&VALUE, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 2.14,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": false,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0111192003",
+    "nombre_fondo": "ATTITUDE OPPORTUNITIES, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_suscripcion, comision_reembolso, esg, tipo_gestion. Sin patrón (null): comision_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 2,
+      "comision_gestion": null,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": false,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0138253002",
+    "nombre_fondo": "CBNK RENTA VARIABLE ESPAÑA FI, CLASE CARTERA",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 1.4,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": true
+  },
+  {
+    "isin": "ES0147715009",
+    "nombre_fondo": "ARQUIA BOLSA GARANTIZADO II, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, comision_gestion, comision_reembolso, esg. Sin patrón (null): horizonte_recomendado_anios, comision_suscripcion, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": 1.0,
+      "comision_suscripcion": null,
+      "comision_reembolso": 5.0,
+      "esg": false,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0165269004",
+    "nombre_fondo": "MUTUAFONDO RENTA VARIABLE EE.UU, FI CLASE D",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, tipo_gestion. Sin patrón (null): esg.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 0.02,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0141580037",
+    "nombre_fondo": "SIGMA INVESTMENT HOUSE AHORRO, FI, CLASE A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 2,
+      "comision_gestion": 0.64,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": false,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0112763000",
+    "nombre_fondo": "BESTINVER NORTEAMERICA, F.I",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 1.8,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0136109008",
+    "nombre_fondo": "FONDO NARANJA RENTABILIDAD 2027 I, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, comision_gestion, comision_suscripcion, comision_reembolso, tipo_gestion. Sin patrón (null): horizonte_recomendado_anios, esg.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": 0.01,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": true
+  },
+  {
+    "isin": "ES0147711032",
+    "nombre_fondo": "BBVA MEGATENDENCIA TECNOLOGÍA, FI A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, tipo_gestion. Sin patrón (null): esg.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 2.44,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0136469006",
+    "nombre_fondo": "FINANCIALS CREDIT FUND, FI / CLASE B",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_suscripcion. Sin patrón (null): comision_gestion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": null,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": null,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0181132004",
+    "nombre_fondo": "LABORAL KUTXA HORIZONTE 2027 3, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, comision_gestion. Sin patrón (null): horizonte_recomendado_anios, comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": 0.2,
+      "comision_suscripcion": null,
+      "comision_reembolso": null,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0165144009",
+    "nombre_fondo": "MUTUAFONDO ESPAÑA, FI CLASE A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 0.12,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0175083031",
+    "nombre_fondo": "SABADELL BOLSAS EMERGENTES, FI - BASE",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, comision_gestion, comision_suscripcion, comision_reembolso, esg. Sin patrón (null): horizonte_recomendado_anios, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": 2.38,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0118857004",
+    "nombre_fondo": "BBVA ESTRATEGIA 0-50, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 1.19,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": true
+  },
+  {
+    "isin": "ES0141113037",
+    "nombre_fondo": "GVCGaesco Japón, FI Clase A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 7,
+      "comision_gestion": 2.46,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0138873007",
+    "nombre_fondo": "CAIXABANK FONDTESORO LARGO PLAZO, FI CLASE SIN RETRO",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 2,
+      "comision_gestion": 0.37,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0140963010",
+    "nombre_fondo": "ALGAR GLOBAL FUND CLASE I, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_suscripcion, comision_reembolso. Sin patrón (null): comision_gestion, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": null,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0173317001",
+    "nombre_fondo": "RENTA 4 DELTA CLASE I",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_suscripcion, comision_reembolso, tipo_gestion. Sin patrón (null): comision_gestion, esg.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": null,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0165206006",
+    "nombre_fondo": "FonsVila-Real, F.I",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 7,
+      "comision_gestion": 1.93,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0160982031",
+    "nombre_fondo": "MARCH GLOBAL QUALITY, F.I. A EUR",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_suscripcion, comision_reembolso, esg, tipo_gestion. Sin patrón (null): comision_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": null,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": true
+  },
+  {
+    "isin": "ES0116849003",
+    "nombre_fondo": "GLOBAL MIX FUND, F.I.",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_suscripcion, comision_reembolso. Sin patrón (null): comision_gestion, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": null,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0182798019",
+    "nombre_fondo": "CLASE I ADRIZA GLOBAL FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 1.0,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": false,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0180842009",
+    "nombre_fondo": "UNICAJA CONSERVADOR, CLASE A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 1.85,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0114202007",
+    "nombre_fondo": "KUTXABANK BOLSA SMALL & MID CAPS, FI CLASE CARTERA",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg. Sin patrón (null): tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 0.6,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0111013035",
+    "nombre_fondo": "UNICAJA RENTA FIJA FLEXIBLE, CLASE A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 0.8,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": false,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": true
+  },
+  {
+    "isin": "ES0114754007",
+    "nombre_fondo": "BANKINTER INDICE EUROPEO FI, CLASE C",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, tipo_gestion. Sin patrón (null): esg.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 4,
+      "comision_gestion": 0.68,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": "pasiva"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0121092011",
+    "nombre_fondo": "COMPROMISO MEDIOLANUM FI, CLASE E",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 0.8,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0123983001",
+    "nombre_fondo": "SABADELL BUY AND WATCH 03 2027, F .I.",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 2,
+      "comision_gestion": 0.56,
+      "comision_suscripcion": 5.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0112612017",
+    "nombre_fondo": "B&H FLEXIBLE, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, tipo_gestion. Sin patrón (null): esg.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 0.88,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0164705008",
+    "nombre_fondo": "MUTUAFONDO BONOS SUBORDINADOS V, FI CLASE A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, tipo_gestion. Sin patrón (null): comision_suscripcion, comision_reembolso, esg.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 0.17,
+      "comision_suscripcion": null,
+      "comision_reembolso": null,
+      "esg": null,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0164540009",
+    "nombre_fondo": "CAIXABANK SI IMPACTO 0/60 RV, FI CLASE ESTANDAR",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg. Sin patrón (null): tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 1.76,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0175808007",
+    "nombre_fondo": "MUTUAFONDO CRECIMIENTO, FI CLASE A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, tipo_gestion. Sin patrón (null): esg.",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 4,
+      "comision_gestion": 0.07,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0138922002",
+    "nombre_fondo": "Gesconsult/Horizonte 2025",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, comision_suscripcion, comision_reembolso. Sin patrón (null): horizonte_recomendado_anios, comision_gestion, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": null,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": true
+  },
+  {
+    "isin": "ES0107441000",
+    "nombre_fondo": "CAIXABANK RENTA FIJA CORPORATIVA FLEXIBLE 2031, FI CLASE PLUS",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 0.97,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0114821004",
+    "nombre_fondo": "BANKINTER AHORRO ACTIVOS EURO FI, CLASE C",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg. Sin patrón (null): tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 1,
+      "horizonte_recomendado_anios": 1,
+      "comision_gestion": 0.36,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0146791001",
+    "nombre_fondo": "IBERCAJA AHORRO RENTA FIJA, FI CLASE A",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg. Sin patrón (null): tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 1,
+      "comision_gestion": 0.76,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": true,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0173985005",
+    "nombre_fondo": "RIVER PATRIMONIO, FI",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso, esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 0.99,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": false,
+      "tipo_gestion": "activa"
+    },
+    "para_verificar_manualmente": false
+  },
+  {
+    "isin": "ES0123747000",
+    "nombre_fondo": "BBVA BP BONOS 2028, FI CARTERA",
+    "descripcion_caso": "Verdad de referencia extraída por patrones de texto (sin LLM). Campos encontrados: nivel_riesgo, horizonte_recomendado_anios, comision_gestion, comision_suscripcion, comision_reembolso. Sin patrón (null): esg, tipo_gestion.",
+    "esperado": {
+      "nivel_riesgo": 1,
+      "horizonte_recomendado_anios": 2.83,
+      "comision_gestion": 0.15,
+      "comision_suscripcion": 0.0,
+      "comision_reembolso": 0.0,
+      "esg": null,
+      "tipo_gestion": null
+    },
+    "para_verificar_manualmente": false
+  }
+]

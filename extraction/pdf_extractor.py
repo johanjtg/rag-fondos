@@ -43,7 +43,8 @@ GEMINI_MODEL = "gemini-2.5-flash"   # cambia a gemini-2.5-pro si se necesita má
 DB_PATH = Path("database/funds.db")
 CHROMA_PATH = Path("database/chroma")
 CHROMA_COLLECTION = "politica_inversion"
-MAX_PDF_CHARS = 12_000   # recorte para no exceder la ventana de contexto
+MAX_PDF_CHARS = 30_000   # cubre el DFI más largo observado en el corpus (28.347 caracteres);
+                          # antes en 12.000, lo que truncaba el 87% de los PDFs (ver evaluation/)
 
 logging.basicConfig(
     level=logging.INFO,
@@ -181,6 +182,7 @@ def _build_llm() -> ChatGoogleGenerativeAI:
         model=GEMINI_MODEL,
         google_api_key=api_key,
         temperature=0,
+        timeout=120,   # evita cuelgues indefinidos (p.ej. tras dormir el equipo con la llamada en vuelo)
     )
 
 
@@ -314,6 +316,35 @@ def save_to_sqlite(fondo: FundModel, db_path: Path) -> None:
     log.debug("SQLite: upsert completado para ISIN %s", fondo.isin)
 
 
+def _load_existing_identifiers(db_path: Path) -> tuple[set[str], set[str]]:
+    """
+    Carga los identificadores de los fondos ya presentes en funds.db, para
+    poder omitirlos sin volver a llamar a Gemini.
+
+    Devuelve (isins, nombres_pdf): el ISIN suele coincidir con el stem del
+    PDF (el scraper nombra el archivo "{ISIN}.pdf", o "{NIF}.pdf" cuando no
+    hay ISIN — ver extract_fund_data), y pdf_origen guarda el nombre de
+    archivo exacto usado en la extracción anterior.
+    """
+    if not db_path.exists():
+        return set(), set()
+    with sqlite3.connect(db_path) as con:
+        existe_tabla = con.execute(
+            "SELECT name FROM sqlite_master WHERE type='table' AND name='funds'"
+        ).fetchone()
+        if existe_tabla is None:
+            return set(), set()
+        filas = con.execute("SELECT isin, pdf_origen FROM funds").fetchall()
+    isins = {isin for isin, _ in filas if isin}
+    nombres_pdf = {pdf_origen for _, pdf_origen in filas if pdf_origen}
+    return isins, nombres_pdf
+
+
+def _ya_extraido(pdf_path: Path, isins_existentes: set[str], nombres_existentes: set[str]) -> bool:
+    """True si el PDF ya tiene fila en funds.db (por ISIN/NIF del nombre de archivo o por pdf_origen)."""
+    return pdf_path.stem in isins_existentes or pdf_path.name in nombres_existentes
+
+
 # ── Persistencia en ChromaDB ──────────────────────────────────────────────────
 
 def _get_chroma_collection(chroma_path: Path) -> chromadb.Collection:
@@ -418,9 +449,19 @@ def run_pipeline(
         log.warning("No se encontraron PDFs en %s", input_path)
         return
 
+    isins_existentes, nombres_existentes = _load_existing_identifiers(db_path)
+    omitidos = [p for p in pdfs if _ya_extraido(p, isins_existentes, nombres_existentes)]
+    pdfs = [p for p in pdfs if not _ya_extraido(p, isins_existentes, nombres_existentes)]
+    for pdf in omitidos:
+        log.info("Ya existe en BD, omitido: %s", pdf.name)
+
+    if not pdfs:
+        log.info("Todos los PDFs ya están en BD (%d omitidos). Nada que procesar.", len(omitidos))
+        return
+
     log.info(
-        "PDFs a procesar: %d | workers: %d | modelo: %s | extractor: %s",
-        len(pdfs), workers, GEMINI_MODEL, "docling" if use_docling else "pypdf",
+        "PDFs a procesar: %d (omitidos por ya existir en BD: %d) | workers: %d | modelo: %s | extractor: %s",
+        len(pdfs), len(omitidos), workers, GEMINI_MODEL, "docling" if use_docling else "pypdf",
     )
 
     llm = _build_llm()
@@ -447,7 +488,10 @@ def run_pipeline(
                 else:
                     errores += 1
 
-    log.info("Pipeline finalizado. OK: %d | Errores: %d | Total: %d", ok, errores, len(pdfs))
+    log.info(
+        "Pipeline finalizado. OK: %d | Errores: %d | Omitidos: %d | Total: %d",
+        ok, errores, len(omitidos), len(pdfs) + len(omitidos),
+    )
 
 
 # ── CLI ───────────────────────────────────────────────────────────────────────

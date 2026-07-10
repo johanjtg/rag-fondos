@@ -2,7 +2,7 @@
 Scraper del portal CNMV para descargar DFIs (Documentos de Datos Fundamentales).
 
 Fuente: https://www.cnmv.es/portal/consultas/mostrarlistados?id=3&lang=es
-Uso:    python scraper/cnmv_scraper.py [--max N] [--out DIR] [--resume]
+Uso:    python scraper/cnmv_scraper.py [--max N] [--out DIR] [--resume] [--random [--seed N]]
 """
 
 from __future__ import annotations
@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import csv
 import logging
+import random
 import re
 import time
 from datetime import date
@@ -369,24 +370,106 @@ def _append_manifest(manifest_path: Path, row: dict) -> None:
 
 # ── Orquestador principal ─────────────────────────────────────────────────────
 
-def run_scraper(
+def _procesar_fondos_pagina(
+    session: requests.Session,
+    fondos_pagina: list[dict],
+    output_dir: Path,
+    manifest_path: Path,
+    resume: bool,
+    ya_descargados: set[str],
+    max_funds: int | None,
+    total_descargados: int,
+) -> int:
+    """
+    Descarga el DFI de cada fondo de `fondos_pagina` y anota el manifest.
+
+    Para cada fondo: visita el detalle → extrae ISIN + URL del PDF → descarga
+    → valida que no sea un falso positivo → registra en el manifest CSV.
+    Devuelve el `total_descargados` actualizado.
+    """
+    for fondo in fondos_pagina:
+        if max_funds and total_descargados >= max_funds:
+            break
+
+        nif = fondo["nif"]
+        nombre = fondo["fund_name"]
+
+        if resume and nif in ya_descargados:
+            log.debug("Omitiendo (ya descargado): %s", nombre)
+            continue
+
+        time.sleep(RATE_LIMIT_SECS)
+
+        # ── Detalle del fondo ─────────────────────────────────────────
+        url_detalle = FUND_URL.format(nif=nif)
+        resp_detalle = _get(session, url_detalle)
+
+        isin = None
+        pdf_url = None
+        pdf_path_str = ""
+
+        if resp_detalle:
+            detalle = BeautifulSoup(resp_detalle.text, "html.parser")
+            info = _parse_fund_detail(session, detalle, nif)
+            isin = info["isin"]
+            pdf_url = info["pdf_url"]
+        else:
+            log.warning("No se pudo obtener detalle de %s (%s)", nombre, nif)
+
+        # ── Descarga PDF ──────────────────────────────────────────────
+        if pdf_url:
+            time.sleep(RATE_LIMIT_SECS)
+            # Nombre de archivo: ISIN si disponible, si no usar NIF
+            safe_id = isin if isin else nif
+            filename = f"{safe_id}.pdf"
+            descargado = _download_pdf(session, pdf_url, output_dir, filename)
+            if descargado:
+                es_valido, motivo = _validar_pdf_es_dfi(descargado)
+                if not es_valido:
+                    log.warning(
+                        "PDF descartado para %s (%s): %s — %s",
+                        nombre, nif, descargado.name, motivo,
+                    )
+                    descargado.unlink(missing_ok=True)
+                    descargado = None
+            pdf_path_str = str(descargado) if descargado else ""
+        else:
+            log.warning("Sin enlace PDF para %s (%s)", nombre, nif)
+
+        # ── Manifest ──────────────────────────────────────────────────
+        _append_manifest(
+            manifest_path,
+            {
+                "fund_name": nombre,
+                "nif": nif,
+                "isin": isin or "",
+                "pdf_url": pdf_url or "",
+                "pdf_path": pdf_path_str,
+                "download_date": date.today().isoformat(),
+            },
+        )
+
+        total_descargados += 1
+        log.info(
+            "[%d] %s | ISIN: %s | PDF: %s",
+            total_descargados,
+            nombre,
+            isin or "—",
+            "OK" if pdf_path_str else "NO",
+        )
+
+    return total_descargados
+
+
+def _run_scraper_secuencial(
+    session: requests.Session,
     max_funds: int | None,
     output_dir: Path,
     manifest_path: Path,
     resume: bool,
-) -> None:
-    """
-    Bucle principal del scraper:
-      1. Itera páginas del listado CNMV.
-      2. Para cada fondo visita la página de detalle → extrae ISIN + URL del PDF.
-      3. Descarga el PDF.
-      4. Guarda entrada en el manifest CSV.
-    """
-    session = _build_session()
-    ya_descargados = _load_manifest(manifest_path) if resume else set()
-    if ya_descargados:
-        log.info("Reanudando: %d fondos ya descargados", len(ya_descargados))
-
+    ya_descargados: set[str],
+) -> int:
+    """Recorre las páginas del listado CNMV en orden estricto (1, 2, 3…)."""
     total_descargados = 0
     pagina = 0
 
@@ -413,76 +496,10 @@ def run_scraper(
             log.info("Sin fondos en página %d. Fin del listado.", pagina)
             break
 
-        for fondo in fondos_pagina:
-            if max_funds and total_descargados >= max_funds:
-                break
-
-            nif = fondo["nif"]
-            nombre = fondo["fund_name"]
-
-            if resume and nif in ya_descargados:
-                log.debug("Omitiendo (ya descargado): %s", nombre)
-                continue
-
-            time.sleep(RATE_LIMIT_SECS)
-
-            # ── Detalle del fondo ─────────────────────────────────────────
-            url_detalle = FUND_URL.format(nif=nif)
-            resp_detalle = _get(session, url_detalle)
-
-            isin = None
-            pdf_url = None
-            pdf_path_str = ""
-
-            if resp_detalle:
-                detalle = BeautifulSoup(resp_detalle.text, "html.parser")
-                info = _parse_fund_detail(session, detalle, nif)
-                isin = info["isin"]
-                pdf_url = info["pdf_url"]
-            else:
-                log.warning("No se pudo obtener detalle de %s (%s)", nombre, nif)
-
-            # ── Descarga PDF ──────────────────────────────────────────────
-            if pdf_url:
-                time.sleep(RATE_LIMIT_SECS)
-                # Nombre de archivo: ISIN si disponible, si no usar NIF
-                safe_id = isin if isin else nif
-                filename = f"{safe_id}.pdf"
-                descargado = _download_pdf(session, pdf_url, output_dir, filename)
-                if descargado:
-                    es_valido, motivo = _validar_pdf_es_dfi(descargado)
-                    if not es_valido:
-                        log.warning(
-                            "PDF descartado para %s (%s): %s — %s",
-                            nombre, nif, descargado.name, motivo,
-                        )
-                        descargado.unlink(missing_ok=True)
-                        descargado = None
-                pdf_path_str = str(descargado) if descargado else ""
-            else:
-                log.warning("Sin enlace PDF para %s (%s)", nombre, nif)
-
-            # ── Manifest ──────────────────────────────────────────────────
-            _append_manifest(
-                manifest_path,
-                {
-                    "fund_name": nombre,
-                    "nif": nif,
-                    "isin": isin or "",
-                    "pdf_url": pdf_url or "",
-                    "pdf_path": pdf_path_str,
-                    "download_date": date.today().isoformat(),
-                },
-            )
-
-            total_descargados += 1
-            log.info(
-                "[%d] %s | ISIN: %s | PDF: %s",
-                total_descargados,
-                nombre,
-                isin or "—",
-                "OK" if pdf_path_str else "NO",
-            )
+        total_descargados = _procesar_fondos_pagina(
+            session, fondos_pagina, output_dir, manifest_path,
+            resume, ya_descargados, max_funds, total_descargados,
+        )
 
         pagina += 1
 
@@ -490,6 +507,106 @@ def run_scraper(
         if pagina >= total_paginas:
             log.info("Listado completo procesado (%d páginas).", total_paginas)
             break
+
+    return total_descargados
+
+
+def _run_scraper_aleatorio(
+    session: requests.Session,
+    max_funds: int | None,
+    output_dir: Path,
+    manifest_path: Path,
+    resume: bool,
+    ya_descargados: set[str],
+    seed: int | None,
+) -> int:
+    """
+    Recorre páginas del listado CNMV en orden aleatorio hasta alcanzar
+    `max_funds` (o agotar todas las páginas si no se indica límite).
+
+    Pide primero la página 0 para conocer el total de páginas, baraja el
+    rango completo [0, total_paginas) y va pidiendo páginas por ese orden
+    (salto directo vía `page=N`, sin recorrer las intermedias).
+    """
+    url_pagina0 = LIST_URL.format(page=0)
+    resp0 = _get(session, url_pagina0)
+    if resp0 is None:
+        log.error("No se pudo obtener la página 0. Abortando.")
+        return 0
+
+    soup0 = BeautifulSoup(resp0.text, "html.parser")
+    total_paginas = _parse_total_pages(soup0)
+    log.info("Total de páginas detectadas: %d", total_paginas)
+
+    orden_paginas = list(range(total_paginas))
+    rng = random.Random(seed)
+    rng.shuffle(orden_paginas)
+    log.info(
+        "Modo aleatorio activado (seed=%s): %d páginas en orden aleatorio",
+        seed, len(orden_paginas),
+    )
+
+    soups_cacheadas = {0: soup0}
+    total_descargados = 0
+
+    for i, pagina in enumerate(orden_paginas, start=1):
+        if max_funds and total_descargados >= max_funds:
+            break
+
+        log.info(
+            "── Página %d (aleatoria, %d/%d) ──────────────────────",
+            pagina + 1, i, len(orden_paginas),
+        )
+
+        soup = soups_cacheadas.get(pagina)
+        if soup is None:
+            resp = _get(session, LIST_URL.format(page=pagina))
+            if resp is None:
+                log.warning("No se pudo obtener la página %d. Saltando.", pagina)
+                continue
+            soup = BeautifulSoup(resp.text, "html.parser")
+
+        fondos_pagina = _parse_fund_list(soup)
+        if not fondos_pagina:
+            log.info("Sin fondos en página %d. Saltando.", pagina)
+            continue
+
+        total_descargados = _procesar_fondos_pagina(
+            session, fondos_pagina, output_dir, manifest_path,
+            resume, ya_descargados, max_funds, total_descargados,
+        )
+
+    return total_descargados
+
+
+def run_scraper(
+    max_funds: int | None,
+    output_dir: Path,
+    manifest_path: Path,
+    resume: bool,
+    random_order: bool = False,
+    seed: int | None = None,
+) -> None:
+    """
+    Bucle principal del scraper:
+      1. Itera páginas del listado CNMV (secuencial o aleatorio según `random_order`).
+      2. Para cada fondo visita la página de detalle → extrae ISIN + URL del PDF.
+      3. Descarga el PDF.
+      4. Guarda entrada en el manifest CSV.
+    """
+    session = _build_session()
+    ya_descargados = _load_manifest(manifest_path) if resume else set()
+    if ya_descargados:
+        log.info("Reanudando: %d fondos ya descargados", len(ya_descargados))
+
+    if random_order:
+        total_descargados = _run_scraper_aleatorio(
+            session, max_funds, output_dir, manifest_path, resume, ya_descargados, seed,
+        )
+    else:
+        total_descargados = _run_scraper_secuencial(
+            session, max_funds, output_dir, manifest_path, resume, ya_descargados,
+        )
 
     log.info("Scraper finalizado. Fondos procesados: %d", total_descargados)
 
@@ -527,6 +644,21 @@ def _parse_args() -> argparse.Namespace:
         help="Saltar fondos ya presentes en el manifest (reanuda una descarga previa).",
     )
     parser.add_argument(
+        "--random",
+        action="store_true",
+        help=(
+            "Seleccionar fondos recorriendo las páginas del listado en orden "
+            "aleatorio (en vez de secuencial 1, 2, 3…) hasta alcanzar --max."
+        ),
+    )
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=None,
+        metavar="N",
+        help="Semilla para el orden aleatorio de páginas (solo con --random; por defecto: no determinista).",
+    )
+    parser.add_argument(
         "--verbose",
         action="store_true",
         help="Activar logging en nivel DEBUG.",
@@ -544,4 +676,6 @@ if __name__ == "__main__":
         output_dir=args.out,
         manifest_path=args.manifest,
         resume=args.resume,
+        random_order=args.random,
+        seed=args.seed,
     )

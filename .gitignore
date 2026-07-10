@@ -34,3 +34,6 @@ evaluation/responses_cache.json
 
 # Claude Code internal
 .claude/
+*.log
+Texto de Terminal.txt
+rap.txt

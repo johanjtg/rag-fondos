@@ -4,8 +4,6 @@ y Evaluador 3 (modelos de embedding).
 """
 
 import json
-import subprocess
-import sys
 from pathlib import Path
 
 import pandas as pd
@@ -37,7 +35,7 @@ with tab1:
 
     col1, col2 = st.columns([3, 1])
     with col1:
-        st.info("Rellena `evaluation/golden_dataset_extraccion.json` con los valores reales y ejecuta el evaluador.")
+        st.info("Recalcula los valores y los compara contra el golden record.")
     with col2:
         if st.button("▶ Ejecutar", key="run_ext", use_container_width=True):
             with st.spinner("Evaluando extracción..."):
@@ -124,24 +122,10 @@ with tab2:
     st.subheader("Calidad de recomendación")
     st.caption("Mide si el sistema recomienda los fondos correctos y compara configuraciones de pesos coseno/semántico")
 
-    col1, col2 = st.columns([3, 1])
-    with col1:
-        st.info("Compara 6 configuraciones de pesos para justificar empíricamente la ponderación 60/40.")
-    with col2:
-        if st.button("▶ Ejecutar", key="run_rec", use_container_width=True):
-            with st.spinner("Evaluando recomendaciones..."):
-                result = subprocess.run(
-                    [sys.executable, "-m", "evaluation.evaluador_recomendacion"],
-                    capture_output=True, text=True
-                )
-            if result.returncode == 0:
-                st.success("Completado.")
-                st.rerun()
-            else:
-                st.error(result.stderr[-500:])
+    st.info("Compara 6 configuraciones de pesos coseno/semántico sobre 6 perfiles de inversor representativos.")
 
     if not RES_REC.exists():
-        st.warning("Sin resultados aún. Ejecuta el evaluador primero.")
+        st.warning("Sin resultados aún.")
 
     else:
         with open(RES_REC, encoding="utf-8") as f:
@@ -203,24 +187,10 @@ with tab3:
         "para justificar la elección de `paraphrase-multilingual-MiniLM-L12-v2`"
     )
 
-    col1, col2 = st.columns([3, 1])
-    with col1:
-        st.info("Re-indexa ChromaDB con cada modelo y mide Precision@K, Hit@1 y MRR. Tarda ~1-2 minutos.")
-    with col2:
-        if st.button("▶ Ejecutar", key="run_emb", use_container_width=True):
-            with st.spinner("Evaluando modelos de embedding... (puede tardar ~2 min)"):
-                result = subprocess.run(
-                    [sys.executable, "-m", "evaluation.evaluador_embeddings"],
-                    capture_output=True, text=True
-                )
-            if result.returncode == 0:
-                st.success("Completado.")
-                st.rerun()
-            else:
-                st.error(result.stderr[-500:])
+    st.info("Re-indexa ChromaDB con cada modelo y mide Precision@K, Hit@1 y MRR.")
 
     if not RES_EMB.exists():
-        st.warning("Sin resultados aún. Ejecuta el evaluador primero.")
+        st.warning("Sin resultados aún.")
     else:
         with open(RES_EMB, encoding="utf-8") as f:
             res_emb = json.load(f)

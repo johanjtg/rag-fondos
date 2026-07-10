@@ -1,0 +1,192 @@
+[
+  {
+    "isin": "ES0156873004",
+    "nombre_fondo": "A&G RENTA FIJA CORTO PLAZO. FI",
+    "descripcion_caso": "Fondo con campos bien extraídos, riesgo bajo, gestión activa",
+    "esperado": {
+      "nivel_riesgo": 2,
+      "horizonte_recomendado_anios": 1,
+      "comision_gestion": null,
+      "comision_suscripcion": null,
+      "comision_reembolso": null,
+      "esg": false,
+      "tipo_gestion": "activa",
+      "importe_minimo_inversion": 10000,
+      "politica_inversion_contiene": [
+        "renta fija pública y/o privada",
+        "depósitos",
+        "deuda subordinada",
+        "OCDE",
+        "zona euro"
+      ]
+    }
+  },
+  {
+    "isin": "ES0162956009",
+    "nombre_fondo": "ABANCA INDICE RENTA VARIABLE EMERGENTE, FI",
+    "descripcion_caso": "Fondo de gestión pasiva, ESG negativo, comisión baja",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": null,
+      "comision_gestion": null,
+      "comision_suscripcion": null,
+      "comision_reembolso": null,
+      "esg": null,
+      "tipo_gestion": "pasiva",
+      "importe_minimo_inversion": null,
+      "politica_inversion_contiene": []
+    }
+  },
+  {
+    "isin": "ES0105321030",
+    "nombre_fondo": "ACCIÓN EUROSTOXX 50 ETF, FI COTIZADO ARMONIZADO",
+    "descripcion_caso": "ETF de gestión pasiva, referenciado a índice",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 0.4,
+      "comision_suscripcion": 0,
+      "comision_reembolso": 0,
+      "esg": false,
+      "tipo_gestion": "pasiva",
+      "importe_minimo_inversion": null,
+      "politica_inversion_contiene": [
+        "EURO STOXX 50",
+        "replicar el índice",
+        "renta variable",
+        "zona euro"
+      ]
+    }
+  },
+  {
+    "isin": "ES0108283005",
+    "nombre_fondo": "ALLIANZ RENDIMIENTO, FI",
+    "descripcion_caso": "Riesgo mínimo (nivel 1), horizonte corto",
+    "esperado": {
+      "nivel_riesgo": 1,
+      "horizonte_recomendado_anios": 1,
+      "comision_gestion": 1.0,
+      "comision_suscripcion": 0,
+      "comision_reembolso": 0,
+      "esg": false,
+      "tipo_gestion": "activa",
+      "importe_minimo_inversion": null,
+      "politica_inversion_contiene": [
+        "renta fija corto euro",
+        "IIC financieras",
+        "renta fija pública y/o privada",
+        "instrumentos del mercado monetario"
+      ]
+    }
+  },
+  {
+    "isin": "ES0140072002",
+    "nombre_fondo": "ABACO RENTA FIJA MIXTA GLOBAL, FI CLASE I",
+    "descripcion_caso": "Fondo multi-clase (I/R/C) sin ISIN único; el PDF asociado al NIF era el Reglamento de Gestión, no el DFI real (mismo bug del scraper vista=2/3) — DFI real recuperado desde la vista de clases de CNMV. Riesgo real 3 (no 6 como figuraba en BD), comisión de gestión varía por clase (I 0,86% / R 1,06% / C 1,51%)",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": null,
+      "comision_suscripcion": 0,
+      "comision_reembolso": 0,
+      "esg": false,
+      "tipo_gestion": "activa",
+      "importe_minimo_inversion": null,
+      "politica_inversion_contiene": [
+        "máxima rentabilidad a largo plazo",
+        "IIC financieras",
+        "instrumentos financieros derivados",
+        "derivados cotizados",
+        "35% del patrimonio"
+      ]
+    }
+  },
+  {
+    "isin": "ES0105263000",
+    "nombre_fondo": "ACACIA PREMIUM FI",
+    "descripcion_caso": "ESG positivo, riesgo medio-alto",
+    "esperado": {
+      "nivel_riesgo": 4,
+      "horizonte_recomendado_anios": 4,
+      "comision_gestion": 1.68,
+      "comision_suscripcion": 0,
+      "comision_reembolso": 0,
+      "esg": true,
+      "tipo_gestion": "activa",
+      "importe_minimo_inversion": null,
+      "politica_inversion_contiene": [
+        "renta variable",
+        "OCDE",
+        "IIC financieras",
+        "MSCI World Net Total Return EUR Index",
+        "características medioambientales o sociales"
+      ]
+    }
+  },
+  {
+    "isin": "ES0124524002",
+    "nombre_fondo": "ABANCA RENTA FIJA GOBIERNOS, FI",
+    "descripcion_caso": "Caso con campos null en BD — validar si Gemini falló o el PDF no los tenía",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 0.23,
+      "comision_suscripcion": 0,
+      "comision_reembolso": 0,
+      "esg": true,
+      "tipo_gestion": "activa",
+      "importe_minimo_inversion": null,
+      "politica_inversion_contiene": [
+        "renta fija euro",
+        "Deuda Pública de Gobiernos",
+        "bonos verdes, sociales y sostenibles",
+        "BLOOMBERG EURO GOVERMENT BOND",
+        "criterios extra-financieros ASG"
+      ]
+    }
+  },
+  {
+    "isin": "ES0115418008",
+    "nombre_fondo": "FUNDO MISTO AÇOES, ABANCA RENTA VARIABLE MIXTA, FI",
+    "descripcion_caso": "Fondo mixto RV internacional, gestión activa, comisión extraída correctamente",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 3,
+      "comision_gestion": 1.54,
+      "comision_suscripcion": 0,
+      "comision_reembolso": 0,
+      "esg": false,
+      "tipo_gestion": "activa",
+      "importe_minimo_inversion": null,
+      "politica_inversion_contiene": [
+        "renta variable mixta internacional",
+        "renta fija pública y/o privada",
+        "países OCDE",
+        "gestión activa",
+        "IIC financieras"
+      ]
+    }
+  },
+  {
+    "isin": "ES0109656001",
+    "nombre_fondo": "ABANDO EQUITIES, FI",
+    "descripcion_caso": "Comisión de gestión alta (1.48%), horizonte largo",
+    "esperado": {
+      "nivel_riesgo": 3,
+      "horizonte_recomendado_anios": 5,
+      "comision_gestion": 1.48,
+      "comision_suscripcion": 0,
+      "comision_reembolso": 0,
+      "esg": false,
+      "tipo_gestion": "activa",
+      "importe_minimo_inversion": null,
+      "politica_inversion_contiene": [
+        "renta variable",
+        "OCDE",
+        "IIC financieras",
+        "alta rotación de la cartera",
+        "países emergentes"
+      ]
+    }
+  }
+]

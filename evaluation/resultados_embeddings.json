@@ -3,48 +3,50 @@
     "nombre": "paraphrase-multilingual-MiniLM-L12-v2 (actual)",
     "model_name": "paraphrase-multilingual-MiniLM-L12-v2",
     "descripcion": "Multilingüe, 384 dims — modelo actual del sistema",
-    "tiempo_s": 16.75,
-    "precision_media": 0.925,
-    "mrr_medio": 1.0,
+    "tiempo_s": 15.9,
+    "precision_media": 0.9056,
+    "mrr_medio": 0.9167,
     "hit_at_1_ratio": 0.8333,
     "perfiles": [
       {
         "id": "perfil_conservador_corto",
         "descripcion": "Inversor muy conservador, capital bajo, horizonte corto, alta liquidez",
         "esperados": [
+          "ES0126551037",
+          "ES0106933031",
           "ES0111166031",
-          "ES0190051039",
-          "ES0119376012",
-          "ES0126542036"
+          "ES0114129036",
+          "ES0108283005"
         ],
         "obtenidos": [
-          "ES0119376012",
+          "ES0137398006",
+          "ES0126551037",
+          "ES0106933031",
           "ES0111166031",
-          "ES0190051039",
-          "ES0108203003"
+          "ES0114129036"
         ],
-        "precision_at_k": 0.75,
-        "mrr": 1.0,
+        "precision_at_k": 0.8,
+        "mrr": 0.5,
         "hit_at_1": false
       },
       {
         "id": "perfil_moderado_medio_plazo",
         "descripcion": "Inversor moderado, horizonte 3 años, sin preferencia de gestión",
         "esperados": [
-          "ES0182798019",
-          "ES0111127009",
-          "ES0108232002",
-          "ES0109191009",
-          "ES0111128007"
+          "ES0119179002",
+          "ES0156944003",
+          "ES0164691000",
+          "ES0138253002",
+          "ES0138861036"
         ],
         "obtenidos": [
-          "ES0182798019",
-          "ES0111127009",
-          "ES0108232002",
-          "ES0111128007",
-          "ES0110196005"
+          "ES0119179002",
+          "ES0156944003",
+          "ES0164691000",
+          "ES0138253002",
+          "ES0138861036"
         ],
-        "precision_at_k": 0.8,
+        "precision_at_k": 1.0,
         "mrr": 1.0,
         "hit_at_1": true
       },
@@ -53,17 +55,17 @@
         "descripcion": "Inversor moderado con sensibilidad ESG, horizonte 5 años",
         "esperados": [
           "ES0106949003",
+          "ES0109652034",
+          "ES0110256007",
           "ES0124524002",
-          "ES0105207007",
-          "ES0105263000",
-          "ES0109266009"
+          "ES0162948014"
         ],
         "obtenidos": [
           "ES0106949003",
+          "ES0109652034",
+          "ES0110256007",
           "ES0124524002",
-          "ES0105263000",
-          "ES0109266009",
-          "ES0105207007"
+          "ES0162948014"
         ],
         "precision_at_k": 1.0,
         "mrr": 1.0,
@@ -74,15 +76,17 @@
         "descripcion": "Inversor agresivo que prefiere gestión pasiva y bajo coste",
         "esperados": [
           "ES0105321030",
-          "ES0105336038",
-          "ES0162956009"
+          "ES0110098037",
+          "ES0162956009",
+          "ES0114564000",
+          "ES0110182039"
         ],
         "obtenidos": [
           "ES0105321030",
-          "ES0105336038",
+          "ES0110098037",
           "ES0162956009",
-          "ES0105959003",
-          "ES0124526007"
+          "ES0114564000",
+          "ES0110182039"
         ],
         "precision_at_k": 1.0,
         "mrr": 1.0,
@@ -92,18 +96,20 @@
         "id": "perfil_agresivo_esg",
         "descripcion": "Inversor decidido con alta sensibilidad ESG, largo plazo",
         "esperados": [
-          "ES0110247006",
-          "ES0110256007",
-          "ES0180709018"
+          "ES0165092034",
+          "ES0147196036",
+          "ES0172243000",
+          "ES0183339037",
+          "ES0109266009"
         ],
         "obtenidos": [
-          "ES0110247006",
-          "ES0110256007",
-          "ES0180709018",
-          "ES0119376012",
-          "ES0111167005"
+          "ES0165092034",
+          "ES0147196036",
+          "ES0137398006",
+          "ES0172243000",
+          "ES0183339037"
         ],
-        "precision_at_k": 1.0,
+        "precision_at_k": 0.8,
         "mrr": 1.0,
         "hit_at_1": true
       },
@@ -111,20 +117,21 @@
         "id": "perfil_muy_agresivo",
         "descripcion": "Inversor muy agresivo, sin restricciones, largo plazo",
         "esperados": [
-          "ES0162957007",
-          "ES0119377002",
-          "ES0176409003",
-          "ES0152505006",
-          "ES0105959003"
+          "ES0140634033",
+          "ES0125434003",
+          "ES0115068035",
+          "ES0138984036",
+          "ES0179692001",
+          "ES0111193001"
         ],
         "obtenidos": [
-          "ES0162957007",
-          "ES0119377002",
-          "ES0176409003",
-          "ES0152505006",
-          "ES0105959003"
+          "ES0140634033",
+          "ES0125434003",
+          "ES0115068035",
+          "ES0138984036",
+          "ES0179692001"
         ],
-        "precision_at_k": 1.0,
+        "precision_at_k": 0.8333333333333334,
         "mrr": 1.0,
         "hit_at_1": true
       }
@@ -134,27 +141,29 @@
     "nombre": "all-MiniLM-L6-v2 (baseline inglés)",
     "model_name": "all-MiniLM-L6-v2",
     "descripcion": "Solo inglés, 384 dims — baseline rápido",
-    "tiempo_s": 9.15,
-    "precision_media": 0.825,
-    "mrr_medio": 1.0,
-    "hit_at_1_ratio": 0.8333,
+    "tiempo_s": 14.22,
+    "precision_media": 0.3278,
+    "mrr_medio": 0.4417,
+    "hit_at_1_ratio": 0.3333,
     "perfiles": [
       {
         "id": "perfil_conservador_corto",
         "descripcion": "Inversor muy conservador, capital bajo, horizonte corto, alta liquidez",
         "esperados": [
+          "ES0126551037",
+          "ES0106933031",
           "ES0111166031",
-          "ES0190051039",
-          "ES0119376012",
-          "ES0126542036"
+          "ES0114129036",
+          "ES0108283005"
         ],
         "obtenidos": [
+          "ES0126551037",
+          "ES0106933031",
           "ES0111166031",
-          "ES0190051039",
-          "ES0108203003",
-          "ES0119376012"
+          "ES0114129036",
+          "ES0113752002"
         ],
-        "precision_at_k": 0.75,
+        "precision_at_k": 0.8,
         "mrr": 1.0,
         "hit_at_1": true
       },
@@ -162,21 +171,21 @@
         "id": "perfil_moderado_medio_plazo",
         "descripcion": "Inversor moderado, horizonte 3 años, sin preferencia de gestión",
         "esperados": [
-          "ES0182798019",
-          "ES0111127009",
-          "ES0108232002",
-          "ES0109191009",
-          "ES0111128007"
+          "ES0119179002",
+          "ES0156944003",
+          "ES0164691000",
+          "ES0138253002",
+          "ES0138861036"
         ],
         "obtenidos": [
-          "ES0108232002",
-          "ES0108240005",
-          "ES0151484005",
-          "ES0109191009",
-          "ES0111127009"
+          "ES0146296001",
+          "ES0174126005",
+          "ES0114371034",
+          "ES0119179002",
+          "ES0114546031"
         ],
-        "precision_at_k": 0.6,
-        "mrr": 1.0,
+        "precision_at_k": 0.2,
+        "mrr": 0.25,
         "hit_at_1": false
       },
       {
@@ -184,38 +193,40 @@
         "descripcion": "Inversor moderado con sensibilidad ESG, horizonte 5 años",
         "esperados": [
           "ES0106949003",
+          "ES0109652034",
+          "ES0110256007",
           "ES0124524002",
-          "ES0105207007",
-          "ES0105263000",
-          "ES0109266009"
+          "ES0162948014"
         ],
         "obtenidos": [
-          "ES0106949003",
-          "ES0109266009",
-          "ES0124524002",
-          "ES0162948014",
-          "ES0105263000"
+          "ES0137355006",
+          "ES0156836019",
+          "ES0114202007",
+          "ES0114222005",
+          "ES0162948014"
         ],
-        "precision_at_k": 0.8,
-        "mrr": 1.0,
-        "hit_at_1": true
+        "precision_at_k": 0.2,
+        "mrr": 0.2,
+        "hit_at_1": false
       },
       {
         "id": "perfil_agresivo_pasivo",
         "descripcion": "Inversor agresivo que prefiere gestión pasiva y bajo coste",
         "esperados": [
           "ES0105321030",
-          "ES0105336038",
-          "ES0162956009"
+          "ES0110098037",
+          "ES0162956009",
+          "ES0114564000",
+          "ES0110182039"
         ],
         "obtenidos": [
           "ES0105321030",
-          "ES0162956009",
-          "ES0105336038",
-          "ES0105959003",
-          "ES0124526007"
+          "ES0110098037",
+          "ES0114564000",
+          "ES0114754007",
+          "ES0114565007"
         ],
-        "precision_at_k": 1.0,
+        "precision_at_k": 0.6,
         "mrr": 1.0,
         "hit_at_1": true
       },
@@ -223,41 +234,44 @@
         "id": "perfil_agresivo_esg",
         "descripcion": "Inversor decidido con alta sensibilidad ESG, largo plazo",
         "esperados": [
-          "ES0110247006",
-          "ES0110256007",
-          "ES0180709018"
+          "ES0165092034",
+          "ES0147196036",
+          "ES0172243000",
+          "ES0183339037",
+          "ES0109266009"
         ],
         "obtenidos": [
-          "ES0110247006",
-          "ES0110256007",
-          "ES0180709018",
-          "ES0109652034",
-          "ES0119376012"
+          "ES0178487007",
+          "ES0178520005",
+          "ES0165198005",
+          "ES0105578001",
+          "ES0167937004"
         ],
-        "precision_at_k": 1.0,
-        "mrr": 1.0,
-        "hit_at_1": true
+        "precision_at_k": 0.0,
+        "mrr": 0.0,
+        "hit_at_1": false
       },
       {
         "id": "perfil_muy_agresivo",
         "descripcion": "Inversor muy agresivo, sin restricciones, largo plazo",
         "esperados": [
-          "ES0162957007",
-          "ES0119377002",
-          "ES0176409003",
-          "ES0152505006",
-          "ES0105959003"
+          "ES0140634033",
+          "ES0125434003",
+          "ES0115068035",
+          "ES0138984036",
+          "ES0179692001",
+          "ES0111193001"
         ],
         "obtenidos": [
           "ES0162957007",
-          "ES0152505006",
-          "ES0119377002",
-          "ES0105959003",
-          "ES0139099008"
+          "ES0144886035",
+          "ES0175738006",
+          "ES0141222036",
+          "ES0140634033"
         ],
-        "precision_at_k": 0.8,
-        "mrr": 1.0,
-        "hit_at_1": true
+        "precision_at_k": 0.16666666666666666,
+        "mrr": 0.2,
+        "hit_at_1": false
       }
     ]
   },
@@ -265,27 +279,29 @@
     "nombre": "distiluse-base-multilingual-cased-v2",
     "model_name": "distiluse-base-multilingual-cased-v2",
     "descripcion": "Multilingüe alternativo, 512 dims",
-    "tiempo_s": 10.9,
-    "precision_media": 0.8583,
-    "mrr_medio": 1.0,
-    "hit_at_1_ratio": 0.8333,
+    "tiempo_s": 19.09,
+    "precision_media": 0.4222,
+    "mrr_medio": 0.6389,
+    "hit_at_1_ratio": 0.5,
     "perfiles": [
       {
         "id": "perfil_conservador_corto",
         "descripcion": "Inversor muy conservador, capital bajo, horizonte corto, alta liquidez",
         "esperados": [
+          "ES0126551037",
+          "ES0106933031",
           "ES0111166031",
-          "ES0190051039",
-          "ES0119376012",
-          "ES0126542036"
+          "ES0114129036",
+          "ES0108283005"
         ],
         "obtenidos": [
+          "ES0126551037",
+          "ES0106933031",
           "ES0111166031",
-          "ES0190051039",
-          "ES0108203003",
-          "ES0119376012"
+          "ES0114129036",
+          "ES0113752002"
         ],
-        "precision_at_k": 0.75,
+        "precision_at_k": 0.8,
         "mrr": 1.0,
         "hit_at_1": true
       },
@@ -293,20 +309,20 @@
         "id": "perfil_moderado_medio_plazo",
         "descripcion": "Inversor moderado, horizonte 3 años, sin preferencia de gestión",
         "esperados": [
-          "ES0182798019",
-          "ES0111127009",
-          "ES0108232002",
-          "ES0109191009",
-          "ES0111128007"
+          "ES0119179002",
+          "ES0156944003",
+          "ES0164691000",
+          "ES0138253002",
+          "ES0138861036"
         ],
         "obtenidos": [
-          "ES0182798019",
-          "ES0111127009",
-          "ES0108232002",
-          "ES0111128007",
-          "ES0140073018"
+          "ES0119179002",
+          "ES0135708008",
+          "ES0113536009",
+          "ES0156453005",
+          "ES0110195007"
         ],
-        "precision_at_k": 0.8,
+        "precision_at_k": 0.2,
         "mrr": 1.0,
         "hit_at_1": true
       },
@@ -315,20 +331,20 @@
         "descripcion": "Inversor moderado con sensibilidad ESG, horizonte 5 años",
         "esperados": [
           "ES0106949003",
+          "ES0109652034",
+          "ES0110256007",
           "ES0124524002",
-          "ES0105207007",
-          "ES0105263000",
-          "ES0109266009"
+          "ES0162948014"
         ],
         "obtenidos": [
-          "ES0109266009",
-          "ES0106949003",
-          "ES0105207007",
-          "ES0105244000",
-          "ES0124524002"
+          "ES0184246009",
+          "ES0138701034",
+          "ES0126906033",
+          "ES0114988035",
+          "ES0156836019"
         ],
-        "precision_at_k": 0.8,
-        "mrr": 1.0,
+        "precision_at_k": 0.0,
+        "mrr": 0.0,
         "hit_at_1": false
       },
       {
@@ -336,17 +352,19 @@
         "descripcion": "Inversor agresivo que prefiere gestión pasiva y bajo coste",
         "esperados": [
           "ES0105321030",
-          "ES0105336038",
-          "ES0162956009"
+          "ES0110098037",
+          "ES0162956009",
+          "ES0114564000",
+          "ES0110182039"
         ],
         "obtenidos": [
           "ES0105321030",
+          "ES0110098037",
           "ES0162956009",
-          "ES0105336038",
-          "ES0124526007",
-          "ES0105959003"
+          "ES0114564000",
+          "ES0110088038"
         ],
-        "precision_at_k": 1.0,
+        "precision_at_k": 0.8,
         "mrr": 1.0,
         "hit_at_1": true
       },
@@ -354,41 +372,44 @@
         "id": "perfil_agresivo_esg",
         "descripcion": "Inversor decidido con alta sensibilidad ESG, largo plazo",
         "esperados": [
-          "ES0110247006",
-          "ES0110256007",
-          "ES0180709018"
+          "ES0165092034",
+          "ES0147196036",
+          "ES0172243000",
+          "ES0183339037",
+          "ES0109266009"
         ],
         "obtenidos": [
-          "ES0110247006",
-          "ES0110256007",
-          "ES0180709018",
-          "ES0119376012",
-          "ES0147597001"
+          "ES0178487007",
+          "ES0147196036",
+          "ES0137398006",
+          "ES0172243000",
+          "ES0158304008"
         ],
-        "precision_at_k": 1.0,
-        "mrr": 1.0,
-        "hit_at_1": true
+        "precision_at_k": 0.4,
+        "mrr": 0.5,
+        "hit_at_1": false
       },
       {
         "id": "perfil_muy_agresivo",
         "descripcion": "Inversor muy agresivo, sin restricciones, largo plazo",
         "esperados": [
-          "ES0162957007",
-          "ES0119377002",
-          "ES0176409003",
-          "ES0152505006",
-          "ES0105959003"
+          "ES0140634033",
+          "ES0125434003",
+          "ES0115068035",
+          "ES0138984036",
+          "ES0179692001",
+          "ES0111193001"
         ],
         "obtenidos": [
-          "ES0162957007",
-          "ES0152505006",
-          "ES0119377002",
-          "ES0105959003",
-          "ES0110197003"
+          "ES0119179002",
+          "ES0116831027",
+          "ES0125434003",
+          "ES0140634033",
+          "ES0111175008"
         ],
-        "precision_at_k": 0.8,
-        "mrr": 1.0,
-        "hit_at_1": true
+        "precision_at_k": 0.3333333333333333,
+        "mrr": 0.3333333333333333,
+        "hit_at_1": false
       }
     ]
   }

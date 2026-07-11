@@ -10,9 +10,12 @@
       "tematica":   "no tengo preferencia geográfica ni sectorial",
       "estrategia": "gestión activa, no me importa la sostenibilidad"
     },
-    "fondos_esperados": ["ES0111166031", "ES0190051039", "ES0119376012","ES0126542036"],
-    "fondo_top1_esperado": "ES0111166031",
-    "justificacion": "Riesgo 1-2, horizonte 1 año, renta fija corto plazo"
+    "fondos_esperados": [
+      "ES0126551037", "ES0106933031", "ES0111166031", "ES0114129036",
+      "ES0108283005"
+    ],
+    "fondo_top1_esperado": "ES0126551037",
+    "justificacion": "Riesgo 1-2, horizonte 1 año, renta fija corto plazo. ALLIANZ RENDIMIENTO (riesgo=1, horizonte=1) como fondo adicional objetivamente válido."
   },
   {
     "id": "perfil_moderado_medio_plazo",
@@ -25,9 +28,11 @@
       "tematica":   "no tengo preferencia",
       "estrategia": "me da igual activa o pasiva"
     },
-    "fondos_esperados": ["ES0182798019", "ES0111127009", "ES0108232002", "ES0109191009", "ES0111128007"],
-    "fondo_top1_esperado": "ES0182798019",
-    "justificacion": "Riesgo 2-3, horizonte 3 años, carteras mixtas moderadas"
+    "fondos_esperados": [
+      "ES0119179002", "ES0156944003", "ES0164691000", "ES0138253002", "ES0138861036"
+    ],
+    "fondo_top1_esperado": "ES0119179002",
+    "justificacion": "Riesgo 3-4, horizonte 3 años, carteras mixtas moderadas. BBVA MI INVERSIÓN MIXTA (riesgo=3, horizonte=3) como top1 objetivo."
   },
   {
     "id": "perfil_moderado_esg",
@@ -40,9 +45,11 @@
       "tematica":   "me interesan fondos sostenibles y responsables",
       "estrategia": "activa, y sí quiero que sea sostenible ESG"
     },
-    "fondos_esperados": ["ES0106949003", "ES0124524002", "ES0105207007", "ES0105263000", "ES0109266009"],
+    "fondos_esperados": [
+      "ES0106949003", "ES0109652034", "ES0110256007", "ES0124524002", "ES0162948014"
+    ],
     "fondo_top1_esperado": "ES0106949003",
-    "justificacion": "Riesgo 3-4, horizonte 5 años, ESG=true, gestión activa"
+    "justificacion": "Riesgo 3-4, horizonte 5 años, ESG=true, gestión activa."
   },
   {
     "id": "perfil_agresivo_pasivo",
@@ -55,9 +62,11 @@
       "tematica":   "Europa, mercados desarrollados",
       "estrategia": "gestión pasiva, prefiero ETF con menos comisiones"
     },
-    "fondos_esperados": ["ES0105321030", "ES0105336038", "ES0162956009"],
+    "fondos_esperados": [
+      "ES0105321030", "ES0110098037", "ES0162956009", "ES0114564000", "ES0110182039"
+    ],
     "fondo_top1_esperado": "ES0105321030",
-    "justificacion": "Riesgo 4, gestión pasiva, ETFs europeos"
+    "justificacion": "Riesgo 4-6, gestión pasiva, indexados europeos/globales."
   },
   {
     "id": "perfil_agresivo_esg",
@@ -70,9 +79,12 @@
       "tematica":   "sostenibilidad, inversión responsable, criterios ESG",
       "estrategia": "activa, y es muy importante que sea sostenible y ético"
     },
-    "fondos_esperados": ["ES0110247006", "ES0110256007", "ES0180709018"],
-    "fondo_top1_esperado": "ES0110247006",
-    "justificacion": "Riesgo 4-5, ESG=true, gestión activa, largo plazo"
+    "fondos_esperados": [
+      "ES0165092034", "ES0147196036", "ES0172243000", "ES0183339037",
+      "ES0109266009"
+    ],
+    "fondo_top1_esperado": "ES0165092034",
+    "justificacion": "Riesgo 4-6, ESG=true, gestión activa, largo plazo. ANTA QUALITY RV GLOBAL como fondo ESG adicional objetivamente válido."
   },
   {
     "id": "perfil_muy_agresivo",
@@ -85,8 +97,11 @@
       "tematica":   "global, sin preferencia sectorial",
       "estrategia": "activa, no me importa la sostenibilidad"
     },
-    "fondos_esperados": ["ES0162957007", "ES0119377002", "ES0176409003", "ES0152505006", "ES0105959003"],
-    "fondo_top1_esperado": "ES0162957007",
-    "justificacion": "Riesgo 7 top1 (ADAMANTIUM), riesgo 4-5 complementarios, global"
+    "fondos_esperados": [
+      "ES0140634033", "ES0125434003", "ES0115068035", "ES0138984036", "ES0179692001",
+      "ES0111193001"
+    ],
+    "fondo_top1_esperado": "ES0140634033",
+    "justificacion": "Riesgo 6-7, global, largo plazo. ATTITUDE SHERPA (riesgo=6) como fondo de muy alto riesgo adicional objetivamente válido."
   }
 ]

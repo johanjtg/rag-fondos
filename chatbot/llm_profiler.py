@@ -38,12 +38,13 @@ class CapitalExtract(BaseModel):
 class HorizonteExtract(BaseModel):
     horizonte_anios: float = Field(
         description=(
-            "Horizonte de inversión en años. "
-            "'corto plazo' o 'menos de 1 año' → 1.0, "
-            "'3 años' → 3.0, "
-            "'5 años' → 5.0, "
+            "Horizonte de inversión en años. Convierte SIEMPRE a años con precisión: "
+            "'15 días' → 0.041, '1 mes' → 0.083, '3 meses' → 0.25, '6 meses' → 0.5, "
+            "'1 año' → 1.0, '3 años' → 3.0, '5 años' → 5.0, "
             "'largo plazo' o 'más de 10 años' → 10.0, "
-            "'no lo sé' o 'indiferente' → 5.0."
+            "'no lo sé' o 'indiferente' → 5.0. "
+            "IMPORTANTE: días y semanas deben producir valores muy pequeños (< 0.1), "
+            "NO los mapees a 'corto plazo' = 1.0."
         )
     )
 
@@ -193,11 +194,17 @@ def actualizar_perfil_llm(
     elif question_id == "horizonte":
         resultado = _extraer(llm, pregunta_texto, respuesta_usuario, HorizonteExtract)
         if resultado and resultado.horizonte_anios > 0:
-            anios = max(UserProfile.HORIZONTE_MIN_ANIOS, min(resultado.horizonte_anios, UserProfile.HORIZONTE_MAX_ANIOS))
-            perfil.horizonte_anios    = anios
-            perfil.horizonte_temporal = min(anios / 10.0, 1.0)
-            perfil._respondidas.add("horizonte")
-            log.debug("LLM horizonte: %.1f años", anios)
+            # Validar ANTES de aplicar el clamp: si el valor está fuera del rango
+            # aceptado, no registrar la respuesta para que la validación lo rechace.
+            if resultado.horizonte_anios < UserProfile.HORIZONTE_MIN_ANIOS:
+                log.debug("LLM horizonte: %.4f años < mínimo, no se registra", resultado.horizonte_anios)
+                # No añadir a _respondidas → la validación en conversation.py rechazará
+            else:
+                anios = min(resultado.horizonte_anios, UserProfile.HORIZONTE_MAX_ANIOS)
+                perfil.horizonte_anios    = anios
+                perfil.horizonte_temporal = min(anios / 10.0, 1.0)
+                perfil._respondidas.add("horizonte")
+                log.debug("LLM horizonte: %.1f años", anios)
         else:
             perfil.update_horizonte(respuesta_usuario)
 

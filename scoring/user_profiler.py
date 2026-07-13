@@ -198,10 +198,12 @@ class UserProfile:
 
     def update_horizonte(self, respuesta: str) -> None:
         """Actualiza horizonte_temporal y horizonte_anios desde texto libre.
-        El valor se limita al rango [1 mes, 100 años]."""
+        Solo registra la respuesta si el valor está dentro del rango aceptado."""
         anios = _parse_years(respuesta)
         if anios is not None:
-            anios = max(self.HORIZONTE_MIN_ANIOS, min(anios, self.HORIZONTE_MAX_ANIOS))
+            if anios < self.HORIZONTE_MIN_ANIOS:
+                return  # demasiado corto — no registrar, la validación lo rechazará
+            anios = min(anios, self.HORIZONTE_MAX_ANIOS)
             self.horizonte_anios = anios
             self.horizonte_temporal = min(anios / HORIZON_MAX_YEARS, 1.0)
             self._respondidas.add("horizonte")

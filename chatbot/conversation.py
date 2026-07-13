@@ -258,7 +258,7 @@ class FondosAdvisor:
         )
         return self._invoke_perfilado(instruccion)
 
-    def _validar_respuesta(self, question_id: str) -> str | None:
+    def _validar_respuesta(self, question_id: str, respuesta_raw: str = "") -> str | None:
         """
         Comprueba si el valor recién extraído es válido.
         Devuelve None si es válido, o un mensaje de corrección si no lo es.
@@ -280,6 +280,14 @@ class FondosAdvisor:
                 )
 
         elif question_id == "horizonte":
+            import re as _re
+            # Detectar directamente plazos en días o semanas en la respuesta original
+            if _re.search(r"\b\d+\s*d[íi]a|\b\d+\s*semana", respuesta_raw.lower()):
+                return (
+                    "Un plazo en días o semanas es demasiado corto para los fondos disponibles. "
+                    "Por favor, indícame un horizonte de al menos 1 mes "
+                    "(por ejemplo: '1 mes', '6 meses', '1 año', 'largo plazo')."
+                )
             if "horizonte" not in self.perfil._respondidas:
                 return (
                     "No he podido interpretar el plazo indicado. "
@@ -300,7 +308,7 @@ class FondosAdvisor:
         from chatbot.llm_profiler import actualizar_perfil_llm
         actualizar_perfil_llm(self.llm_perfilado, self.perfil, q["id"], q["pregunta"], respuesta_usuario)
 
-        error = self._validar_respuesta(q["id"])
+        error = self._validar_respuesta(q["id"], respuesta_usuario)
         if error:
             return f"Mmm, hay un problema con ese dato. {error}"
 

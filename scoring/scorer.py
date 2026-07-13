@@ -105,21 +105,33 @@ def load_all_funds(db_path: Path = DB_PATH) -> list[FundModel]:
 
 # ── Filtros duros ─────────────────────────────────────────────────────────────
 
+CAPITAL_MINIMO_DEFAULT = 30.0   # € — umbral preventivo cuando el fondo no informa su mínimo
+
 def _pasa_filtros(fondo: FundModel, perfil: UserProfile) -> tuple[bool, str]:
     """
     Evalúa los filtros de exclusión duros.
     Devuelve (True, "") si el fondo pasa, o (False, motivo) si es excluido.
+
+    Política de datos ausentes:
+    - importe_minimo_inversion nulo → se aplica CAPITAL_MINIMO_DEFAULT (30 €).
+      Si el capital del usuario es inferior a ese umbral, el fondo se excluye
+      preventivamente en lugar de omitir la comprobación.
+    - horizonte_recomendado_anios nulo → se excluye preventivamente cuando el
+      usuario declara un horizonte temporal definido (> 0), ya que no es posible
+      verificar la compatibilidad.
     """
     # Capital mínimo
-    if (
-        fondo.importe_minimo_inversion is not None
-        and perfil.capital_disponible > 0
-        and fondo.importe_minimo_inversion > perfil.capital_disponible
-    ):
-        return False, (
-            f"importe_minimo ({fondo.importe_minimo_inversion:.0f}€) "
-            f"> capital ({perfil.capital_disponible:.0f}€)"
+    if perfil.capital_disponible > 0:
+        minimo = (
+            fondo.importe_minimo_inversion
+            if fondo.importe_minimo_inversion is not None
+            else CAPITAL_MINIMO_DEFAULT
         )
+        if perfil.capital_disponible < minimo:
+            return False, (
+                f"importe_minimo ({minimo:.0f}€) "
+                f"> capital ({perfil.capital_disponible:.0f}€)"
+            )
 
     # Nivel de riesgo
     if (
@@ -129,15 +141,14 @@ def _pasa_filtros(fondo: FundModel, perfil: UserProfile) -> tuple[bool, str]:
         return False, f"nivel_riesgo ({fondo.nivel_riesgo}) > max ({perfil.nivel_riesgo_max})"
 
     # Horizonte temporal
-    if (
-        fondo.horizonte_recomendado_anios is not None
-        and perfil.horizonte_anios > 0
-        and fondo.horizonte_recomendado_anios > perfil.horizonte_anios
-    ):
-        return False, (
-            f"horizonte_fondo ({fondo.horizonte_recomendado_anios}a) "
-            f"> horizonte_usuario ({perfil.horizonte_anios:.1f}a)"
-        )
+    if perfil.horizonte_anios > 0:
+        if fondo.horizonte_recomendado_anios is None:
+            return False, "horizonte_fondo desconocido — excluido preventivamente"
+        if fondo.horizonte_recomendado_anios > perfil.horizonte_anios:
+            return False, (
+                f"horizonte_fondo ({fondo.horizonte_recomendado_anios}a) "
+                f"> horizonte_usuario ({perfil.horizonte_anios:.1f}a)"
+            )
 
     # Restricciones de liquidez
     if (

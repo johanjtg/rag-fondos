@@ -258,14 +258,47 @@ class FondosAdvisor:
         )
         return self._invoke_perfilado(instruccion)
 
+    def _validar_respuesta(self, question_id: str) -> str | None:
+        """
+        Comprueba si el valor recién extraído es válido.
+        Devuelve None si es válido, o un mensaje de corrección si no lo es.
+        """
+        if question_id == "capital":
+            if "capital" not in self.perfil._respondidas or self.perfil.capital_disponible <= 0:
+                return (
+                    "El importe indicado no es válido (debe ser mayor que 0 €). "
+                    "Por favor, indícame el capital disponible en euros "
+                    "(por ejemplo: '5000 euros', '10k', '1500 €')."
+                )
+
+        elif question_id == "horizonte":
+            if "horizonte" not in self.perfil._respondidas:
+                return (
+                    "No he podido interpretar el plazo indicado. "
+                    "Por favor, indícame el horizonte de inversión "
+                    "(mínimo 1 mes, máximo 100 años; "
+                    "por ejemplo: '6 meses', '3 años', 'largo plazo')."
+                )
+
+        return None
+
     def _procesar_respuesta_perfilado(self, respuesta_usuario: str) -> str:
         """
         Actualiza el perfil con la respuesta recibida, avanza al siguiente
         estado y devuelve la respuesta del asistente.
+        Si el valor extraído no supera la validación, repite la pregunta.
         """
         q = INVESTOR_PROFILE_QUESTIONS[self.pregunta_idx]
         from chatbot.llm_profiler import actualizar_perfil_llm
         actualizar_perfil_llm(self.llm_perfilado, self.perfil, q["id"], q["pregunta"], respuesta_usuario)
+
+        error = self._validar_respuesta(q["id"])
+        if error:
+            return self._invoke_perfilado(
+                f"El usuario ha respondido: «{respuesta_usuario}». "
+                f"Su respuesta no es válida: {error} "
+                f"Pídele que la corrija de forma amable y clara, sin avanzar a la siguiente pregunta."
+            )
 
         self.pregunta_idx += 1
         hay_mas_preguntas = self.pregunta_idx < len(INVESTOR_PROFILE_QUESTIONS)

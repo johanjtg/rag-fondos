@@ -176,10 +176,11 @@ def actualizar_perfil_llm(
     elif question_id == "horizonte":
         resultado = _extraer(llm, pregunta_texto, respuesta_usuario, HorizonteExtract)
         if resultado and resultado.horizonte_anios > 0:
-            perfil.horizonte_anios    = resultado.horizonte_anios
-            perfil.horizonte_temporal = min(resultado.horizonte_anios / 10.0, 1.0)
+            anios = max(UserProfile.HORIZONTE_MIN_ANIOS, min(resultado.horizonte_anios, UserProfile.HORIZONTE_MAX_ANIOS))
+            perfil.horizonte_anios    = anios
+            perfil.horizonte_temporal = min(anios / 10.0, 1.0)
             perfil._respondidas.add("horizonte")
-            log.debug("LLM horizonte: %.1f años", resultado.horizonte_anios)
+            log.debug("LLM horizonte: %.1f años", anios)
         else:
             perfil.update_horizonte(respuesta_usuario)
 

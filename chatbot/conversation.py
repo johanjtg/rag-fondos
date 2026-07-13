@@ -264,11 +264,19 @@ class FondosAdvisor:
         Devuelve None si es válido, o un mensaje de corrección si no lo es.
         """
         if question_id == "capital":
-            if "capital" not in self.perfil._respondidas or self.perfil.capital_disponible <= 0:
+            from scoring.scorer import CAPITAL_MINIMO_DEFAULT
+            capital = self.perfil.capital_disponible
+            if "capital" not in self.perfil._respondidas or capital <= 0:
                 return (
-                    "El importe indicado no es válido (debe ser mayor que 0 €). "
+                    "No he podido interpretar el importe indicado. "
                     "Por favor, indícame el capital disponible en euros "
                     "(por ejemplo: '5000 euros', '10k', '1500 €')."
+                )
+            if capital < CAPITAL_MINIMO_DEFAULT:
+                return (
+                    f"El importe indicado ({capital:.0f} €) es inferior al mínimo "
+                    f"requerido por los fondos disponibles ({CAPITAL_MINIMO_DEFAULT:.0f} €). "
+                    "Por favor, indícame un capital disponible mayor."
                 )
 
         elif question_id == "horizonte":

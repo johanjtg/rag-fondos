@@ -14,9 +14,7 @@ st.set_page_config(
 
 st.sidebar.markdown(
     f"**Fondos AI** `v{VERSION}`  \n"
-    f"_{VERSION_DATE}_  \n"
-    f"<small>{VERSION_NOTES}</small>",
-    unsafe_allow_html=True,
+    f"_{VERSION_DATE}_",
 )
 
 chatbot_page   = st.Page("pages/chatbot.py",    title="Asesor",     icon="💬", default=True)

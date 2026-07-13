@@ -250,10 +250,19 @@ def score_funds(
     cosenos = cosine_similarity(vector_usuario, vectores_fondos)[0]  # shape (n,)
 
     # ── 3. Similitud semántica (RAG) ──────────────────────────────────────────
-    query_semantica = " ".join(filter(None, [
-        perfil.preferencia_geografica,
-        perfil.preferencia_sectorial,
-    ]))
+    geo     = perfil.preferencia_geografica.strip()
+    sector  = perfil.preferencia_sectorial.strip()
+    if sector and geo:
+        query_semantica = (
+            f"fondo que invierte en el sector {sector} "
+            f"con exposición geográfica a {geo}"
+        )
+    elif sector:
+        query_semantica = f"fondo especializado en el sector {sector}"
+    elif geo:
+        query_semantica = f"fondo que invierte en {geo}"
+    else:
+        query_semantica = ""
     isins_candidatos = [f.isin for f in candidatos]
     semanticos = _semantic_scores(query_semantica, isins_candidatos, chroma_path)
 

@@ -140,18 +140,24 @@ def _parse_esg(texto: str) -> float:
     return 0.3   # por defecto leve indiferencia
 
 
+SEÑALES_GESTION_ACTIVA = ("activa", "superar", "gestor", "alguien gestione", "batir")
+SEÑALES_GESTION_PASIVA = ("pasiva", "índice", "etf", "menos comisiones", "automático")
+
+
 def _parse_gestion(texto: str) -> float:
     """
     Mapea la preferencia de gestión activa/pasiva a [0.0, 1.0].
-    1.0 = activa, 0.0 = pasiva.
+    1.0 = activa, 0.0 = pasiva, 0.5 = neutral o respuesta contradictoria.
     """
     texto_lower = texto.lower()
-    señales_activa = ("activa", "superar", "gestor", "alguien gestione", "batir")
-    señales_pasiva = ("pasiva", "índice", "etf", "menos comisiones", "automático")
+    tiene_activa = any(s in texto_lower for s in SEÑALES_GESTION_ACTIVA)
+    tiene_pasiva = any(s in texto_lower for s in SEÑALES_GESTION_PASIVA)
 
-    if any(s in texto_lower for s in señales_activa):
+    if tiene_activa and tiene_pasiva:
+        return 0.5   # contradicción → neutral
+    if tiene_activa:
         return 0.9
-    if any(s in texto_lower for s in señales_pasiva):
+    if tiene_pasiva:
         return 0.1
     return 0.5
 

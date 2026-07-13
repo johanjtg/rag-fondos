@@ -302,6 +302,19 @@ class FondosAdvisor:
                     "por ejemplo: '6 meses', '3 años', 'largo plazo')."
                 )
 
+        elif question_id == "estrategia":
+            from scoring.user_profiler import SEÑALES_GESTION_ACTIVA, SEÑALES_GESTION_PASIVA
+            texto_lower = respuesta_raw.lower()
+            tiene_activa = any(s in texto_lower for s in SEÑALES_GESTION_ACTIVA)
+            tiene_pasiva = any(s in texto_lower for s in SEÑALES_GESTION_PASIVA)
+            if tiene_activa and tiene_pasiva:
+                return (
+                    "Tu respuesta menciona tanto gestión activa como pasiva. "
+                    "Por favor, indícame cuál prefieres: "
+                    "¿gestión activa (un gestor que intenta superar al mercado) "
+                    "o gestión pasiva (seguir un índice con menores costes)?"
+                )
+
         return None
 
     def _procesar_respuesta_perfilado(self, respuesta_usuario: str) -> str:

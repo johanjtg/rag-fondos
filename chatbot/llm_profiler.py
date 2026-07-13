@@ -113,9 +113,26 @@ class EstrategiaExtract(BaseModel):
             "1.0 = muy importante, es criterio prioritario. "
             "0.0 = completamente indiferente. "
             "0.3 = no es prioritario pero tampoco rechaza. "
-            "'Sí' a ESG / sostenible / ético → 0.9. "
+            "'Sí' a ESG / sostenible / ético / responsable / verde / criterios sostenibles → 0.9. "
             "'No' o 'no me importa' → 0.0. "
-            "'Depende' o sin mención → 0.3."
+            "Sin mención explícita → 0.3. "
+            "IMPORTANTE: si la respuesta es combinada (gestión + sostenibilidad), "
+            "extrae la sensibilidad ESG de forma independiente sin que la preferencia "
+            "de gestión influya en este valor."
+        )
+    )
+
+
+class ESGExtract(BaseModel):
+    sensibilidad_esg: float = Field(
+        description=(
+            "Sensibilidad a criterios de sostenibilidad ESG entre 0.0 y 1.0. "
+            "Céntrate ÚNICAMENTE en si el usuario quiere que el fondo sea sostenible, "
+            "ignorando cualquier otra preferencia mencionada. "
+            "Cualquier mención a: sostenible, ESG, ético, responsable, verde, "
+            "criterios sociales, medioambientales → 0.9. "
+            "Sin mención o indiferente → 0.3. "
+            "Rechazo explícito → 0.0."
         )
     )
 
@@ -218,9 +235,16 @@ def actualizar_perfil_llm(
         resultado = _extraer(llm, pregunta_texto, respuesta_usuario, EstrategiaExtract)
         if resultado:
             perfil.preferencia_gestion_activa = max(0.0, min(1.0, resultado.preferencia_gestion_activa))
-            perfil.sensibilidad_esg           = max(0.0, min(1.0, resultado.sensibilidad_esg))
+            esg_principal = max(0.0, min(1.0, resultado.sensibilidad_esg))
+            # Segunda llamada LLM enfocada exclusivamente en ESG para evitar que
+            # respuestas combinadas (gestión + sostenibilidad) diluyan la señal ESG.
+            esg_resultado = _extraer(llm, pregunta_texto, respuesta_usuario, ESGExtract)
+            esg_focalizado = max(0.0, min(1.0, esg_resultado.sensibilidad_esg)) if esg_resultado else esg_principal
+            perfil.sensibilidad_esg = max(esg_principal, esg_focalizado)
             perfil._respondidas.add("estrategia")
-            log.debug("LLM estrategia: gestion=%.2f esg=%.2f",
-                      resultado.preferencia_gestion_activa, resultado.sensibilidad_esg)
+            log.debug(
+                "LLM estrategia: gestion=%.2f esg_principal=%.2f esg_focalizado=%.2f → esg=%.2f",
+                resultado.preferencia_gestion_activa, esg_principal, esg_focalizado, perfil.sensibilidad_esg,
+            )
         else:
             perfil.update_estrategia(respuesta_usuario)

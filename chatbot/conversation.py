@@ -302,11 +302,7 @@ class FondosAdvisor:
 
         error = self._validar_respuesta(q["id"])
         if error:
-            return self._invoke_perfilado(
-                f"El usuario ha respondido: «{respuesta_usuario}». "
-                f"Su respuesta no es válida: {error} "
-                f"Pídele que la corrija de forma amable y clara, sin avanzar a la siguiente pregunta."
-            )
+            return f"Mmm, hay un problema con ese dato. {error}"
 
         self.pregunta_idx += 1
         hay_mas_preguntas = self.pregunta_idx < len(INVESTOR_PROFILE_QUESTIONS)

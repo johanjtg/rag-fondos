@@ -4,11 +4,19 @@ Streamlit multipage — las páginas están en pages/
 """
 
 import streamlit as st
+from version import VERSION, VERSION_DATE, VERSION_NOTES
 
 st.set_page_config(
     page_title="Fondos AI",
     page_icon="📈",
     layout="centered",
+)
+
+st.sidebar.markdown(
+    f"**Fondos AI** `v{VERSION}`  \n"
+    f"_{VERSION_DATE}_  \n"
+    f"<small>{VERSION_NOTES}</small>",
+    unsafe_allow_html=True,
 )
 
 chatbot_page   = st.Page("pages/chatbot.py",    title="Asesor",     icon="💬", default=True)

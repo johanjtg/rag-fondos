@@ -336,11 +336,29 @@ class FondosAdvisor:
             )
 
         if not fondos:
+            causas = []
+            if self.perfil.capital_disponible > 0 and self.perfil.capital_disponible < 30:
+                causas.append(
+                    f"el capital indicado ({self.perfil.capital_disponible:.0f} €) "
+                    "es inferior al mínimo de inversión de los fondos disponibles"
+                )
+            if self.perfil.horizonte_anios > 0:
+                causas.append(
+                    f"el horizonte de inversión indicado "
+                    f"({'%.0f meses' % (self.perfil.horizonte_anios * 12) if self.perfil.horizonte_anios < 1 else '%.0f años' % self.perfil.horizonte_anios}) "
+                    "no es compatible con ningún fondo disponible"
+                )
+            if not causas:
+                causas.append("las restricciones del perfil son demasiado estrictas para los fondos disponibles")
+
+            causa_texto = " y ".join(causas)
             return self._invoke_recomendacion(
-                "No se ha encontrado ningún fondo que supere los filtros de "
-                "compatibilidad con el perfil del usuario. Explícale esto con "
-                "empatía y sugiere que podría relajar alguna restricción, por "
-                "ejemplo ampliando el horizonte o aumentando la tolerancia al riesgo."
+                f"No se ha encontrado ningún fondo compatible con el perfil del usuario. "
+                f"Causa identificada: {causa_texto}. "
+                "Explícale esto con empatía y claridad, mencionando la causa concreta. "
+                "Sugiere qué restricción podría relajar para obtener resultados: "
+                "por ejemplo, aumentar el capital disponible, ampliar el horizonte temporal "
+                "o revisar la tolerancia al riesgo."
             )
 
         prompt_resultados = _formatear_fondos(fondos, self.perfil)

@@ -193,10 +193,15 @@ class UserProfile:
             self.capital_disponible = euros
             self._respondidas.add("capital")
 
+    HORIZONTE_MIN_ANIOS: float = 1 / 12   # 1 mes
+    HORIZONTE_MAX_ANIOS: float = 100.0    # 100 años
+
     def update_horizonte(self, respuesta: str) -> None:
-        """Actualiza horizonte_temporal y horizonte_anios desde texto libre."""
+        """Actualiza horizonte_temporal y horizonte_anios desde texto libre.
+        El valor se limita al rango [1 mes, 100 años]."""
         anios = _parse_years(respuesta)
         if anios is not None:
+            anios = max(self.HORIZONTE_MIN_ANIOS, min(anios, self.HORIZONTE_MAX_ANIOS))
             self.horizonte_anios = anios
             self.horizonte_temporal = min(anios / HORIZON_MAX_YEARS, 1.0)
             self._respondidas.add("horizonte")

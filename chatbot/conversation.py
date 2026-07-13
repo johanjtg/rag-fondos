@@ -178,8 +178,14 @@ def _resumen_perfil(perfil: UserProfile) -> str:
         f"  • Sostenibilidad ESG: {esg_texto}",
         f"  • Gestión preferida: {gestion}",
     ]
-    if perfil.preferencia_geografica:
-        lineas.append(f"  • Preferencias temáticas: {perfil.preferencia_geografica}")
+    tematica_partes = list(filter(None, [
+        perfil.preferencia_geografica,
+        perfil.preferencia_sectorial if perfil.preferencia_sectorial != perfil.preferencia_geografica else "",
+    ]))
+    if tematica_partes:
+        lineas.append(f"  • Preferencias temáticas: {', '.join(tematica_partes)}")
+    else:
+        lineas.append("  • Preferencias temáticas: sin preferencia específica")
     lineas.append("\n¿Es correcto? ¿Hay algo que quieras ajustar antes de ver los resultados?")
     return "\n".join(lineas)
 
